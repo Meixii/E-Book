@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\El Filibusterismo">
+      <UniqueIdentifier>{b13f2412-f0c5-45e8-9e4e-f10543107f94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\El Filibusterismo\Kabanata">
+      <UniqueIdentifier>{6383b579-689e-4fa6-bd64-22adace904a1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EBook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Resources\Fili\Buod\fil_k_1.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_2.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_3.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_4.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_5.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_6.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_7.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_8.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_9.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_10.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_11.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_12.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_13.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_14.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_15.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_16.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_17.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_18.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_19.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_20.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_21.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_22.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_23.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_24.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_25.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_26.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_27.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_28.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_29.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_30.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_31.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_32.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_33.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_34.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_35.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_36.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_37.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_38.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_k_39.txt">
+      <Filter>Resource Files\El Filibusterismo\Kabanata</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Buod\fil_b.txt">
+      <Filter>Resource Files\El Filibusterismo</Filter>
+    </Text>
+    <Text Include="Resources\Fili\Tauhan\fil_t.txt">
+      <Filter>Resource Files\El Filibusterismo</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EBook.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

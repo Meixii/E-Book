@@ -1,0 +1,13 @@
+﻿  EBook.cpp
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\EBook.cpp(49,11): warning C4101: 'CursorPosition': unreferenced local variable
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\EBook.cpp(87,11): warning C4101: 'CursorPosition': unreferenced local variable
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\EBook.cpp(97,11): warning C4101: 'CursorPosition': unreferenced local variable
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\EBook.cpp(129,11): warning C4101: 'CursorPosition': unreferenced local variable
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\EBook.cpp(179,11): warning C4101: 'CursorPosition': unreferenced local variable
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\EBook.cpp(345,11): warning C4102: 'defaut': unreferenced label
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\EBook.cpp(212,11): warning C4101: 'CursorPosition': unreferenced local variable
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\EBook.cpp(384,11): warning C4101: 'CursorPosition': unreferenced local variable
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\EBook.cpp(649,11): warning C4101: 'CursorPosition': unreferenced local variable
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\EBook.cpp(821,11): warning C4101: 'CursorPosition': unreferenced local variable
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\EBook.cpp(817,9): warning C4101: 'exitprompt': unreferenced local variable
+  EBook.vcxproj -> C:\Users\Ryzen\Documents\Programming\Group 3\EBook\x64\Debug\EBook.exe

@@ -11,12 +11,14 @@ using namespace std;
 
 // Main Menu
 void Logo();
+void Face();
 void toc();
 void Tutorial();
 void Home();
 
 // Rizal
 void Rizal();
+void Rizal2();
 
 // Noli Me Tangere
 void noli();
@@ -43,13 +45,16 @@ void quit();
 //void function(void);
 //void tablefk();
 
+
 int main()
 {
+
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     COORD CursorPosition;
 
     // Start Menu
     system("mode 120, 50");
+    system("TITLE Lakbay ni Pepe - Group 3");
     Logo();
 
     cout << "                                             ";
@@ -92,7 +97,8 @@ void Tutorial()
 }
 
 void Logo() {
-
+    system("mode 120, 50");
+    system("TITLE Lakbay ni Pepe - Group 3");
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     COORD CursorPosition;
 
@@ -124,11 +130,10 @@ void Logo() {
 // About Us
 
 void AboutUs() {
-    
+    system("mode 120, 50");
+    system("TITLE Lakbay ni Pepe - About Us");
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     COORD CursorPosition;
-
-    Logo();
     SetConsoleTextAttribute(hConsole, 14);
     cout << "                                        __________________________________________" << endl;
     cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -138,25 +143,26 @@ void AboutUs() {
 
     cout << "                                           Group 3: \"MGA BATA NI SIR RR\"\n\n";
 
-    cout << "                       Programmers: \n";
-    cout << "                            - LLANES, KEVIN \n";
-    cout << "                            - FUNGO, GIAN HIGINO \n";
-    cout << "                            - MAYONADO, CHRISTIAN \n";
-    cout << "                            - LONOZA, JOSHUA OLIVERA \n";
-    cout << "                            - MONTE, MARTIN LORENCE \n";
-    cout << "                            - MIRANDA, KARL \n";
-    cout << "                            - LUGTU, BEA \n";
-    cout << "                            - LISTANGCO, LAURENZ \n";
-    cout << "                            - JULIANE, CARL JAMES \n\n";
+    cout << "                                     Programmers: \n";
+    cout << "                                       - FUNGO, GIAN HIGINO \n";
+    cout << "                                       - JULIANE, CARL JAMES \n\n";
+    cout << "                                       - LISTANGCO, LAURENZ \n";
+    cout << "                                       - LLANES, KEVIN \n";
+    cout << "                                       - LONOZA, JOSHUA OLIVERA \n";
+    cout << "                                       - LUGTU, BEA \n";
+    cout << "                                       - MAYONADO, CHRISTIAN \n";
+    cout << "                                       - MIRANDA, KARL \n";
+    cout << "                                       - MONTE, MARTIN LORENCE \n";
 
-    cout << "                       Campus: \n";
-    cout << "                           University of Caloocan City - North Congress \n\n";
 
-    cout << "                       Program: \n";
-    cout << "                           Bachelor of Science in Computer Science (BSCS) \n\n";
+    cout << "                                     Campus: \n";
+    cout << "                                       University of Caloocan City - North Congress \n\n";
 
-    cout << "                       Section: \n";
-    cout << "                           1st - A \n\n";
+    cout << "                                     Program: \n";
+    cout << "                                      Bachelor of Science in Computer Science (BSCS) \n\n";
+
+    cout << "                                     Section: \n";
+    cout << "                                        1st - A \n\n";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "                                        __________________________________________" << endl;
     cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -174,7 +180,8 @@ void AboutUs() {
 // Home
 
 void Home() {
-    
+    system("mode 120, 50");
+    system("TITLE Lakbay ni Pepe - Home");
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     COORD CursorPosition;
 
@@ -197,22 +204,16 @@ void Home() {
     toc();
 }
 
-/*
-To do:
-- content
-    - introduction
-    - 
-*/
-
 // Table of Contents
 
 void toc() {
-
+    system("mode 120, 50");
+    system("TITLE Lakbay ni Pepe - Mapa");
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     COORD CursorPosition;
 
     int table;
-
+    cout << "" << endl << endl << endl << endl << endl;
     SetConsoleTextAttribute(hConsole, 14);
     cout << "                                        __________________________________________" << endl;
     cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -224,12 +225,23 @@ void toc() {
     cout << "                                        __________________________________________" << endl;
     cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
     SetConsoleTextAttribute(hConsole, 11);
-
+    cout << "                                       ------------------";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << " Rizal";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout <<" ------------------" << endl;
     cout << "                                        [ "; 
     SetConsoleTextAttribute(hConsole, 7);
     cout << "1";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Ang Bida" << endl << endl;
+
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       -------------";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << " Noli Me Tangere";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " -------------" << endl;
 
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
@@ -247,6 +259,13 @@ void toc() {
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Mga Kabanata ng \"Noli Me Tangere\"" << endl << endl;
 
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       ------------";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << " El Filibusterismo";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ------------" << endl;
+
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7); 
     cout << "5";
@@ -263,6 +282,13 @@ void toc() {
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Mga Kabanata ng \"El Filibusterismo\"" << endl << endl;
 
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       -----------";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << " Tungkol sa Programa";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " -----------" << endl;
+
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7); 
     cout << "8";
@@ -278,12 +304,15 @@ void toc() {
     cout << "                                        __________________________________________" << endl;
     cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
     SetConsoleTextAttribute(hConsole, 11);
-
-    cout << " Pumili ng iyong destinasyon: ";
+    cout << "                                       -------------------------------------------" << endl;
+    cout << "                                           Tip: Maglagay lamang ng numero" << endl;
+    cout << "                                       -------------------------------------------" << endl << endl;
     SetConsoleTextAttribute(hConsole, 7);
+    cout << "                                       Pumili ng inyong destinasyon: ";
+    SetConsoleTextAttribute(hConsole, 11);
     cin >> table;
     /*
-    1. Dr. Jose P. Rizal
+    1. Ang Bida
 
     2. Buod ng Noli Me Tangere
     3. Pagkakakilanlan sa mga Tauhan 
@@ -354,15 +383,207 @@ void toc() {
 // ***************************************************************************************************************************************************************************************
 // ***************************************************************************************************************************************************************************************
 
-void Rizal() {
-
+void Face() {
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    COORD CursorPosition;
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "                                               ,,,*,/," << endl;
+    cout << "                                              ,((*,,**/(#%%&%#(###%%%#(#%*" << endl;
+    cout << "                                            //(((##**/(//***(#(%%%%%%%%%%&#%&*" << endl;
+    cout << "                                          //*(%&&@&%,/**////((#((/(#/(%@@&&&&&&#" << endl;
+    cout << "                                        *(%%%&&&&&#(#/#*/#(#%(/(////(#&/*,,,*/#%#(*," << endl;
+    cout << "                                       ,#&&&&&@@&&&%&&&%&%&&%%#(#&@&%*,,,,,,,,,,,,,(%#" << endl;
+    cout << "                                     ,(*%&@&@&@@@@&&%&@@@@@@@@@&&&#*,,,,,,.,,,,,,,,,/##" << endl;
+    cout << "                                    ,*%&&&&&&&@&&&&#/****,,,,,,,,,,,,,,,.,.,,,,,****/#%%" << endl;
+    cout << "                                    /(&&&&&&&@@@@&%#***,,,,,,,,.,.............,,,,**(&&#(" << endl;
+    cout << "                                    /&&@&@@@@@@@@&&/**,,,,,...................,,,,,,/&&#*" << endl;
+    cout << "                                     (&@@@@&@@@&%**,,,,,,,,,,*/#%%%#*,..,,,,*/(#(//((&&" << endl;
+    cout << "                                      #@@@@&&@@&*,,,,,,,**,,*(#%#/*#%#/,,*/%&&#**,,//#," << endl;
+    cout << "                                     *#,.*(&&&&(,,,,,,,,/&((,#@&,(&**,..../%#%&@@&%&&/" << endl;
+    cout << "                                    *&,/&/*,*##/,,,,,.......,,*,,,,.......,/**///((#((&" << endl;
+    cout << "                                    **,*(@#,,*/***,,,......................***,******/#" << endl;
+    cout << "                                    *,.,(./,,,////***,,,,,,,..,...,,........(,,,,,,*/(," << endl;
+    cout << "                                     ***,...,**/(/**/****,,,,,,.,,*.......,,/,,,,,,/#/" << endl;
+    cout << "                                        ,*,.,.*///********,,,,....../##&&&&&&/,,**(%," << endl;
+    cout << "                                           %&%*********,,,,,,,.....,,..,,,((*,,*(#/" << endl;
+    cout << "                                            &#(/*****,,,,,,,,,,(#%&%%%%%&%%%((#(##" << endl;
+    cout << "                                            ***#(*/****,*,,,,,,,,,,,.,....,**(#(#," << endl;
+    cout << "                                            ,./*#&%#(/*****,****,***/#%&&%##((#%/" << endl;
+    cout << "                                       ,%@&%......,&&%%(//*,,,,,,,...,,,**//(#%," << endl;
+    cout << "                                     &&&&@&&%.........,/#&&%%(/*,,,,,,***/(##*" << endl;
+    cout << "                                  *&&&&&@&&&&&#..........,***/%&&&&&&&&&&&&&&&&#" << endl;
+    cout << "                     *&&&&#**(&&&&&&&&&@&&&&&&&&#..........,,****#(/*///#&&&&&&&&&#" << endl;
+    cout << "                    &&%@&&&&@@@@&&&&&&&&&&&&&&&&&&%.........,,,*/(/**//(&&&&&&&&&&&&&%" << endl;
+    cout << "                  %&&&&&&&&&&@&&&&&&&&&&&&%%%&&&&&&&%&&#.....,,**/////%&&&&&&&&&&&&&&&&&&%," << endl;
+    cout << "               /&&&&&&&&&&&&&&&&&&&&&&&&&#%%%%%&&&&&&%%%&&&&@&&&&&&&&&&&&&&&&&&&&&%%%%%%&%&&&&&*" << endl << endl;
 }
 
+void Rizal() {
+    system("TITLE Lakbay ni Pepe - Ang Bayani");
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    COORD CursorPosition;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "       ____________________________________________________________________________________________________________" << endl;
+    cout << "      /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+
+    Face();
+
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "              Si";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << " Dr. Jose Protacio Rizal Mercado y Alonzo Realonda";
+    SetConsoleTextAttribute(hConsole, 11); 
+    cout << " (pinanganak noong ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "19 Hunyo 1861";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " at namatay" << endl;
+    cout << "         noong ";
+    SetConsoleTextAttribute(hConsole, 7); 
+    cout << "30 Disyembre 1896";
+    SetConsoleTextAttribute(hConsole, 11); 
+    cout << ") ay isang Pilipinong bayani at isa sa pinakatanyag na tagapagtaguyod ng " << endl;
+    cout << "         pagbabago sa Pilipinas noong panahon ng pananakop ng mga Kastila. Siya ang kinikilala bilang  " << endl;
+    cout << "         pinakamagaling na bayani at tinala bilang isa sa mga";
+    SetConsoleTextAttribute(hConsole, 7); 
+    cout << " pambansang bayani ng Pilipinas";
+    SetConsoleTextAttribute(hConsole, 11); 
+    cout << " ng Lupon ng mga" << endl;
+    cout << "         Pambansang Bayani." << endl << endl;
+
+    cout << "         Pinanganak si Rizal sa isang mayamang angkan sa";
+    SetConsoleTextAttribute(hConsole, 7); 
+    cout << " Calamba, Laguna";
+    SetConsoleTextAttribute(hConsole, 11); 
+    cout << " at";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << " pampito sa labing - isang anak";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ng" << endl;
+    cout << "         mag-asawang";
+    SetConsoleTextAttribute(hConsole, 7); 
+    cout << " Francisco Engracio Rizal Mercado y Alejandro"; 
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " at"; 
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << " Teodora Morales Alonzo Realonda y Quintos." << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "         Nag-aral siya sa Ateneo Municipal de Manila, at nakakuha ng diploma sa Batsilyer ng Sining at nag-aral" << endl;
+    cout << "         ng medisina sa Pamantasan ng Santo Tomas sa Maynila. Ipinagpatuloy niya ang kanyang pag-aaral sa" << endl;
+    cout << "         Universidad Central de Madrid sa Madrid, Espanya, at nakakuha ng Lisensiya sa Medisina, na nagbigay " << endl;
+    cout << "         sa kanyan ng karapatan  sanayin ang medisina. Nag-aral din siya sa Pamantasan ng Paris at Pamantasan " << endl;
+    cout << "         ng Heidelberg." << endl;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "       ____________________________________________________________________________________________________________" << endl;
+    cout << "      /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "                                               ";
+    system("pause");
+    system("cls");
+    Rizal2();
+}
+
+void Rizal2() {
+    system("TITLE Lakbay ni Pepe - Ang Bayani");
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    COORD CursorPosition;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "       ____________________________________________________________________________________________________________" << endl;
+    cout << "      /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "              Isang polimata si Rizal; maliban sa medisina, mahusay siya sa pagpinta, pagguhit, paglilok at " << endl;
+    cout << "         pag-ukit. Isa siyang makata, manunulat, at nobelista na ang pinakatanyag sa kanyang mga gawa ay ang" << endl;
+    cout << "         nobela ng Noli Me Tangere, at ang kasunod nitong El filibusterismo. Isa ring poliglota si Rizal, na " << endl;
+    cout << "         nakakaunawa ng dalawampu\'t dalawang mga wika." << endl << endl;
+
+    cout << "              Itinatag ni Jose Rizal ang La Liga Filipina, isang samahan na naging daan sa pagkabuo ng Katipunan" << endl;
+    cout << "         na pinamunuan ni Andres Bonifacio, isang lihim na samahan na nagpasimula ng Himagsikang Pilipino laban" << endl;
+    cout << "         sa Espanya na naging saligan ng Unang Republika ng Pilipinas sa ilalim ni Emilio Aguinaldo. Siya ay" << endl;
+    cout << "         tagapagtaguyod ng pagkakaroon ng Pilipinas ng sarili nitong pamahalaan sa mayapang pamamaraan kaysa sa" << endl;
+    cout << "         marahas na himagsikan, at susuportahan lamang ang karahasan bilang huling dulugan. Naniniwala si Rizal" << endl;
+    cout << "         na ang tanging katwiran sa pagpapalaya sa Pilipinas at pagkakaroon nito ng sariling pamahalaan ay ang " << endl;
+    cout << "         pagbabalik ng karangalan ng mga mamamayan, at kanyang winika: Bakit kalayaan, kung ang mga alipin ngayon" << endl;
+    cout << "         ay magiging maniniil ng hinaharap?; Ang pangkahalatang napagsang-ayunan ng mga dalubhasa sa buhay ni " << endl;
+    cout << "         Rizal ay ang pagbitay dito ang naghudyat upang magsimula ang Himagsikang Pilipino." << endl;
+    cout << "         " << endl;
+
+
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "       ____________________________________________________________________________________________________________" << endl;
+    cout << "      /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 7);
+
+    char nav;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                                       Navigation " << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "         Noli Me Tangere: ";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "N";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "         El Filibusterismo : ";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "E";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "         Mapa ni Pepe : ";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "M";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "         Umalis: ";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "X" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                              Pumili ng Destinasyon: ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cin >> nav;
+
+    switch (toupper(nav)) {
+    case 'N':
+        system("cls");
+        /* Noli Me Tangere */
+        noli();
+        break;
+
+    case 'E':
+        system("cls");
+        /* El Filibusterismo */
+        fili();
+        break;
+
+    case 'M':
+        system("cls");
+        /* Mapa */
+        toc();
+        break;
+
+    case 'X':
+        system("cls");
+        quit();
+        break;
+
+    default:
+        /*
+        
+        ERROR CHECK
+        
+        */
+        break;
+    }
+    system("cls");
+}
 
 // Noli me Tangere - Full {Whole Summary, Characters, Termnilogies}
 
 void noli() {
-   
+    system("TITLE Lakbay ni Pepe - Noli Me Tangere");
     cout << "Noli Me Tangere\n";
     
     ifstream fil_b("Resources/Fili/Buod/fil_b.txt");
@@ -378,6 +599,8 @@ void noli() {
 // Noli me Tangere - Chapters
 
 void k_noli() {
+    system("TITLE Noli Me Tangere - Kabanata");
+    system("mode 120, 50");
     using namespace std;
 
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -566,7 +789,7 @@ void c_noli() {
 
 // compiled
 void C_noli() {
-
+    system("TITLE Noli Me Tangere - Tauhan");
 
 }
 
@@ -582,7 +805,7 @@ void t_noli() {
 
 // compiled
 void T_noli() {
-
+    system("TITLE Noli Me Tangere - Talasalitaan");
 
 }
 // ***************************************************************************************************************************************************************************************
@@ -592,6 +815,7 @@ void T_noli() {
 // El Filibusterismo - Full {Whole Summary, Characters, Termnilogies}
 
 void fili() {
+    system("TITLE El Filibusterismo - Buod");
     cout << "El Filibusterismo\n";
     
     system("pause");
@@ -643,6 +867,7 @@ void tablefk() {
 */
 
 void k_fili() {
+    system("TITLE El Filibusterismo - Kabanata");
     using namespace std;
 
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -836,11 +1061,11 @@ void quit() {
             cout << "                                        __________________________________________" << endl;
             cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
             SetConsoleTextAttribute(hConsole, 7);
-            cout << "                                           Salamat sa pag ";
+            cout << "                                           Salamat sa pagsama sa ";
             SetConsoleTextAttribute(hConsole, 11);
             cout << "Lakbay ni Pepe!" << endl;
             SetConsoleTextAttribute(hConsole, 7);
-            cout << "                                                    Exiting Program..." << endl;
+            cout << "                                                         Paalam..." << endl;
             SetConsoleTextAttribute(hConsole, 14);
             cout << "                                        __________________________________________" << endl;
             cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -855,9 +1080,9 @@ void quit() {
             cout << "                                        __________________________________________" << endl;
             cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
             SetConsoleTextAttribute(hConsole, 7);
-            cout << "                                                Going back to "; 
+            cout << "                                                Babalik sa "; 
             SetConsoleTextAttribute(hConsole, 11);
-            cout << "main menu.." << endl;
+            cout << "Mapa ni Pepe.." << endl;
             SetConsoleTextAttribute(hConsole, 14);
             cout << "                                        __________________________________________" << endl;
             cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -880,7 +1105,7 @@ void c_fili() {
 }
 
 void C_fili() {
-
+    system("TITLE El Filibusterismo - Tauhan");
 
 }
 
@@ -895,7 +1120,7 @@ void t_fili() {
 }
 
 void T_fili() {
-
+    system("TITLE El Filibusterismo - Talasalitaan");
 
 }
 

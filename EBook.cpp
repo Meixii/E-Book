@@ -6,6 +6,7 @@
 #include <dos.h>
 #include <wchar.h>
 #include <locale.h>
+#include <iomanip>
 
 using namespace std;
 
@@ -134,35 +135,69 @@ void AboutUs() {
     system("TITLE Lakbay ni Pepe - About Us");
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     COORD CursorPosition;
+    cout << "" << endl << endl << endl << endl << endl << endl << endl;
     SetConsoleTextAttribute(hConsole, 14);
     cout << "                                        __________________________________________" << endl;
     cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                                       ABOUT US\n" << endl;
+    cout << "                                                     Tungkol sa Amin\n" << endl;
 
 
-    cout << "                                           Group 3: \"MGA BATA NI SIR RR\"\n\n";
+    cout << "                                              Group 3: \"";
+    SetConsoleTextAttribute(hConsole, 14); 
+    cout << "MGA BATA NI SIR RR";
+    SetConsoleTextAttribute(hConsole, 11); 
+    cout << "\"\n\n";
 
     cout << "                                     Programmers: \n";
-    cout << "                                       - FUNGO, GIAN HIGINO \n";
-    cout << "                                       - JULIANE, CARL JAMES \n\n";
-    cout << "                                       - LISTANGCO, LAURENZ \n";
-    cout << "                                       - LLANES, KEVIN \n";
-    cout << "                                       - LONOZA, JOSHUA OLIVERA \n";
-    cout << "                                       - LUGTU, BEA \n";
-    cout << "                                       - MAYONADO, CHRISTIAN \n";
-    cout << "                                       - MIRANDA, KARL \n";
-    cout << "                                       - MONTE, MARTIN LORENCE \n";
-
-
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       - ";
+    SetConsoleTextAttribute(hConsole, 7); 
+    cout << "FUNGO, GIAN HIGINO \n";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       - ";
+    SetConsoleTextAttribute(hConsole, 7); 
+    cout << "JULIANE, CARL JAMES \n";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       - ";
+    SetConsoleTextAttribute(hConsole, 7); 
+    cout << "LISTANGCO, LAURENZ \n";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       - ";
+    SetConsoleTextAttribute(hConsole, 7); 
+    cout << "LLANES, KEVIN \n";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       - ";
+    SetConsoleTextAttribute(hConsole, 7); 
+    cout << "LONOZA, JOSHUA OLIVERA \n";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       - ";
+    SetConsoleTextAttribute(hConsole, 7); 
+    cout << "LUGTU, BEA \n";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       - ";
+    SetConsoleTextAttribute(hConsole, 7); 
+    cout << "MAYONADO, CHRISTIAN \n";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       - ";
+    SetConsoleTextAttribute(hConsole, 7); 
+    cout << "MIRANDA, KARL \n";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       - ";
+    SetConsoleTextAttribute(hConsole, 7); 
+    cout << "MONTE, MARTIN LORENCE \n\n";
+    SetConsoleTextAttribute(hConsole, 11);
     cout << "                                     Campus: \n";
+    SetConsoleTextAttribute(hConsole, 7);
     cout << "                                       University of Caloocan City - North Congress \n\n";
-
+    SetConsoleTextAttribute(hConsole, 11);
     cout << "                                     Program: \n";
-    cout << "                                      Bachelor of Science in Computer Science (BSCS) \n\n";
-
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "                                       Bachelor of Science in Computer Science (BSCS) \n\n";
+    SetConsoleTextAttribute(hConsole, 11);
     cout << "                                     Section: \n";
-    cout << "                                        1st - A \n\n";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "                                       1st - A \n\n";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "                                        __________________________________________" << endl;
     cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -188,14 +223,21 @@ void Home() {
     Logo();
 
     SetConsoleTextAttribute(hConsole, 11);
+    cout << "             Ang \"Lakbay ni Pepe\" (LnP) ay isang elektronik na libro o \"E\-Book\" kung tawagin; Gawa ng grupo" << endl;
+    cout << "           ika\-tatlo na pinangalanang \"Mga Bata ni Sir RR\". Ang LnP ay naglalaman ng mga kaalaman patungkol" << endl;
+    cout << "           sa bidang si \"Pepe\" at ang mga likhang nobela na nakasalin sa wikang Tagalog. Ang kilalang nobela" << endl;
+    cout << "           na ito ay pinamagatang \"Noli Me Tangere\" at \"El Filibusterismo\". Ang programang ito ay naglalaman" << endl;
+    cout << "           ng buod sa bawat kabanata, mga pagkikilanlan sa mga tauhan, at mga talasalitaan nang mas maunawaan " << endl;
+    cout << "           ng mga mangbabasa ang mga salitang matatalinghaga sa bawat nobelang nabanggit." << endl << endl;
 
-    cout << "      Ang \"Lakbay ni Pepe\" ay binubuo ng mga kaukulang impormasyon ukol kay Dr. Jose P. Rizal at mga likhang niyang nobela" << endl;
-    cout << "    na \"Noli me tangere\" at \"El Filibusterismo\" na isinalin sa tagalog at ito ay binuod, makikita rin ang mga tauhan at " << endl;
-    cout << "    mga talasalatian sa bawat kabanata ng mga nabanggit na nobela." << endl << endl;
+    SetConsoleTextAttribute(hConsole, 8);
+    cout << "           The \"Lakbay ni Pepe\" application was created for offline browsing of Dr. Jose P. Rizal's books" << endl;
+    cout << "           such as \"Noli me Tangere\" and \"El Filibusterismo.\" This program was created for educational" << endl;
+    cout << "           purposes only and makes no claims for public use." << endl << endl;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "            ________________________________________________________________________________________________" << endl;
+    cout << "           /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
 
-    cout << "    The \"Lakbay ni Pepe\" application was created for offline browsing of Dr. Jose P. Rizal's books such as \"Noli me " << endl;
-    cout << "    Tangere\" and \"El Filibusterismo.\" This program was created for educational purposes only and makes no claims for" << endl;
-    cout << "    public use." << endl << endl;
 
     cout << "                                             ";
     SetConsoleTextAttribute(hConsole, 7);
@@ -305,7 +347,9 @@ void toc() {
     cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
     SetConsoleTextAttribute(hConsole, 11);
     cout << "                                       -------------------------------------------" << endl;
-    cout << "                                           Tip: Maglagay lamang ng numero" << endl;
+    SetConsoleTextAttribute(hConsole, 8);
+    cout << "                                              Tip: Maglagay lamang ng numero" << endl;
+    SetConsoleTextAttribute(hConsole, 11);
     cout << "                                       -------------------------------------------" << endl << endl;
     SetConsoleTextAttribute(hConsole, 7);
     cout << "                                       Pumili ng inyong destinasyon: ";
@@ -806,11 +850,7 @@ void t_noli() {
 // compiled
 void T_noli() {
     system("TITLE Noli Me Tangere - Talasalitaan");
-
 }
-// ***************************************************************************************************************************************************************************************
-// ***************************************************************************************************************************************************************************************
-
 
 // El Filibusterismo - Full {Whole Summary, Characters, Termnilogies}
 
@@ -924,6 +964,7 @@ void k_fili() {
     else if (cin.fail())
     {
         cin.clear(); cin.ignore(512, '\n');
+        cout << "" << endl << endl << endl << endl << endl << endl << endl;
         SetConsoleTextAttribute(hConsole, 14);
         cout << "                                        __________________________________________" << endl;
         cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -948,6 +989,8 @@ void k_fili() {
     else // if user inputted 0 or 
     {
         system("cls");
+
+        cout << "" << endl << endl << endl << endl << endl << endl << endl;
         SetConsoleTextAttribute(hConsole, 14);
         cout << "                                        __________________________________________" << endl;
         cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -1065,7 +1108,7 @@ void quit() {
             SetConsoleTextAttribute(hConsole, 11);
             cout << "Lakbay ni Pepe!" << endl;
             SetConsoleTextAttribute(hConsole, 7);
-            cout << "                                                         Paalam..." << endl;
+            cout << "                                                  Paalam mula sa Group 3" << endl;
             SetConsoleTextAttribute(hConsole, 14);
             cout << "                                        __________________________________________" << endl;
             cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -1082,7 +1125,7 @@ void quit() {
             SetConsoleTextAttribute(hConsole, 7);
             cout << "                                                Babalik sa "; 
             SetConsoleTextAttribute(hConsole, 11);
-            cout << "Mapa ni Pepe.." << endl;
+            cout << "Simula.." << endl;
             SetConsoleTextAttribute(hConsole, 14);
             cout << "                                        __________________________________________" << endl;
             cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -1326,6 +1369,8 @@ do {
     cout << "Enter a number: ";
     cin >> num;
 }while(num < 0);
+
+setw(1)
 
 */
 
@@ -1724,5 +1769,14 @@ Time in/out of the User
 - Removed Account Plan.
 */
 
+/*
 
+TASK
+
+> Tutorial
+    - 
+
+
+
+*/
 

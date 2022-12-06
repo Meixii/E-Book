@@ -41,17 +41,30 @@ void t_fili();
     // compiled
 void C_fili();
 
+void printK();
+void navigation();
 void AboutUs();
+
+    // error
+
+void e1(); // TOC input Error
+void e2(); // Ang Bida input Error
+void e3(); // Noli Navigation input Error
+void e4(); // Fili Navigation input Error
+void e5();
+
+
 void quit();
 //void function(void);
 //void tablefk();
 
+int k_num;
+
+HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
 int main()
 {
-
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD CursorPosition;
+    
 
     // Start Menu
     system("mode 120, 50");
@@ -89,8 +102,8 @@ void function(void)
 
 void Tutorial()
 {
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD CursorPosition;
+    
+     
 
     Logo();
 
@@ -100,8 +113,8 @@ void Tutorial()
 void Logo() {
     system("mode 120, 50");
     system("TITLE Lakbay ni Pepe - Group 3");
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD CursorPosition;
+    
+     
 
     cout << endl;
     cout << endl;
@@ -133,8 +146,8 @@ void Logo() {
 void AboutUs() {
     system("mode 120, 50");
     system("TITLE Lakbay ni Pepe - About Us");
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD CursorPosition;
+    
+     
     cout << "" << endl << endl << endl << endl << endl << endl << endl;
     SetConsoleTextAttribute(hConsole, 14);
     cout << "                                        __________________________________________" << endl;
@@ -217,8 +230,8 @@ void AboutUs() {
 void Home() {
     system("mode 120, 50");
     system("TITLE Lakbay ni Pepe - Home");
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD CursorPosition;
+    
+     
 
     Logo();
 
@@ -251,9 +264,7 @@ void Home() {
 void toc() {
     system("mode 120, 50");
     system("TITLE Lakbay ni Pepe - Mapa");
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD CursorPosition;
-
+    
     int table;
     cout << "" << endl << endl << endl << endl << endl;
     SetConsoleTextAttribute(hConsole, 14);
@@ -414,9 +425,15 @@ void toc() {
         system("cls");
         quit();
         break;
+    
+    default:
 
-    defaut:
-        break;
+        if (cin.fail())
+        {
+            cin.clear(); cin.ignore(512, '\n');
+        }
+        e1();
+
     }
     
     system("pause");
@@ -428,8 +445,8 @@ void toc() {
 // ***************************************************************************************************************************************************************************************
 
 void Face() {
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD CursorPosition;
+    
+     
     SetConsoleTextAttribute(hConsole, 7);
     cout << "                                               ,,,*,/," << endl;
     cout << "                                              ,((*,,**/(#%%&%#(###%%%#(#%*" << endl;
@@ -464,8 +481,8 @@ void Face() {
 
 void Rizal() {
     system("TITLE Lakbay ni Pepe - Ang Bayani");
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD CursorPosition;
+    
+     
     SetConsoleTextAttribute(hConsole, 14);
     cout << "       ____________________________________________________________________________________________________________" << endl;
     cout << "      /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -529,8 +546,8 @@ void Rizal() {
 
 void Rizal2() {
     system("TITLE Lakbay ni Pepe - Ang Bayani");
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD CursorPosition;
+    
+     
     SetConsoleTextAttribute(hConsole, 14);
     cout << "       ____________________________________________________________________________________________________________" << endl;
     cout << "      /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -614,15 +631,20 @@ void Rizal2() {
         break;
 
     default:
-        /*
-        
-        ERROR CHECK
-        
-        */
+        e2();
+        Rizal2();
         break;
     }
     system("cls");
 }
+/*
+
+    if (k_num == 40)
+    {
+
+}
+
+*/
 
 // Noli me Tangere - Full {Whole Summary, Characters, Termnilogies}
 
@@ -647,8 +669,8 @@ void k_noli() {
     system("mode 120, 50");
     using namespace std;
 
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD CursorPosition;
+    
+     
 
     int k_num;
     cout << "" << endl << endl << endl << endl << endl << endl << endl;
@@ -910,10 +932,6 @@ void k_fili() {
     system("TITLE El Filibusterismo - Kabanata");
     using namespace std;
 
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD CursorPosition;
-
-    int k_num;          // yung mga apostrophe nalang problema
     cout << "" << endl << endl << endl << endl << endl << endl << endl;
     SetConsoleTextAttribute(hConsole, 14);
     cout << "                                        __________________________________________" << endl;
@@ -929,11 +947,26 @@ void k_fili() {
 
     cout << "                                       Pumili ng kabanata: ";
     cin >> k_num;
-
     system("cls");
+    printK();
+}
+
+void printK() {
+    
+    /*
+    if (!(k_num < 1 || k_num > 39))
+    {
+        cin.clear();
+        system("cls");
+        k_fili();
+    }
+    */
 
     fstream fil_k;
     fil_k.open("Resources/Fili/Buod/fil_k_" + to_string(k_num) + ".txt", ios::in);
+
+    fstream fil_t;
+    fil_t.open("Resources/Fili/Talasalitaan/fil_t_" + to_string(k_num) + ".txt", ios::in);
 
     if (fil_k.is_open())
     {
@@ -947,7 +980,7 @@ void k_fili() {
         cout << "                                        __________________________________________" << endl;
         cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
         SetConsoleTextAttribute(hConsole, 11);
-   
+
         for (int i = 1; i <= 120; i++) {
             cout << "=";
         }
@@ -959,6 +992,22 @@ void k_fili() {
             cout << line << endl;
         }
         fil_k.close();
+
+        cout << endl << endl;
+    }
+
+
+    if (fil_t.is_open())
+    {
+        SetConsoleTextAttribute(hConsole, 7);
+        cout << "Talasalitaan:" << endl;
+        SetConsoleTextAttribute(hConsole, 14);
+        string line_t;
+        while (getline(fil_t, line_t))
+        {
+            cout << line_t << endl;
+        }
+        fil_t.close();
     }
 
     else if (cin.fail())
@@ -977,15 +1026,21 @@ void k_fili() {
         cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
         SetConsoleTextAttribute(hConsole, 11);
 
-        cout << "                                       ERROR: Maglagay lamang ng Numero" << endl << endl;
-        
-        cout << "                                       ";
-        SetConsoleTextAttribute(hConsole, 14);
+        SetConsoleTextAttribute(hConsole, 11);
+        cout << "                                       -------------------------------------------" << endl << endl;
+        SetConsoleTextAttribute(hConsole, 5);
+        cout << "                                         ERROR: ";
+        SetConsoleTextAttribute(hConsole, 8);
+        cout << "Maglagay lamang ng Numero" << endl << endl;
+        SetConsoleTextAttribute(hConsole, 11);
+        cout << "                                       -------------------------------------------" << endl << endl;
+        cout << "                                             ";
+        SetConsoleTextAttribute(hConsole, 7);
         system("pause");
         system("cls");
         k_fili();
     }
-    
+
     else // if user inputted 0 or 
     {
         system("cls");
@@ -1003,9 +1058,16 @@ void k_fili() {
         cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
         SetConsoleTextAttribute(hConsole, 11);
 
-        cout << "                                       ERROR: Hindi mahanap ang Kabanata" << endl;
-        cout << "                                       ";
-        SetConsoleTextAttribute(hConsole, 14);
+        SetConsoleTextAttribute(hConsole, 11);
+        cout << "                                       -------------------------------------------" << endl << endl;
+        SetConsoleTextAttribute(hConsole, 5);
+        cout << "                                         ERROR: ";
+        SetConsoleTextAttribute(hConsole, 8);
+        cout << "Hindi mahanap ang Kabanata." << endl << endl;
+        SetConsoleTextAttribute(hConsole, 11);
+        cout << "                                       -------------------------------------------" << endl << endl;
+        cout << "                                             ";
+        SetConsoleTextAttribute(hConsole, 7);
         system("pause");
         system("cls");
         k_fili();
@@ -1017,6 +1079,10 @@ void k_fili() {
     }
     cout << "\n" << endl;
 
+    navigation();
+}
+
+void navigation() {
     char nav;
     SetConsoleTextAttribute(hConsole, 14);
     cout << "                                        __________________________________________" << endl;
@@ -1050,14 +1116,16 @@ void k_fili() {
     switch (toupper(nav)) {
         case 'B':
             system("cls");
+            k_num--;
+            printK();
             /* Previous */
-            quit();
             break;
 
         case 'N':
             system("cls");
+            k_num++;
+            printK();
             /* Next */
-            quit();
             break;
 
         case 'I':
@@ -1072,7 +1140,8 @@ void k_fili() {
             break;
 
         default:
-
+            e3();
+            printK();
             break;
     }
 
@@ -1080,13 +1149,102 @@ void k_fili() {
     system("cls");
 }
 
+// ERROR
+
+void e1() {
+
+    system("cls");
+    cout << "" << endl << endl << endl << endl << endl << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       -------------------------------------------" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 5);
+    cout << "                                         ERROR: ";
+    SetConsoleTextAttribute(hConsole, 8);
+    cout << "Maglagay lamang ng tamang input." << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       -------------------------------------------" << endl << endl;
+    cout << "                                             ";
+    system("pause");
+    system("cls");
+    toc();
+
+}void e2() {
+
+    system("cls");
+    cout << "" << endl << endl << endl << endl << endl << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       -------------------------------------------" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 5);
+    cout << "                                         ERROR: ";
+    SetConsoleTextAttribute(hConsole, 8);
+    cout << "Maglagay lamang ng tamang input." << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       -------------------------------------------" << endl << endl;
+    cout << "                                             ";
+    system("pause");
+    system("cls");
+
+}
+
+void e3() {
+
+    system("cls");
+    cout << "" << endl << endl << endl << endl << endl << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       -------------------------------------------" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 5);
+    cout << "                                         ERROR: ";
+    SetConsoleTextAttribute(hConsole, 8);
+    cout << "Maglagay lamang ng tamang input." << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       -------------------------------------------" << endl << endl;
+    cout << "                                             ";
+    system("pause");
+    system("cls");
+
+}
+
+void e4() {
+
+    system("cls");
+    cout << "" << endl << endl << endl << endl << endl << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       -------------------------------------------" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 5);
+    cout << "                                         ERROR: ";
+    SetConsoleTextAttribute(hConsole, 8);
+    cout << "Maglagay lamang ng tamang input." << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       -------------------------------------------" << endl << endl;
+    cout << "                                             ";
+    system("pause");
+    system("cls");
+}
+
+void e5() {
+    
+    system("cls");
+    cout << "" << endl << endl << endl << endl << endl << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       -------------------------------------------" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 5);
+    cout << "                                         ERROR: ";
+    SetConsoleTextAttribute(hConsole, 8);
+    cout << "Maglagay lamang ng tamang input." << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       -------------------------------------------" << endl << endl;
+    cout << "                                             ";
+    system("pause");
+    system("cls");
+
+}
+
 void quit() {
 
     int exitprompt;
     char input;
 
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD CursorPosition;
+    
 
     Logo();
     cout << "                            Are you sure you want to terminate the program? ";
@@ -1123,7 +1281,7 @@ void quit() {
             cout << "                                        __________________________________________" << endl;
             cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
             SetConsoleTextAttribute(hConsole, 7);
-            cout << "                                                Babalik sa "; 
+            cout << "                                                    Babalik sa "; 
             SetConsoleTextAttribute(hConsole, 11);
             cout << "Simula.." << endl;
             SetConsoleTextAttribute(hConsole, 14);
@@ -1178,45 +1336,6 @@ void T_fili() {
 
 */
 
-
-
-/*
-    char nav;
-    cin >> nav;
-
-    if (nav == 'B')
-    {
-        int k_num = k_num--;
-        fstream fil_k;
-        fil_k.open("Resources/Fili/Buod/fil_k_" + to_string(k_num) + ".txt", ios::in);
-    }
-        else if (fil_k.is_open())
-        {
-            cout << endl;
-            cout << "                                                    [ Kabanata " << k_num << " ]" << endl << endl;
-
-            for (int i = 1; i <= 120; i++) {
-                cout << "=";
-            }
-            cout << "\n" << endl;
-
-            string line;
-            while (getline(fil_k, line))
-            {
-                cout << line << endl;
-            }
-            fil_k.close();
-        }
-
-        else if (cin.fail())
-        {
-            cin.clear(); cin.ignore(512, '\n');
-            cout << "Maglagay lamang ng numero." << endl << endl;
-            system("pause");
-            system("cls");
-            k_fili();
-        }
-    */
 
 // NOTES:
 

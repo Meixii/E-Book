@@ -1,5 +1,5 @@
 	Magdaraos ng ikaunang palabas ang samahan ng operang Pranses ni Mr. Jouy sa dulaang Variedades. Ikapito at
-	kalahati palang ng gabi ay wala nang mabiling tiket. Sa ikawalo’y malaking halaga na ang itinatawad sa
+	kalahati palang ng gabi ay wala nang mabiling tiket. Sa ikawalo ay malaking halaga na ang itinatawad sa
 	mangisa-ngisang nabibiling tiket.
 
 	Ngunit may isang Kastila ang nararahuyo sa gayung kaguluhan, siya si Camaroncocido. Lumapit naman ang isang
@@ -14,4 +14,4 @@
 	marino, kawani at maraming matataas na tao ay nagtanggol dito. Sa pag-iisa ni Camaroncocido ay marami itong
 	napuna sa kaniyang pagmamatyag.
 
-	May narinig siyang “ang palatandaan ay isang putok” ngunit hindi niya ito pinansin.
+	May narinig siyang *ang palatandaan ay isang putok* ngunit hindi niya ito pinansin.

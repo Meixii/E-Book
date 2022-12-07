@@ -1,5 +1,5 @@
 ﻿  EBook.cpp
-C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(139,13): warning C4129: '-': unrecognized character escape sequence
-C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(140,13): warning C4129: '-': unrecognized character escape sequence
-C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(1909,9): warning C4101: 'exitprompt': unreferenced local variable
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(158,13): warning C4129: '-': unrecognized character escape sequence
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(159,13): warning C4129: '-': unrecognized character escape sequence
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(2466,9): warning C4101: 'exitprompt': unreferenced local variable
   EBook.vcxproj -> C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\x64\Debug\EBook.exe

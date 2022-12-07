@@ -1,8 +1,5 @@
-﻿KABANATA 17
-
-
-1. Liwasan – parke ng isang lugar na may espasyo para sa pag-aaliw
-2. Paghanga – iniidolo o nagustuhan sa isang tao o bagay
-3. Inukit – panlililok
-4. Nangangamba – nag-aalala
-5. Panlilinlang – pandaraya
+1. Liwasan: parke ng isang lugar na may espasyo para sa pag-aaliw
+2. Paghanga: iniidolo o nagustuhan sa isang tao o bagay
+3. Inukit: panlililok
+4. Nangangamba: nag-aalala
+5. Panlilinlang: pandaraya

@@ -1,11 +1,8 @@
-﻿KABANATA 18
-
-
-1. Prayle – pari
-2. Pahintulot – pagpayag
-3. Pagsisiyasat – pagmamanman
-4. Pirimide – pyramid
-5. Papiro – isang halamang tubig
-6. Kinatatalaan – kinasusulatan
-7. Espinghe – isang halimaw na may katawan ng leon at ulo ng tao
-8. Nakatuon – nakatutok, nakatitig
+1. Prayle: pari
+2. Pahintulot: pagpayag
+3. Pagsisiyasat: pagmamanman
+4. Pirimide: pyramid
+5. Papiro: isang halamang tubig
+6. Kinatatalaan: kinasusulatan
+7. Espinghe: isang halimaw na may katawan ng leon at ulo ng tao
+8. Nakatuon: nakatutok, nakatitig

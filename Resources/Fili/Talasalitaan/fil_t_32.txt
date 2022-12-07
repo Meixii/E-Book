@@ -1,8 +1,5 @@
-﻿KABANATA 32
-
-
-1. Napilitan – puwersahin
-2. Sinigaan – sinunog
-3. Namahala – namuno
-4. Pagtatalumpati – pagsasalita sa entablado
-5. Nakabilanggo – nakakulong
+1. Napilitan: puwersahin
+2. Sinigaan: sinunog
+3. Namahala: namuno
+4. Pagtatalumpati: pagsasalita sa entablado
+5. Nakabilanggo: nakakulong

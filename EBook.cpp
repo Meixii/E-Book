@@ -1,3 +1,12 @@
+
+/*
+* 
+* 
+                    Lakbay ni Pepe   ||    Group 3 "Mga Bata ni Sir RR"   ||    BSCS1A@2022      
+*
+* 
+*/
+
 #include <iostream>
 #include <fstream>
 #include <ctime>
@@ -10,91 +19,65 @@
 #include <conio.h>
 #include <stdio.h>
 
-
 using namespace std;
 
-// Main Menu
+    // Main Menu
 void Logo();
 void Face();
 void toc();
 void Home();
 
-// Rizal
+    // Rizal
 void Rizal();
 void Rizal2();
-void nav_Rizal2();
 
-// Noli Me Tangere
-void noli();
-void noli2();
+    // Navigation
+void nav_Rizal2();
 void nav_noli();
 void nav_noli2();
+void nav_fili();
+void nav_fili2();
+void nav_Fil_K();
+void nav_Nol_K();
+void nav_end();
+
+    // Noli Me Tangere
+void noli();
+void noli2();
+
 
     // chapter
 void chap_Nol_K();
-
-    // compiled
-void Nol_C();
-void print_Nol_C();
-
-void Nol_T();
-void print_Nol_T();
-
-// El Filibusterismo
-void fili();
-void fili2();
-void nav_fili();
-void nav_fili2();
-
-    // chapter
 void chap_Fil_K();
 
     // compiled
+void Nol_C();
 void Fil_C();
-void print_Fil_C();
 
-void Fil_T();
+    // El Filibusterismo
+void fili();
+void fili2();
 
 
     // print
+void print_Nol_C();
+void print2_Nol_C();
+void print_Fil_C();
 void print_Fil_K();
 void print_Nol_K();
+void print_Nol_C();
+void print2_Nol_C();
+void print_Fil_C();
+void print2_Fil_C();
 
-void nav_Fil_K();
-void nav_Nol_K();
-
-void error_Nol_K();
-void error_Nol_C();
-void error_print_Nol_C();
-void error_Nol_T();
-
-void error_Fil_K();
-void error_Fil_C();
-void error_print_Fil_C();
-void error_Fil_T();
-
-
-
+void nav_end();
 void AboutUs();
-
-    // error
-//Rizal
-void e1(); // TOC
-void e2(); // Rizal
-
-void e3(); // Noli 1
-void e4(); // Noli 2
-
-void e5(); // Fili 1
-void e6(); // Fili 2
-
-void error_quit();
 void quit();
 
+    // error
+void error();
+
 int k_num, c_num;
-
-
-
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
 int main()
@@ -142,8 +125,6 @@ void Logo() {
 
 }
 
-
-
 // Home
 void Home() {
 
@@ -176,8 +157,6 @@ void Home() {
     system("cls");
     return toc();
 }
-
-
 
 // Table of Contents
 void toc() {
@@ -351,12 +330,11 @@ void toc() {
         {
             cin.clear(); cin.ignore(512, '\n');
         }
-        e1();
+        error();
+        return toc();
         break;
     }
 }
-
-
 
 
 // Rizal
@@ -481,7 +459,7 @@ void Rizal2() {
     cout << endl;
 
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "       Bumalik :  ";
+    cout << "                               Bumalik :  ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "1";
 
@@ -493,15 +471,15 @@ void Rizal2() {
     SetConsoleTextAttribute(hConsole, 11);
     cout << "       El Filibusterismo : ";
     SetConsoleTextAttribute(hConsole, 14);
-    cout << "3";
+    cout << "3" << endl;
 
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "       Mapa ni Pepe : ";
+    cout << "                                       Mapa ni Pepe : ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "4";
 
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "       Umalis: ";
+    cout << "       Ipagliban ang Paglalakbay: ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "5" << endl;
 
@@ -627,12 +605,20 @@ void nav_Rizal2() {
         break;
 
     default:
-        system("cls");
-        e2();
+        error();
+        return Rizal2();
         break;
     }
 
 }
+
+
+/*
+
+    <==============================================================================>
+    <==============================================================================>
+
+*/
 
 
 // Noli Me Tangere - Buod
@@ -660,7 +646,7 @@ void noli() {
 
 
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "                   Bumalik  (Rizal):  ";
+    cout << "          Bumalik  (Rizal):  ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "1";
 
@@ -675,7 +661,7 @@ void noli() {
     cout << "3";
 
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "       Umalis: ";
+    cout << "       Ipagliban ang Paglalakbay: ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "4" << endl;
 
@@ -731,7 +717,7 @@ system("TITLE Lakbay ni Pepe - Noli Me Tangere");
     cout << endl;
 
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "       Bumalik  (Buod):  ";
+    cout << "                               Bumalik  (Buod):  ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "1";
 
@@ -743,15 +729,15 @@ system("TITLE Lakbay ni Pepe - Noli Me Tangere");
     SetConsoleTextAttribute(hConsole, 11);
     cout << "       Mga Kabanata : ";
     SetConsoleTextAttribute(hConsole, 14);
-    cout << "3";
+    cout << "3" << endl;
 
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "       Mapa ni Pepe : ";
+    cout << "                                       Mapa ni Pepe : ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "4";
 
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "       Umalis: ";
+    cout << "       Ipagliban ang Paglalakbay: ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "5" << endl;
 
@@ -811,8 +797,8 @@ void nav_noli() {
         break;
 
     default:
-        system("cls");
-        e3();
+        error();
+        noli();
         break;
     }
 
@@ -850,8 +836,8 @@ void nav_noli2() {
         break;
 
     default:
-        system("cls");
-        e4();
+        error();
+        noli2();
         break;
     }
 
@@ -915,7 +901,7 @@ void print_Nol_K() {
         }
         cout << endl;
         SetConsoleTextAttribute(hConsole, 11);
-        cout << "      Huling Kabanata: ";
+        cout << "                           Huling Kabanata: ";
         SetConsoleTextAttribute(hConsole, 14);
         cout << "1";
         SetConsoleTextAttribute(hConsole, 11);
@@ -925,13 +911,15 @@ void print_Nol_K() {
         SetConsoleTextAttribute(hConsole, 11);
         cout << "      Mga Kabanata : ";
         SetConsoleTextAttribute(hConsole, 14);
-        cout << "3";
+        cout << "3" << endl;
+
+
         SetConsoleTextAttribute(hConsole, 11);
-        cout << "      Mapa ni Pepe : ";
+        cout << "                                    Mapa ni Pepe : ";
         SetConsoleTextAttribute(hConsole, 14);
         cout << "4";
         SetConsoleTextAttribute(hConsole, 11);
-        cout << "      Umalis: ";
+        cout << "      Ipagliban ang Paglalakbay: ";
         SetConsoleTextAttribute(hConsole, 14);
         cout << "5" << endl;
 
@@ -1067,13 +1055,26 @@ void nav_Nol_K() {
         system("cls");
         system("cls");
         k_num--;
-        print_Nol_K();
+        if (k_num >= 1) {
+            print_Nol_K();
+        }
+        else {
+            chap_Nol_K();
+        }
         break;
 
     case 50: // ,
         system("cls");
         k_num++;
-        print_Nol_K();
+        if (k_num <= 64)
+        {
+            print_Fil_K();
+        }
+
+        else {
+            nav_end();
+        }
+ 
         break;
 
     case 51:
@@ -1092,8 +1093,8 @@ void nav_Nol_K() {
         break;
 
     default:
-        system("cls");
-        error_Nol_K();
+        error();
+        print_Nol_K();
         break;
     }
 
@@ -1123,7 +1124,7 @@ void Nol_C() {
         }
         cout << endl;
         SetConsoleTextAttribute(hConsole, 11);
-        cout << "                               Susunod na pahina: ";
+        cout << "                       Susunod na pahina: ";
         SetConsoleTextAttribute(hConsole, 14);
         cout << "1";
         SetConsoleTextAttribute(hConsole, 11);
@@ -1131,7 +1132,7 @@ void Nol_C() {
         SetConsoleTextAttribute(hConsole, 14);
         cout << "2";
         SetConsoleTextAttribute(hConsole, 11);
-        cout << "      Umalis: ";
+        cout << "      Ipagliban ang Paglalakbay: ";
         SetConsoleTextAttribute(hConsole, 14);
         cout << "3" << endl;
 
@@ -1174,12 +1175,14 @@ void Nol_C() {
 
         else if (cin.fail())
         {
-            error_Nol_C();
+            error();
+            Nol_C();
         }
 
         else
         {
-            error_Nol_C();
+            error();
+            Nol_C();
         }
 
         int nav;
@@ -1204,13 +1207,13 @@ void Nol_C() {
             break;
 
         default:
-            system("cls");
-            error_Nol_C();
+            error();
+            Nol_C();
             break;
         }
     }
 
-// Noli Me Tangere - Tauhan 2 - 5
+// Noli Me Tangere - Tauhan 2 - 3
 void print_Nol_C() {
     system("TITLE Noli Me Tangere - Tauhan");
 
@@ -1233,7 +1236,7 @@ void print_Nol_C() {
     }
     cout << endl;
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "                  Huling pahina: ";
+    cout << "            Huling pahina: ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "1";
     SetConsoleTextAttribute(hConsole, 11);
@@ -1245,7 +1248,7 @@ void print_Nol_C() {
     SetConsoleTextAttribute(hConsole, 14);
     cout << "3";
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "      Umalis: ";
+    cout << "      Ipagliban ang Paglalakbay: ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "4" << endl;
 
@@ -1287,12 +1290,14 @@ void print_Nol_C() {
 
     else if (cin.fail())
     {
-        error_print_Nol_C();
+        error();
+        print_Nol_C();
     }
 
     else
     {
-        error_print_Nol_C();
+        error();
+        print_Nol_C();
     }
 
     int nav;
@@ -1317,10 +1322,10 @@ void print_Nol_C() {
     case 50: // ,
         system("cls");
         c_num++;
-        if (c_num <= 5)
+        if (c_num <= 4)
         print_Nol_C();
         else {
-            return Nol_C();
+            return print2_Nol_C();
         }
         break;
 
@@ -1335,21 +1340,139 @@ void print_Nol_C() {
         break;
 
     default  :
+        error();
+        print_Nol_C();
+        break;
+    }
+}
+
+// Noli Me Tangere - Tauhan 5
+void print2_Nol_C() {
+    system("TITLE Noli Me Tangere - Tauhan");
+
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                                Kilalanin ang mga Tauhan" << endl;
+    cout << "                                                mula sa \"Noli Me Tangere\"" << endl;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "                                                       Nabigasyon:" << endl;
+
+    SetConsoleTextAttribute(hConsole, 8);
+    for (int i = 1; i <= 120; i++) {
+        cout << "-";
+    }
+    cout << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                       Huling pahina: ";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "1";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "      Mapa ni Pepe : ";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "2";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "      Ipagliban ang Paglalakbay: ";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "3" << endl;
+
+    SetConsoleTextAttribute(hConsole, 8);
+    for (int i = 1; i <= 120; i++) {
+        cout << "-";
+    }
+
+    cout << endl << endl;
+
+    SetConsoleTextAttribute(hConsole, 11);
+    for (int i = 1; i <= 120; i++) {
+        cout << "=";
+    }
+
+
+    cout << endl << endl;
+
+    c_num = 5;
+    fstream nol_c;
+    nol_c.open("Resources/Noli/Tauhan/nol_c" + to_string(c_num) + ".txt", ios::in);
+
+
+    if (nol_c.is_open()) {
+        SetConsoleTextAttribute(hConsole, 7);
+        string line;
+        while (getline(nol_c, line))
+        {
+            cout << "   " << line << endl;
+        }
+        nol_c.close();
+
+        cout << endl << endl;
+
+        SetConsoleTextAttribute(hConsole, 11);
+        for (int i = 1; i <= 120; i++) {
+            cout << "=";
+        }
+    }
+
+    else if (cin.fail())
+    {
+        error();
+        print2_Nol_C();
+    }
+
+    else
+    {
+        error();
+        print2_Nol_C();
+    }
+
+    int nav;
+
+    nav = _getch();
+
+    switch (nav) {
+
+
+    case 49: // ,
         system("cls");
-        error_print_Nol_C();
+        c_num--;
+        if (c_num == 4) {
+            return print_Nol_C();
+        }
+        else {
+            print2_Nol_C();
+        }
+        break;
+
+    case 50:
+        system("cls");
+        toc();
+        break;
+
+    case 51:
+        system("cls");
+        quit();
+        break;
+
+    default:
+        error();
+        print2_Nol_C();
         break;
     }
 }
 
 
-// Noli Me Tangere - Talasalitaan
-void Nol_T() {
-    system("TITLE Noli Me Tangere - Talasalitaan");
-}
+/*
 
-void print_Nol_T() {
+    <==============================================================================>
+    <==============================================================================>
 
-}
+*/
+
 
 // El Filibusterismo - Buod
 void fili() {
@@ -1389,7 +1512,7 @@ void fili() {
     cout << "3";
 
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "       Umalis: ";
+    cout << "       Ipagliban ang Paglalakbay: ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "4" << endl;
 
@@ -1468,7 +1591,7 @@ void fili2()
     cout << "4";
 
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "       Umalis: ";
+    cout << "       Ipagliban ang Paglalakbay: ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "5" << endl;
 
@@ -1533,8 +1656,8 @@ void nav_fili() {
         break;
 
     default:
-        system("cls");
-        e1();
+        error();
+        fili();
         break;
     }
 
@@ -1572,12 +1695,13 @@ void nav_fili2() {
         break;
 
     default:
-        system("cls");
-        error_Nol_K();
+        error();
+        fili2;
         break;
     }
 
 }
+
 
 // El Filibusterismo - Chapters
 void chap_Fil_K() {
@@ -1636,7 +1760,7 @@ void print_Fil_K() {
 
         cout << endl;
         SetConsoleTextAttribute(hConsole, 11);
-        cout << "      Huling Kabanata: ";
+        cout << "                           Huling Kabanata: ";
         SetConsoleTextAttribute(hConsole, 14);
         cout << "1";
         SetConsoleTextAttribute(hConsole, 11);
@@ -1646,13 +1770,15 @@ void print_Fil_K() {
         SetConsoleTextAttribute(hConsole, 11);
         cout << "      Mga Kabanata : ";
         SetConsoleTextAttribute(hConsole, 14);
-        cout << "3";
+        cout << "3" << endl;
+
+
         SetConsoleTextAttribute(hConsole, 11);
-        cout << "      Mapa ni Pepe : ";
+        cout << "                                    Mapa ni Pepe : ";
         SetConsoleTextAttribute(hConsole, 14);
         cout << "4";
         SetConsoleTextAttribute(hConsole, 11);
-        cout << "      Umalis: ";
+        cout << "      Ipagliban ang Paglalakbay: ";
         SetConsoleTextAttribute(hConsole, 14);
         cout << "5" << endl;
 
@@ -1786,13 +1912,26 @@ void nav_Fil_K() {
         case 49:
             system("cls");
             k_num--;
-            print_Fil_K();
+            if (k_num >= 1) {
+                print_Fil_K();
+            }
+            else {
+                chap_Fil_K();
+            }
             break;
 
         case 50:
             system("cls");
             k_num++;
-            print_Fil_K();
+            if (k_num <= 39)
+            {
+                print_Fil_K();
+            }
+
+            else {
+                nav_end();
+            }
+
             break;
 
         case 51:
@@ -1811,11 +1950,12 @@ void nav_Fil_K() {
             break;
 
         default:
-            system("cls");
-            error_Fil_K();
+            error();
+            print_Fil_K();
             break;
         }
 }
+
 
 // El Filibusterismo - Tauhan
 void Fil_C() {
@@ -1840,7 +1980,7 @@ void Fil_C() {
     }
     cout << endl;
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "                               Susunod na pahina: ";
+    cout << "                       Susunod na pahina: ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "1";
     SetConsoleTextAttribute(hConsole, 11);
@@ -1848,7 +1988,7 @@ void Fil_C() {
     SetConsoleTextAttribute(hConsole, 14);
     cout << "2";
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "      Umalis: ";
+    cout << "      Ipagliban ang Paglalakbay: ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "3" << endl;
 
@@ -1891,12 +2031,12 @@ void Fil_C() {
 
     else if (cin.fail())
     {
-        error_Fil_C();
+        Fil_C();
     }
 
     else
     {
-        error_Fil_C();
+        Fil_C();
     }
 
     int nav;
@@ -1922,12 +2062,12 @@ void Fil_C() {
 
     default:
         system("cls");
-        error_Fil_C();
+        Fil_C();
         break;
     }
 }
 
-// Noli Me Tangere - Tauhan 2 - 5
+// El Filibusterismo - Tauhan 2 - 4
 void print_Fil_C() {
     system("TITLE El Filibusterismo - Tauhan");
 
@@ -1950,7 +2090,7 @@ void print_Fil_C() {
     }
     cout << endl;
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "                  Huling pahina: ";
+    cout << "            Huling pahina: ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "1";
     SetConsoleTextAttribute(hConsole, 11);
@@ -1962,7 +2102,7 @@ void print_Fil_C() {
     SetConsoleTextAttribute(hConsole, 14);
     cout << "3";
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "      Umalis: ";
+    cout << "      Ipagliban ang Paglalakbay: ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "4" << endl;
 
@@ -2004,12 +2144,14 @@ void print_Fil_C() {
 
     else if (cin.fail())
     {
-        error_print_Fil_C();
+        error();
+        print_Fil_C();
     }
 
     else
     {
-        error_print_Fil_C();
+        error();
+        print_Fil_C();
     }
 
     int nav;
@@ -2033,10 +2175,10 @@ void print_Fil_C() {
     case 50: // ,
         system("cls");
         c_num++;
-        if (c_num <= 5)
+        if (c_num <= 4)
             print_Fil_C();
         else {
-            return Fil_C();
+            return print2_Fil_C();
         }
         break;
 
@@ -2051,28 +2193,217 @@ void print_Fil_C() {
         break;
 
     default:
+        error();
+        print_Fil_C();
+        break;
+    }
+}
+
+// El Filibusterismo - Tauhan 5
+void print2_Fil_C() {
+    system("TITLE Noli Me Tangere - Tauhan");
+
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                                Kilalanin ang mga Tauhan" << endl;
+    cout << "                                               mula sa \"El Filibusterismo\"" << endl;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "                                                       Nabigasyon:" << endl;
+
+    SetConsoleTextAttribute(hConsole, 8);
+    for (int i = 1; i <= 120; i++) {
+        cout << "-";
+    }
+    cout << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                       Huling pahina: ";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "1";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "      Mapa ni Pepe : ";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "2";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "      Ipagliban ang Paglalakbay: ";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "3" << endl;
+
+    SetConsoleTextAttribute(hConsole, 8);
+    for (int i = 1; i <= 120; i++) {
+        cout << "-";
+    }
+
+    cout << endl << endl;
+
+    SetConsoleTextAttribute(hConsole, 11);
+    for (int i = 1; i <= 120; i++) {
+        cout << "=";
+    }
+
+    c_num = 5;
+    cout << endl << endl;
+    fstream fil_c;
+    fil_c.open("Resources/Fili/Tauhan/fil_c" + to_string(c_num) + ".txt", ios::in);
+
+
+    if (fil_c.is_open()) {
+        SetConsoleTextAttribute(hConsole, 7);
+        string line;
+        while (getline(fil_c, line))
+        {
+            cout << "   " << line << endl;
+        }
+        fil_c.close();
+
+        cout << endl << endl;
+
+        SetConsoleTextAttribute(hConsole, 11);
+        for (int i = 1; i <= 120; i++) {
+            cout << "=";
+        }
+    }
+
+    else if (cin.fail())
+    {
+        error();
+        print_Fil_C();
+    }
+
+    else
+    {
+        error();
+        print_Fil_C();
+    }
+
+    int nav;
+
+    nav = _getch();
+
+    switch (nav) {
+
+
+    case 49: // ,
         system("cls");
-        error_print_Fil_C();
+        c_num--;
+        if (c_num == 4) {
+            return print_Fil_C();
+        }
+        else {
+            print2_Fil_C();
+        }
+        break;
+
+    case 50:
+        system("cls");
+        toc();
+        break;
+
+    case 51:
+        system("cls");
+        quit();
+        break;
+
+    default:
+        error();
+        print2_Nol_C();
         break;
     }
 }
 
 
-// El Filibusterismo - Talasalitaan
-void Fil_T() {
-    system("TITLE El Filibusterismo - Talasalitaan");
+// End
+void nav_end() {
+
+    system("cls");
+    cout << "" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+
+    cout << "                                                   Mahusay ";
+    SetConsoleTextAttribute(hConsole, 7); 
+    cout << "manlalakbay!" << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                                Iyong natapos ang ";
+    SetConsoleTextAttribute(hConsole, 7); 
+    cout << "Kwento!" << endl;
+
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl << endl << endl;
+
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "                                   Maari kang maglakbay muli sa iba pang destinasyon:" << endl;
+
+    SetConsoleTextAttribute(hConsole, 8);
+    for (int i = 1; i <= 120; i++) {
+        cout << "-";
+    }
+    cout << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "      Noli Me Tangere: ";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "1";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "      El Filibusterismo: ";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "2";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "      Mapa ni Pepe : ";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "3";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "      Ipagliban ang Paglalakbay: ";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "4" << endl;
+
+    SetConsoleTextAttribute(hConsole, 8);
+    for (int i = 1; i <= 120; i++) {
+        cout << "-";
+    }
+
+    int nav;
+
+    nav = _getch();
+    switch (nav) {
+
+    case 49: // ,
+        system("cls");
+        fili();
+        break;
+
+    case 50: // ,
+        system("cls");
+        noli();
+        break;
+
+    case 51:
+        system("cls");
+        toc();
+        break;
+
+    case 52:
+        system("cls");
+        quit();
+        break;
+
+    default:
+        error();
+        nav_end();
+        break;
+    }
 
 }
 
-// void nav_fili_T();
-
-               
-
-
-                                    // ERROR
-
-// TOC
-void e1() { 
+// ERROR
+void error() {
 
     system("cls");
     cout << "" << endl << endl << endl << endl << endl << endl << endl;
@@ -2086,252 +2417,10 @@ void e1() {
     cout << "                                       -------------------------------------------" << endl << endl;
 
     cout << "                                           Babalik sa huling pinanggalingan...";
-    Sleep(2500);
+    Sleep(1500);
     system("cls");
-    return toc();
-}
-
-// Rizal
-void e2() { 
-
-    system("cls");
-    cout << "" << endl << endl << endl << endl << endl << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-    SetConsoleTextAttribute(hConsole, 5);
-    cout << "                                         ERROR: ";
-    SetConsoleTextAttribute(hConsole, 8);
-    cout << "Maglagay lamang ng tamang input." << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-
-    cout << "                                           Babalik sa huling pinanggalingan...";
-    Sleep(2500);
-    system("cls");
-    return Rizal2();
-
 
 }
-
-// Noli 1
-void e3() {
-
-    system("cls");
-    cout << "" << endl << endl << endl << endl << endl << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-    SetConsoleTextAttribute(hConsole, 5);
-    cout << "                                         ERROR: ";
-    SetConsoleTextAttribute(hConsole, 8);
-    cout << "Maglagay lamang ng tamang input." << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-
-    cout << "                                           Babalik sa huling pinanggalingan...";
-    Sleep(2500);
-    system("cls");
-    return noli();
-
-}
-
-// Noli 2
-void e4() {
-
-    system("cls");
-    cout << "" << endl << endl << endl << endl << endl << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-    SetConsoleTextAttribute(hConsole, 5);
-    cout << "                                         ERROR: ";
-    SetConsoleTextAttribute(hConsole, 8);
-    cout << "Maglagay lamang ng tamang input." << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-
-    cout << "                                           Babalik sa huling pinanggalingan...";
-    Sleep(2500);
-    system("cls");
-    return noli2();
-
-
-}
-
-// Fili 1
-void e5() {
-    
-    system("cls");
-    cout << "" << endl << endl << endl << endl << endl << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-    SetConsoleTextAttribute(hConsole, 5);
-    cout << "                                         ERROR: ";
-    SetConsoleTextAttribute(hConsole, 8);
-    cout << "Maglagay lamang ng tamang input." << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-
-    cout << "                                           Babalik sa huling pinanggalingan...";
-    Sleep(2500);
-    system("cls");
-    return fili();
-
-}
-
-// Fili 2
-void e6() {
-
-    system("cls");
-    cout << "" << endl << endl << endl << endl << endl << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-    SetConsoleTextAttribute(hConsole, 5);
-    cout << "                                         ERROR: ";
-    SetConsoleTextAttribute(hConsole, 8);
-    cout << "Maglagay lamang ng tamang input." << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-
-    cout << "                                           Babalik sa huling pinanggalingan...";
-    Sleep(2500);
-    system("cls");
-    return fili2();
-
-}
-
-
-
-
-// Error Noli
-
-void error_Nol_K() {
-
-    system("cls");
-    cout << "" << endl << endl << endl << endl << endl << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-    SetConsoleTextAttribute(hConsole, 5);
-    cout << "                                         ERROR: ";
-    SetConsoleTextAttribute(hConsole, 8);
-    cout << "Maglagay lamang ng tamang input." << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-
-    cout << "                                           Babalik sa huling pinanggalingan...";
-    Sleep(2500);
-    system("cls");
-    system("cls");
-    print_Nol_K();
-
-}
-
-void error_Nol_T() {
-
-}
-
-void error_Nol_C() {
-    system("cls");
-    cout << "" << endl << endl << endl << endl << endl << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-    SetConsoleTextAttribute(hConsole, 5);
-    cout << "                                         ERROR: ";
-    SetConsoleTextAttribute(hConsole, 8);
-    cout << "Maglagay lamang ng tamang input." << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-
-    cout << "                                           Babalik sa huling pinanggalingan...";
-    Sleep(2500);
-    system("cls");
-    system("cls");
-    Nol_C();
-}
-
-void error_print_Nol_C() {
-    system("cls");
-    cout << "" << endl << endl << endl << endl << endl << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-    SetConsoleTextAttribute(hConsole, 5);
-    cout << "                                         ERROR: ";
-    SetConsoleTextAttribute(hConsole, 8);
-    cout << "Maglagay lamang ng tamang input." << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-
-    cout << "                                           Babalik sa huling pinanggalingan...";
-    Sleep(2500);
-    system("cls");
-    system("cls");
-    print_Nol_C();
-}
-
-// Error Fili
-
-void error_Fil_K() {
-
-    system("cls");
-    cout << "" << endl << endl << endl << endl << endl << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-    SetConsoleTextAttribute(hConsole, 5);
-    cout << "                                         ERROR: ";
-    SetConsoleTextAttribute(hConsole, 8);
-    cout << "Maglagay lamang ng tamang input." << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-
-    cout << "                                           Babalik sa huling pinanggalingan...";
-    Sleep(2500);
-    system("cls");
-    system("cls");
-    print_Fil_K();
-
-}
-
-void error_Fil_T() {
-
-}
-
-void error_Fil_C() {
-    system("cls");
-    cout << "" << endl << endl << endl << endl << endl << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-    SetConsoleTextAttribute(hConsole, 5);
-    cout << "                                         ERROR: ";
-    SetConsoleTextAttribute(hConsole, 8);
-    cout << "Maglagay lamang ng tamang input." << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-
-    cout << "                                           Babalik sa huling pinanggalingan...";
-    Sleep(2500);
-    system("cls");
-    system("cls");
-    Fil_C();
-}
-
-void error_print_Fil_C() {
-    system("cls");
-    cout << "" << endl << endl << endl << endl << endl << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-    SetConsoleTextAttribute(hConsole, 5);
-    cout << "                                         ERROR: ";
-    SetConsoleTextAttribute(hConsole, 8);
-    cout << "Maglagay lamang ng tamang input." << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-
-    cout << "                                           Babalik sa huling pinanggalingan...";
-    Sleep(2500);
-    system("cls");
-    system("cls");
-    print_Fil_C();
-}
-
-
 
 // About Us
 void AboutUs() {
@@ -2465,30 +2554,9 @@ void quit() {
         break;
 
     default:
-        error_quit();
+        error();
+        quit();
         break;
     }
 
 }
-
-void error_quit() {
-
-    system("cls");
-    cout << "" << endl << endl << endl << endl << endl << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-    SetConsoleTextAttribute(hConsole, 5);
-    cout << "                                         ERROR: ";
-    SetConsoleTextAttribute(hConsole, 8);
-    cout << "Maglagay lamang ng tamang input." << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-
-    cout << "                                           Babalik sa huling pinanggalingan...";
-    Sleep(1500);
-    system("cls");
-    quit();
-
-}
-// ***************************************************************************************************************************************************************************************
-// ***************************************************************************************************************************************************************************************

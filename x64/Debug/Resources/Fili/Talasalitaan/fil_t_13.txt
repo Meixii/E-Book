@@ -1,8 +1,5 @@
-﻿KABANATA 13
-
-
-1. Bulwagan – gusaling pinagtatanghalan
-2. Rehas – kulungan
-3. Gabinete – tauhan sa pamahalaan
-4. Inilalaan – pagbibigay ng oras
-5. Nilait – pagsasabi ng negatibo o paninira
+1. Bulwagan: gusaling pinagtatanghalan
+2. Rehas: kulungan
+3. Gabinete: tauhan sa pamahalaan
+4. Inilalaan: pagbibigay ng oras
+5. Nilait: pagsasabi ng negatibo o paninira

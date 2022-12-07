@@ -1,9 +1,6 @@
-﻿KABANATA 25
-
-
-1. Bulwagan – gusaling pinagtatanghalan
-2. Iminungkahi – opinyon, kuro kuro
-3. Iginawad – pinagkaloob
-4. Sinang-ayunan – pumayag
-5. Pinatutungkulan – pinamumunuan
-6. Nagmamanman – nagmamasid
+1. Bulwagan: gusaling pinagtatanghalan
+2. Iminungkahi: opinyon, kuro kuro
+3. Iginawad: pinagkaloob
+4. Sinang-ayunan: pumayag
+5. Pinatutungkulan: pinamumunuan
+6. Nagmamanman: nagmamasid

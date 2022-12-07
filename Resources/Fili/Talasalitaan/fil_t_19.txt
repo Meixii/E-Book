@@ -1,10 +1,7 @@
-﻿KABANATA 19
-
-
-1. Poot – galit
-2. Liham – sulat
-3. Kabesa – pinuno, kapitan
-4. Nag-usisa – pagtatanong
-5. Lansangan – kalye, kalsada
-6. Daungan – pantalan o tigilan ng barko
-7. Puksain – alisin
+1. Poot: galit
+2. Liham: sulat
+3. Kabesa: pinuno, kapitan
+4. Nag-usisa: pagtatanong
+5. Lansangan: kalye, kalsada
+6. Daungan: pantalan o tigilan ng barko
+7. Puksain: alisin

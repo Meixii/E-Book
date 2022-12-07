@@ -1,4 +1,4 @@
-﻿Kubyerta: palapag o sahig ng barko
+	Kubyerta: palapag o sahig ng barko
 	Tampipi: isang lalagyang gawa sa dahon ng niyog
 	Bakol: lalagyan o basket
 	Paksa: pinag-uusapan

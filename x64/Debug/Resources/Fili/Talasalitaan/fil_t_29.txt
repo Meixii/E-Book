@@ -1,9 +1,6 @@
-﻿KABANATA 29
-
-
-1. Maringal – engrade, kahanga hanga
-2. Nakipagkumpisal – pagpapahayag ng kasalanan
-3. Naghihingalo – nag-aagaw buhay
-4. Palatuntunan – program
-5. Naghangad – nagnais
-6. Yumao – namatay
+1. Maringal: engrade, kahanga hanga
+2. Nakipagkumpisal: pagpapahayag ng kasalanan
+3. Naghihingalo: nag-aagaw buhay
+4. Palatuntunan: program
+5. Naghangad: nagnais
+6. Yumao: namatay

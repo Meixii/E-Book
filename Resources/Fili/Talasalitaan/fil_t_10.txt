@@ -1,11 +1,8 @@
-﻿KABANATA 10
-
-
-1. Nagtungo – nagpunta
-2. Humanga – nagalingan
-3. Agnos – kwintas
-4. Isangguni – komunsulta
-5. Takipsilim – panahong pagkatapos lumubog ang araw
-6. Rebolber – maliit na uri ng baril
-7. Liham – sulat
-8. Panunulisan – pamimirata, pandarambong
+1. Nagtungo: nagpunta
+2. Humanga: nagalingan
+3. Agnos: kwintas
+4. Isangguni: komunsulta
+5. Takipsilim: panahong pagkatapos lumubog ang araw
+6. Rebolber: maliit na uri ng baril
+7. Liham: sulat
+8. Panunulisan: pamimirata, pandarambong

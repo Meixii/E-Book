@@ -1,8 +1,5 @@
-﻿KABANATA 12
-
-
-1. Liham – sulat
-2. Mangolekta – manguha
-3. Ambag – kontribusyon
-4. Bantayog – kilala
-5. Lagdaan – pirmahan
+1. Liham: sulat
+2. Mangolekta: manguha
+3. Ambag: kontribusyon
+4. Bantayog: kilala
+5. Lagdaan: pirmahan

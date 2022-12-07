@@ -1,11 +1,8 @@
-﻿KABANATA 30
-
-
-1. Paghihimagsik – pagrerebelde sa awtoridad
-2. Pagkakatubos – pagkalaya
-3. Tulisan – rebelde
-4. Tagatangkilik – tagapangalaga
-5. Magpatiwakal – magpakamatay
-6. Sumangguni – pagkonsulta
-7. Kukutya – aasar
-8. Nag-atubili – nagdalawang-isip
+1. Paghihimagsik: pagrerebelde sa awtoridad
+2. Pagkakatubos: pagkalaya
+3. Tulisan: rebelde
+4. Tagatangkilik: tagapangalaga
+5. Magpatiwakal: magpakamatay
+6. Sumangguni: pagkonsulta
+7. Kukutya: aasar
+8. Nag-atubili: nagdalawang-isip

@@ -1,16 +1,13 @@
-﻿KABANATA 26
-
-
-1. Paskin – isang limbag na tumutuligsa sa pamahalaan
-2. Pamantasan – paaralan
-3. Salapi – pera
-4. Naimpok – naipon
-5. Pinaghihimagsik – pagrerebelde sa awtoridad
-6. Dampa – bahay kubo
-7. Nasasangkot – nasasama
-8. Piging – handaan
-9. Pinaghihinalaan – sinosospetsa
-10. Kapisanan – samahan
-11. Nagtungo – nagpunta
-12. Itinataboy – pinapaalis
-13. Dinakip – hinuli
+1. Paskin: isang limbag na tumutuligsa sa pamahalaan
+2. Pamantasan: paaralan
+3. Salapi: pera
+4. Naimpok: naipon
+5. Pinaghihimagsik: pagrerebelde sa awtoridad
+6. Dampa: bahay kubo
+7. Nasasangkot: nasasama
+8. Piging: handaan
+9. Pinaghihinalaan: sinosospetsa
+10. Kapisanan: samahan
+11. Nagtungo: nagpunta
+12. Itinataboy: pinapaalis
+13. Dinakip: hinuli

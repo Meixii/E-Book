@@ -1,8 +1,5 @@
-﻿KABANATA 15
-
-
-1. Nagtungo – nagpunta
-2. Hikayatin – kumbinsihin
-3. Sumangguni – pagdulog, pagkunsulta
-4. Napagpasyahan – napagdesisyonan
-5. Panukala – mungkahi
+1. Nagtungo: nagpunta
+2. Hikayatin: kumbinsihin
+3. Sumangguni: pagdulog, pagkunsulta
+4. Napagpasyahan: napagdesisyonan
+5. Panukala: mungkahi

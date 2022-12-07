@@ -1,5 +1,5 @@
-	Bapor tabo: barko na hugis tabo
-	Patungo: papunta
-	Paksa: pinag-uusapan
-	Nagmungkahi: nagsalaysay
-	Himagsikan: rebelyon, pakikidigma
+1. Bapor tabo: barko na hugis tabo
+2. Patungo: papunta
+3. Paksa: pinag-uusapan
+4. Nagmungkahi: nagsalaysay
+5. Himagsikan: rebelyon, pakikidigma

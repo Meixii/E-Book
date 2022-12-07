@@ -1,12 +1,9 @@
-﻿KABANATA 6
-
-
-1. Palihim – patago
-2. Bunton – tambak
-3. Yumao – pumanaw
-4. Lumisan – namatay
-5. Gula-gulanit – sira-sira
-6. Alila – alipin
-7. Kumbento – simbahan
-8. Kinamuhian – kinasuklaman
-9. Nagpakadalubhasa – eksperto, nagpakahusay
+1. Palihim: patago
+2. Bunton: tambak
+3. Yumao: pumanaw
+4. Lumisan: namatay
+5. Gula-gulanit: sira-sira
+6. Alila: alipin
+7. Kumbento: simbahan
+8. Kinamuhian: kinasuklaman
+9. Nagpakadalubhasa: eksperto, nagpakahusay

@@ -1,11 +1,8 @@
-﻿KABANATA 7
-
-
-1. Yabag – tunog ng lakad
-2. Nagulintang – nagulat, nabigla
-3. Pagpawi – pagalis
-4. Naniniil – nang-aapi
-5. Hahantong – darating
-6. Taliwas – kabaliktaran, hindi pagsunod
-7. Paghihimagsik – pagsuway, pagrerebelde
-8. Pinaunlakan – pinayagan
+1. Yabag: tunog ng lakad
+2. Nagulintang: nagulat, nabigla
+3. Pagpawi: pagalis
+4. Naniniil: nang-aapi
+5. Hahantong: darating
+6. Taliwas: kabaliktaran, hindi pagsunod
+7. Paghihimagsik: pagsuway, pagrerebelde
+8. Pinaunlakan: pinayagan

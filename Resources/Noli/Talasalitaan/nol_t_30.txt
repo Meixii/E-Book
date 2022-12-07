@@ -1,0 +1,6 @@
+1.	Misa: simba
+2.	Komedya: palabas ng nakakatuwa
+3.	Maestro: guro
+4.	Alkalde: mayor
+5.	Sermon: pangangaral
+6.	Pulpito: gamit ng nagsesermon tulad ng pari

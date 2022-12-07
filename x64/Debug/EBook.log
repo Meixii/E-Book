@@ -1,6 +1,6 @@
 ﻿  EBook.cpp
-C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(146,13): warning C4129: '-': unrecognized character escape sequence
-C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(147,13): warning C4129: '-': unrecognized character escape sequence
-C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(1693,9): warning C4551: function call missing argument list
-C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(2499,9): warning C4101: 'exitprompt': unreferenced local variable
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(138,13): warning C4129: '-': unrecognized character escape sequence
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(139,13): warning C4129: '-': unrecognized character escape sequence
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(1699,9): warning C4551: function call missing argument list
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(2507,9): warning C4101: 'exitprompt': unreferenced local variable
   EBook.vcxproj -> C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\x64\Debug\EBook.exe

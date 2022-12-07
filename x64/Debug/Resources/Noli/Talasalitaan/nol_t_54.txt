@@ -1,14 +1,12 @@
-Talasalitaan:
-
-Alperes – opisyal ng militar
-Pumanhik – pumunta, sumampa
-Tumambad – bumulaga, bumalandra
-Pag-aalsa – paghihimagsik o pagtiwalag
-Nagkumpisal – pagpapatotoo, nagpahayag
-Paglusob – pagsugod
-Kumbento – simbahan
-Kwartel – tirahan ng mga sundalo
-Kasawian – kamatayan
+1.	Alperes: opisyal ng militar
+2.	Pumanhik: pumunta, sumampa
+3.	Tumambad: bumulaga, bumalandra
+4.	Pag-aalsa: paghihimagsik o pagtiwalag
+5.	Nagkumpisal: pagpapatotoo, nagpahayag
+6.	Paglusob: pagsugod
+7.	Kumbento: simbahan
+8.	Kwartel: tirahan ng mga sundalo
+9.	Kasawian: kamatayan
 
 
 

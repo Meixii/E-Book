@@ -1,12 +1,10 @@
-Talasalitaan:
-
-Napapaligiran – napapalibutan
-Iminungkahi – inilahad
-Masalimuot – mahirap, magulo
-Sinapit – dinanas
-Kumbento – simbahan
-Kura – pari
-Lumusob – sumugod
-Pinag-uusig – pinaghahanap
-Hinaing – hinanakit, reklamo
-Aanib – sasapi
+1.	Napapaligiran: napapalibutan
+2.	Iminungkahi: inilahad
+3.	Masalimuot: mahirap, magulo
+4.	Sinapit: dinanas
+5.	Kumbento: simbahan
+6.	Kura: pari
+7.	Lumusob: sumugod
+8.	Pinag-uusig: pinaghahanap
+9.	Hinaing: hinanakit, reklamo
+10	Aanib: sasapi

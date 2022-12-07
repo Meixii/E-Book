@@ -1,10 +1,8 @@
-Talasalitaan:
-
-Salaysay – pagpapahayag
-Indulhensiya – kinokolektang pera ng mga pari
-Pinapastol – pag-aalaga
-Nagsermon – nagpangaral
-Kura – pari
+1.	Salaysay: pagpapahayag
+2.	Indulhensiya: kinokolektang pera ng mga pari
+3.	Pinapastol: pag-aalaga
+4.	Nagsermon: nagpangaral
+5.	Kura: pari
 
 
 

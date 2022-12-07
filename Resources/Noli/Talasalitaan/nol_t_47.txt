@@ -1,7 +1,5 @@
-Talasalitaan:
-
-Baston – tungkod
-Alperes – opisyal ng militar
-Matalim – matalas
-Masubsob – madapa
-Nag-alipustahan – nagbangayan, nagsagutan
+1.	Baston: tungkod
+2.	Alperes: opisyal ng militar
+3.	Matalim: matalas
+4.	Masubsob: madapa
+5.	Nag-alipustahan: nagbangayan, nagsagutan

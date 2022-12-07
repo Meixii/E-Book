@@ -1,0 +1,15 @@
+1.	Atipan: lagyan ng bubong
+2.	Baybayin: tabi
+3.	Bumulaga: gumulat
+4.	Kahangalan: kamangmangan
+5.	Luntian: berde
+6.	Mapusok: masiklabong damdamin
+7.	Masigasig: masipag
+8.	Matatas: malinaw
+9.	Matatas: matuwid magsalita
+10.	Nakaulinig: nakarinig
+11.	Nangangalisag: paninindig ng balahibo
+12.	Napagsasamantalahan: naloloko
+13.	Simboryo: kampanaryo
+14.	Taluktok: tuktok
+15.	Uugoy-ugoy: gagalaw-galaw

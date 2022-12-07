@@ -1,7 +1,5 @@
-Talasalitaan:
-
-Pagkalembang – pagtunog
-Alperes – batang opisyal ng militar
-Prusisyon – parada
-Garbo – maganda, magara
-Karosa – karwahe
+1.	Pagkalembang: pagtunog
+2.	Alperes: batang opisyal ng militar
+3.	Prusisyon: parada
+4.	Garbo: maganda, magara
+5.	Karosa: karwahe

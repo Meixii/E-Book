@@ -1,10 +1,8 @@
-Talasalitaan:
-
-Iritang irita – inis na inis
-Ipinamalas – ipinakita
-Nobyo – kasintahang lalaki
-Ekskomunikado – bawal tanggapin ng simbahan habang nabubuhay
-Arsobispo – mataas na katungkulan ng pari
-Alkalde – mayor
-Iminungkahi – inilahad
-Patungo – papunta
+1.	Iritang irita: inis na inis
+2.	Ipinamalas: ipinakita
+3.	Nobyo: kasintahang lalaki
+4.	Ekskomunikado: bawal tanggapin ng simbahan habang nabubuhay
+5.	Arsobispo: mataas na katungkulan ng pari
+6.	Alkalde: mayor
+7.	Iminungkahi: inilahad
+8.	Patungo: papunta

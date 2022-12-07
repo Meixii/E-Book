@@ -1,11 +1,9 @@
-Talasalitaan:
-
-Naanyayahan – pinapapunta
-Pumanhik – pumunta, umakyat
-Ipamalita – ipakalat
-Tinitingala – hinahangaan
-Natanaw – nakita
-Ipinagtapat – sinabi
+1.	Naanyayahan: pinapapunta
+2.	Pumanhik: pumunta, umakyat
+3.	Ipamalita: ipakalat
+4.	Tinitingala: hinahangaan
+5.	Natanaw: nakita
+6.	Ipinagtapat: sinabi
 
 
 

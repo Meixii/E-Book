@@ -1,8 +1,6 @@
-Talasalitaan:
-
-Selebrasyon – pagdiriwang
-Kumbento – simbahan
-Asotea – balkonahe
+1.	Selebrasyon: pagdiriwang
+2.	Kumbento: simbahan
+3.	Asotea: balkonahe
 
 
 

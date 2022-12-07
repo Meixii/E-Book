@@ -1,0 +1,18 @@
+1.	Alintana: pansin
+2.	Baliw: wala sa sarili o wala sa tamang pag-iisip
+3.	Binagtas: dinaanan
+4.	Dinaluhong: sabay-sabay na hinahanap
+5.	Halimuyak: kabanguhan
+6.	Ipinaanod: ipinatangay
+7.	Matindi: malubha
+8.	Nangangatal: nanginginig
+9.	Nanghahagupit: namamalo
+10.	Nanlilisik: nagagalit
+11.	Naparalitiko: nawalan ng pakiramdam
+12.	Nasindak: natakot
+13.	Nitso: libingan o puntod
+14.	Padre Garote: paring nagpaparusa
+15.	Rumaragasa: mabilis
+16.	Sigwa: unos
+17.	Sumulyap: tumingin
+18.	Tinalunton: sinundan

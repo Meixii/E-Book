@@ -1,0 +1,10 @@
+1.	Binalaan: binantaan
+2.	Hatol: husga
+3.	Isusuplong: isusumbong
+4.	Kinikilingan: kinakampihan
+5.	Nahulaan: nalaman
+6.	Namangha: nagandahan
+7.	Namanhik: naligaw
+8.	Pagdusahan: paghirapan
+9.	Tinugaygayan: sinubaybayan o binabantayan
+10.	Tunggalian: labanan

@@ -1,8 +1,8 @@
-	Prayle: pari
-	Pagtutol: di pagsang-ayon
-	Bapor: barko
-	Isinalaysay: ikiniwento
-	Tulisan: hindi sumusunod sa batas
-	Yungib: kweba
-	Arsobispo: mataas na uri ng pari
-	Tinugis: hinanap
+1. Prayle: pari
+2. Pagtutol: di pagsang-ayon
+3. Bapor: barko
+4. Isinalaysay: ikiniwento
+5. Tulisan: hindi sumusunod sa batas
+6. Yungib: kweba
+7. Arsobispo: mataas na uri ng pari
+8. Tinugis: hinanap

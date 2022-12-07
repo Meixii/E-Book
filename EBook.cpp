@@ -646,7 +646,7 @@ void noli() {
 
 
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "          Bumalik  (Rizal):  ";
+    cout << "       Bumalik  (Rizal):  ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "1";
 
@@ -962,7 +962,7 @@ void print_Nol_K() {
         string line_t;
         while (getline(nol_t, line_t))
         {
-            cout << line_t << endl;
+        cout << "       " << line_t << endl;
         }
         nol_t.close();
     }
@@ -1068,7 +1068,7 @@ void nav_Nol_K() {
         k_num++;
         if (k_num <= 64)
         {
-            print_Fil_K();
+            print_Nol_K();
         }
 
         else {
@@ -1497,7 +1497,7 @@ void fili() {
     cout << endl;
 
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "                   Bumalik  (Rizal):  ";
+    cout << "       Bumalik  (Rizal):  ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "1";
 
@@ -1571,7 +1571,7 @@ void fili2()
     cout << endl;
 
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "           Bumalik  (Buod):  ";
+    cout << "                               Bumalik  (Buod):  ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "1";
 
@@ -1583,10 +1583,10 @@ void fili2()
     SetConsoleTextAttribute(hConsole, 11);
     cout << "       Mga Kabanata: ";
     SetConsoleTextAttribute(hConsole, 14);
-    cout << "3";
+    cout << "3" << endl;
 
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "       Mapa ni Pepe : ";
+    cout << "                                       Mapa ni Pepe : ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "4";
 
@@ -2376,12 +2376,12 @@ void nav_end() {
 
     case 49: // ,
         system("cls");
-        fili();
+        noli();
         break;
 
     case 50: // ,
         system("cls");
-        noli();
+        fili();
         break;
 
     case 51:

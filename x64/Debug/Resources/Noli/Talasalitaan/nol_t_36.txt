@@ -1,7 +1,5 @@
-Talasalitaan:
-
-Ekskomunikado – bawal tanggapin ng simbahan habang nabubuhay
-Umuubra – tumalab
-Katwiran – rason
-Nagimbal – pagkagulat
-Manganganib – delikado
+1.	Ekskomunikado: bawal tanggapin ng simbahan habang nabubuhay
+2.	Umuubra: tumalab	
+3.	Katwiran: rason
+4.	Nagimbal: pagkagulat
+5.	Manganganib: delikado

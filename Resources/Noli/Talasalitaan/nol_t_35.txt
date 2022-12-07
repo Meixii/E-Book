@@ -1,7 +1,5 @@
-Talasalitaan:
-
-Pumanig – kumampi
-Makakapagtimpi – makakapagpigil
-Alkalde – mayor
-Binitawan – pinakawalan
-Nalugod – nagalak
+1.	Pumanig: kumampi
+2.	Makakapagtimpi: makakapagpigil
+3.	Alkalde: mayor
+4.	Binitawan: pinakawalan
+5.	Nalugod: nagalak

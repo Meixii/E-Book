@@ -1,13 +1,11 @@
-Talasalitaan:
-
-Kumbento – simbahan
-Natagpuan – nakita
-Obispo – isang opisyales ng Simbahang Katoliko, pari
-Pagdadalamhati – pagdurusa
-Pinagtaksilan – niloko
-Humuhusay – gumagaling
-Kutsero – nagpapaandar sa kalesa
-Disenterya – uri ng sakit sa tiyan
+1.	Kumbento: simbahan
+2.	Natagpuan: nakita
+3.	Obispo: isang opisyales ng Simbahang Katoliko, pari
+4.	Pagdadalamhati: pagdurusa
+5.	Pinagtaksilan: niloko
+6.	Humuhusay: gumagaling
+7.	Kutsero: nagpapaandar sa kalesa
+8.	Disenterya: uri ng sakit sa tiyan
 
 
 

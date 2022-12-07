@@ -109,8 +109,7 @@ int main()
     system("pause");
     system("cls");
 
-    Nol_C();
-    //Home();
+    Home();
     return 0;
 }
 
@@ -602,10 +601,6 @@ void nav_Rizal2() {
     nav = _getch();
     switch (nav) {
 
-    case 0:
-        _getch();
-        break;
-
     case 49: // ,
         system("cls");
         Rizal();
@@ -638,11 +633,6 @@ void nav_Rizal2() {
     }
 
 }
-
-
-
-
-
 
 
 // Noli Me Tangere - Buod
@@ -800,10 +790,6 @@ void nav_noli() {
     nav = _getch();
     switch (nav) {
 
-    case 0:
-        _getch();
-        break;
-
     case 49: // ,
         system("cls");
         Rizal();
@@ -838,10 +824,6 @@ void nav_noli2() {
     nav = _getch();
     switch (nav) {
 
-    case 0:
-        _getch();
-        break;
-
     case 49: // ,
         system("cls");
         noli();
@@ -874,6 +856,7 @@ void nav_noli2() {
     }
 
 }
+
 
 // Noli Me Tangere - Chapters
 void chap_Nol_K() {
@@ -1075,10 +1058,6 @@ void nav_Nol_K() {
     nav = _getch();
     switch (nav) {
 
-    case 0:
-        _getch();
-        break;
-
     case 27:
         system("cls");
         chap_Nol_K();
@@ -1119,6 +1098,7 @@ void nav_Nol_K() {
     }
 
 }
+
 
 // Noli Me Tangere - Tauhan 1
 void Nol_C() {
@@ -1206,10 +1186,6 @@ void Nol_C() {
 
         nav = _getch();
         switch (nav) {
-
-        case 0:
-            _getch();
-            break;
 
         case 49: // ,
             system("cls");
@@ -1325,9 +1301,7 @@ void print_Nol_C() {
 
 
     switch (nav) {
-    case 0:
-        _getch();
-        break;
+
 
     case 49: // ,
         system("cls");
@@ -1368,7 +1342,6 @@ void print_Nol_C() {
 }
 
 
-
 // Noli Me Tangere - Talasalitaan
 void Nol_T() {
     system("TITLE Noli Me Tangere - Talasalitaan");
@@ -1377,9 +1350,6 @@ void Nol_T() {
 void print_Nol_T() {
 
 }
-// void nav_noli_T();
-
-
 
 // El Filibusterismo - Buod
 void fili() {
@@ -1541,9 +1511,6 @@ void nav_fili() {
     nav = _getch();
     switch (nav) {
 
-    case 0:
-        _getch();
-        break;
 
     case 49: // ,
         system("cls");
@@ -1578,10 +1545,6 @@ void nav_fili2() {
 
     nav = _getch();
     switch (nav) {
-
-    case 0:
-        _getch();
-        break;
 
     case 49: // ,
         system("cls");
@@ -1728,8 +1691,8 @@ void print_Fil_K() {
         cout << "\n" << endl;
 
         SetConsoleTextAttribute(hConsole, 7);
-        cout << "        Talasalitaan:" << endl;
-        SetConsoleTextAttribute(hConsole, 14);
+        cout << "       Talasalitaan:" << endl;
+        //SetConsoleTextAttribute(hConsole, 14);
         string line_t;
         while (getline(fil_t, line_t))
         {
@@ -1815,22 +1778,18 @@ void nav_Fil_K() {
         nav = _getch();
         switch (nav) {
 
-        case 0:
-            _getch();
-            break;
-
         case 27:
             system("cls");
             chap_Fil_K();
             break;
 
-        case 49: // ,
+        case 49:
             system("cls");
             k_num--;
             print_Fil_K();
             break;
 
-        case 50: // ,
+        case 50:
             system("cls");
             k_num++;
             print_Fil_K();
@@ -1944,10 +1903,6 @@ void Fil_C() {
 
     nav = _getch();
     switch (nav) {
-
-    case 0:
-        _getch();
-        break;
 
     case 49: // ,
         system("cls");
@@ -2063,9 +2018,6 @@ void print_Fil_C() {
 
 
     switch (nav) {
-    case 0:
-        _getch();
-        break;
 
     case 49: // ,
         system("cls");

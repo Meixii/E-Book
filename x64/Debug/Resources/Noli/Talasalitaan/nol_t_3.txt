@@ -1,12 +1,8 @@
-1.	Bahid: bakas ng dumi, mantsa
-2.	Humahangos: nagmamadali
-3.	Inaatupag: iniintindi; ginagawa
-4.	Kapritso: luho; layaw
-5.	Nababakas: nababanaag; nakikita
-6.	Nahumpak: namayat
-7.	Namumurok: nanaba
-8.	Paggunita: pag-alala
-9.	Pobre: mahirap
-10.	Tinangka: binalak
-11.	Umusal: bumigkas
-12.	Walang puso: walang damdamin
+1.	Talakayan: usapan
+2.	Tinyente: sundalo
+3.	Kabisera: punong lungsod
+4.	Sentro: gitna
+5.	Kumpesor: taga-gawa
+6.	Kura: pari
+7.	Kinahantungan: kinalabasan
+8.	Telegrama: sulat

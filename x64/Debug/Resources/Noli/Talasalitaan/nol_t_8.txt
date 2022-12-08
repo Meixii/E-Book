@@ -1,15 +1,8 @@
-1.	Banal: santo
-2.	Hidwaan: alitan
-3.	Kabulaanan: kasinungalingan
-4.	Magiliw: masintahin
-5.	Malugod: masaya
-6.	Maluwalhati: mapayapa
-7.	Masinsin: magkakalapit
-8.	Nagbabata: nagtitiis
-9.	Napamulagat: napatitig
-10.	Natambad: nalantad
-11.	Pag-aalitan: pag-aaway
-12.	Pagmamalabis: pang-aabuso
-13.	Pasagsag: padabog
-14.	Sakim: ganid
-15.	Yayat: manipis
+1.	Kagalakan: kasiyahan
+2.	Karwahe: sasakyan na hilahila ng kabayo
+3.	Kareta: kariton
+4.	Baku-bako: sira sira
+5.	Lumalatay: bumabakat
+6.	Naparam: naglaho
+7.	Marikit: maganda
+8.	Kamangmangan: walang alam

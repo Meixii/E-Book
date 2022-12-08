@@ -1,12 +1,4 @@
-1.	Bahid: bakas ng dumi, mantsa
-2.	Humahangos: nagmamadali
-3.	Inaatupag: iniintindi; ginagawa
-4.	Kapritso: luho; layaw
-5.	Nababakas: nababanaag; nakikita
-6.	Nahumpak: namayat
-7.	Namumurok: nanaba
-8.	Paggunita: pag-alala
-9.	Pobre: mahirap
-10.	Tinangka: binalak
-11.	Umusal: bumigkas
-12.	Walang puso: walang damdamin
+1.	Alkalde: mayor
+2.	Kura paroko: pinakamataas na pari sa simbahan
+3.	Alperes: opisyal ng militar
+4.	Hidwaan: pagaaway

@@ -1,10 +1,7 @@
-1.	Alumpihit: di mapalagay
-2.	Hinanakit: pagdaramdam
-3.	Mag-ulayaw: mag-usap
-4.	Nagpapasikdo: nagpapatibok
-5.	Nagtulos: nagtirik
-6.	Nakatatalos: nakaalam
-7.	Napatda: natigilan
-8.	Sawimpalad: nabigo
-9.	Sinasamba: paghanga
-10.	Ulupong: makamandag
+1.	Tinutuluyan: tinitirahan
+2.	Nagmasid-masid: tumingin tingin
+3.	Natanaw: nakita
+4.	Kalansing: tunog
+5.	Kubyertos: kutsara
+6.	Balingkinitan: payat
+7.	Nahimlay: nahiga

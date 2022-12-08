@@ -1,9 +1,5 @@
-1.	Gula-gulanit: punit-punit
-2.	Inangkat: pinadala
-3.	Kinumbida: inimbita
-4.	Nahabag: naawa
-5.	Paniniwalang agnos: pag-aalinlangan
-6.	Pinaunlakan: pumayag
-7.	Relikaryong ginto: antigo
-8.	Salakot: sumbrero na parang isang maliit na payong
-9.	Ikinasisiya: apresyahin
+1.	Karwahe: sasakyang hilahila ng kabayo
+2.	Sinang-ayunan: pumayag
+3.	Pakikitungo: pakikisama
+4.	Titiyakin: sisiguraduhin
+5.	Inimbitahan: inanyayahan

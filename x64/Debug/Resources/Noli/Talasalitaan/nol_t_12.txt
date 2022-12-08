@@ -1,10 +1,4 @@
-1.	Ampahilom: gamit para sa paggaling ng sugat
-2.	Bulo: anak ng kalabaw o baka
-3.	Dumaplis: pasagi o pahaging ang pagtama
-4.	Ikinabuwal: natumba at napahiga
-5.	Punglo: bala
-6.	Quien vive: salitang Espanol na nangangahulugang "Sino ang nariyan?"
-7.	Sakristan Mayor: namumuno sa lahat ng sakristan
-8.	Sinunggaban: biglang dinakma o inagaw ang isang bagay
-9.	Tagapastol: tagapag-alaga ng hayop gaya ng tupa, kalabaw, kabayo atbp.
-10.	Yantok: galing sa isang uri ng palma na may mahahaba at magkakadugtong na sanga
+1.	Malawak: malaki
+2.	Masukal: madamo
+3.	Dalubhasa: magaling
+4.	Sepulturero: nagtatrabaho sa sementeryo

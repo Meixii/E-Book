@@ -1,17 +1,13 @@
-1.	Arabal: purok, distrito
-2.	Humayo: umalis
-3.	Humihilam: nagpapahapdi ng mata
-4.	Kamangmangan: walang nalalaman
-5.	Maparam: mapawi
-6.	Mapasupling: mapatubo
-7.	Maririkit: maniningning
-8.	Muralya: pader
-9.	Nabansot: naging pandak
-10.	Nahalinhan: napalitan
-11.	Nahihimlay: natutulog
-12.	Nakaakit: nakahalina
-13.	Nakagayak: nakabihis
-14.	Nakalulan: nakasakay
-15.	Nakatimbuwang: nakatihaya
-16.	Nangisay: nanginig
-17.	Tanglaw: ilaw
+1.	Relihiyoso: banal
+2.	Abuloy: pagbibigay
+3.	Gumagasta: gumagastos
+4.	Bulto-bulto: madami
+5.	Alkalde: mayor
+6.	Piskal: dumudulog
+7.	Ganid: mapanglamang
+8.	Dominiko: prayle, pari
+9.	Musmos: bata
+10.	Maselan: sensitibo
+11.	Adorno: palamuti
+12.	Siwang: maliit na butas
+13.	Beateryo: tinitirhan ng mga madre

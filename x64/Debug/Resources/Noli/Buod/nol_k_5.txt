@@ -1,9 +1,7 @@
-Kabanata 5: Ang Liwanag sa Gabing Madilim
-
-Dumating si Ibarra sa kanyang tinutuluyan sa Fonda de Lala. Agad itong naupo sa kanyang silid.
-Nagmasid-masid ito sa kapaligiran habang may gulong tumatakbo sa kanyang isip dahil sa sinapit ng ama.
-Natanaw niya mula sa kanyang bintana ang maliwanag na bahay sa kabila ng ilog. 
-Naririnig niya ang tunog na gawa ng orkestra at ang kalansing ng mga piggan at kubyertos.
-Natanaw din niya ang isang magandang babae na may balingkinitan na pangangatawan at may kasuotang diyamante at ginto.
-Siya si Maria Clara. Giliw na giliw na nakatingin ang lahat sa ganda ng dalaga. 
-Dahil sa pagod na isip at katawan ni Ibarra ay mabilis siyang nahimlay.
+	Dumating si Ibarra sa kanyang tinutuluyan sa Fonda de Lala. Agad itong naupo sa kanyang silid. Nagmasid
+	masid ito sa kapaligiran habang may gulong tumatakbo sa kanyang isip dahil sa sinapit ng ama. Natanaw niya
+	mula sa kanyang bintana ang maliwanag na bahay sa kabila ng ilog. Naririnig niya ang tunog na gawa ng
+	orkestra at ang kalansing ng mga piggan at kubyertos. Natanaw din niya ang isang magandang babae na may
+	balingkinitan na pangangatawan at may kasuotang diyamante at ginto. Siya si Maria Clara. Giliw na giliw na
+	nakatingin ang lahat sa ganda ng dalaga. Dahil sa pagod na isip at katawan ni Ibarra ay mabilis siyang
+	nahimlay.

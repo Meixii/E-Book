@@ -1,9 +1,8 @@
-1.	Habol-hininga: buntong-hininga
-2.	Hiyaw: sigaw
-3.	Inalo: inaruga
-4.	Kalumbayan: kalungkutan
-5.	Nagpatibuwal: nagpadalus-dalos
-6.	Nananalasa: sumisira
-7.	Palahaw: pananangis
-8.	Panaghoy: daing
-9.	Tinutulan: hindi sinang-ayunan
+1.	Kampanaryo: kampana
+2.	Nakahimlay: nakalibing
+3.	Luntian: berde
+4.	Umuugoy: dumuduyan
+5.	Umalingasaw: umaamoy
+6.	Masigasig: masipag
+7.	Manilenya: babaeng taga maynila
+8.	Giliw na giliw: sayang saya

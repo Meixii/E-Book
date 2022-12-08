@@ -1,13 +1,10 @@
-1.	Balisa: ligalig
-2.	Guni-guni: imahinasyon
-3.	Kahambal-hambal: kasuklam-suklam
-4.	Kasisilayaan: kakikitaan
-5.	Katuturan: kahulugan
-6.	Malamlam: mapanglaw
-7.	Nahihimlay -nakahiga
-8.	Nakakahambal: nakakaawa
-9.	Nakakalunos: nakapanghihinayang
-10.	Nauulinigan: naririnig
-11.	Nimpa: diyosa
-12.	Pabiling-biling: palinga-linga
-13.	Panatag: tiwasay
+1.	Alkalde: mayor
+2.	Porselana: magandang kutis
+3.	Kalansing: tunog
+4.	Kubyertos: gamit sa pagkain
+5.	Bulwagan: gusaling pinagtatanghalan
+6.	Adorno: palamuti
+7.	Kura: pari
+8.	Paisano: katulong
+9.	Erehe: taong di sumasangayon
+10.	Batid: alam

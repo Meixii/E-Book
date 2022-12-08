@@ -1,10 +1,7 @@
-1.	Lumaganap: kumalat
-2.	Hampaslupa: dukha
-3.	Inaalipusta: inaabuso o pinapahirapan
-4.	Kaaliwaswasan: kalokohan
-5.	Malakas na ibinulaslas -biglang pagsabi
-6.	Mapusok: agresibo
-7.	Nanlumo: nanghina
-8.	Pagtimpi: pagtitiis o pagpigil sa sarili
-9.	Sumabad: sumagot
-10.	Tigmak ng dugo: punong-puno ng dugo
+1.	Sermon: pangangaral
+2.	Nakatuon: nakabaling, naka pokus
+3.	Tinitingala: hinahangaan
+4.	Tulisan: hindi sumusunod sa batas, bandido
+5.	Naghihikab: pagkaantok
+6.	Sinusulyapan: palihim na tinitignan
+7.	Erehe: hindi sumusunod sa utos ng simbahan

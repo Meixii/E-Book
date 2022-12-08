@@ -1,10 +1,5 @@
-1.	Kuwartel: gusali kung saan nakatira ang mga sundalo
-2.	Kura: pari na namumuno sa isang simbahan
-3.	Kusing: halagang kalahati lamang ng isang sentimo
-4.	Nadakip: nahuli
-5.	Nagsumamo: nagmakaawa
-6.	Onsa: yunit ng timbang o bigat
-7.	Pananambitan: pagluluksa, pananaghoy, pananangis
-8.	Pilas: punit
-9.	Sikdo: kutob
-10.	Sinakmal: kinagat nang bigla
+1.	Lulong: adik
+2.	Maidulot: hatid
+3.	Di inaasahan: hindi hinahangad
+4.	Nilamon: kinain
+5.	Nanlumo: labis na nalungkot, nanghina, nanamlay, nawalan ng pag-asa

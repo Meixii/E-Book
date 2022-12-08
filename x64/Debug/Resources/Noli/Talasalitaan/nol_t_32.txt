@@ -1,5 +1,13 @@
-1.	Ekskomunyon: pagtitiwalag sa simbahang Katoliko.
-2.	Nawalan ng ulirat: hinimatay
-3.	Pahiwatig: mga ‘di tiyak o tagong pahayag o kaya’y mga kilos o galaw ayon sa pagpapakahulugan ng
-	mga tao
-4.	Yagbols: pinalakas-loob
+1.	Makikilahok: sasali
+2.	Nagdaos: nagdiwang
+3.	Alkalde: mayor
+4.	Alperes: batang opisyal ng militar
+5.	Hudyat: senyales
+6.	Sermon: pangangaral
+7.	Nangangatal: nanginginig
+8.	Bumbong: lalagyan na yari sa kawayan
+9.	Nagmungkahi: nag ulat, nagsalita, nagkwento
+10.	Eskribano: dalubhasa sa batas
+11.	Uka: sira
+12.	Binendisyonan: binasbasan
+13.	Nagulantang: nagulat

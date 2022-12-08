@@ -77,8 +77,26 @@ void quit();
     // error
 void error();
 
+
+/*
+
+    <==============================================================================>
+    <==============================================================================>
+
+*/
+
+
 int k_num, c_num;
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+
+/*
+
+    <==============================================================================>
+    <==============================================================================>
+
+*/
+
 
 int main()
 {
@@ -2348,7 +2366,7 @@ void nav_end() {
     }
     cout << endl;
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "      Noli Me Tangere: ";
+    cout << "          Noli Me Tangere: ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "1";
     SetConsoleTextAttribute(hConsole, 11);

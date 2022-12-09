@@ -1,6 +1,4 @@
-1.	Maaaninag: makikita
-2.	Tugon: sagot
-3.	Kwartel: tirahan ng mga sundalo
-4.	Nagmatyag: nagtingin tingin
-
-
+1. Maaaninag: makikita
+2. Tugon: sagot
+3. Kwartel: tirahan ng mga sundalo
+4. Nagmatyag: nagtingin tingin

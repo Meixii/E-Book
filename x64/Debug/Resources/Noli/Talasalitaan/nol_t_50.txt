@@ -1,8 +1,7 @@
-1.	Tagasuri: tagatingin
-2.	Ipinataw: ipinatong
-3.	Nasakdal: suspek
-4.	Bandido: tulisan, may nalabag na batas
-5.	Masaklap: hindi kanais-nais
-6.	Paglaon: lumipas
-7.	Musmos: bata
-
+1. Tagasuri: tagatingin
+2. Ipinataw: ipinatong
+3. Nasakdal: suspek
+4. Bandido: tulisan, may nalabag na batas
+5. Masaklap: hindi kanais-nais
+6. Paglaon: lumipas
+7. Musmos: bata

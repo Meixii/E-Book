@@ -1,9 +1,9 @@
-1.	Buwis: bahagi ng kinikita o bayad ng mga mamamayan na napupunta sa pamahalaan
-2.	Humahatol: nagdedesisyon
-3.	Lasak: kulay itim at puting manok
-4.	Bulik: batik batik na manok
-5.	Liamado: lamang
-6.	Dehado: lugi, talo
-7.	Nagmamasid: nanonood, nagtitingin tingin
-8.	Kwartel: tirahan ng mga sundalo
-9.	Makakapag-akay: makakapagsama
+1. Buwis: bahagi ng kinikita o bayad ng mga mamamayan na napupunta sa pamahalaan
+2. Humahatol: nagdedesisyon
+3. Lasak: kulay itim at puting manok
+4. Bulik: batik batik na manok
+5. Liamado: lamang
+6. Dehado: lugi, talo
+7. Nagmamasid: nanonood, nagtitingin tingin
+8. Kwartel: tirahan ng mga sundalo
+9. Makakapag-akay: makakapagsama

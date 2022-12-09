@@ -1,13 +1,13 @@
-1.	Pilosopo: nag-uusisa, matalinong tao
-2.	Pananaw: paniniwala
-3.	Kabiyak: asawa
-4.	Inatupag: inasikaso
-5.	Sinapit: dinanas
-6.	Naengganyo: naaya o nahikayat
-7.	Napabayaan: naiwan
-8.	Nagbabadya: nagbabanta
-9.	Lilipol: sisira
-10.	Sanlibutan: mundo
-11.	Mungkahi: opinyon
-12.	Purgatoryo: Dito nananatili ang mga taong namatay na at hindi pa kinukuha ng langit o ng lupa
-13.	Talakayan: usapan
+1. Pilosopo: nag-uusisa, matalinong tao
+2. Pananaw: paniniwala
+3. Kabiyak: asawa
+4. Inatupag: inasikaso
+5. Sinapit: dinanas
+6. Naengganyo: naaya o nahikayat
+7. Napabayaan: naiwan
+8. Nagbabadya: nagbabanta
+9. Lilipol: sisira
+10. Sanlibutan: mundo
+11. Mungkahi: opinyon
+12. Purgatoryo: Dito nananatili ang mga taong namatay na at hindi pa kinukuha ng langit o ng lupa
+13. Talakayan: usapan

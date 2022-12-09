@@ -1,7 +1,7 @@
-1.	Alkalde: mayor
-2.	Alperes: batang opisyal ng militar
-3.	Tinyente: sundalo
-4.	Eskribano: dalubhasa sa batas
-5.	Telegrama: sulat
-6.	Kumbento: simbahan
-7.	Huminahon: kumalma
+1. Alkalde: mayor
+2. Alperes: batang opisyal ng militar
+3. Tinyente: sundalo
+4. Eskribano: dalubhasa sa batas
+5. Telegrama: sulat
+6. Kumbento: simbahan
+7. Huminahon: kumalma

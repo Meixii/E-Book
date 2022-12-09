@@ -1,7 +1,6 @@
-1.	Liham: sulat
-2.	Nabalisa: hindi mapakali, natatakot
-3.	Alperes: opisyal ng militar
-4.	Malalampaso: matatalo
-5.	Ekskumonikado: bawal tanggapin ng simbahan habang nabubuhay
-6.	Sagabal: hadlang
-
+1. Liham: sulat
+2. Nabalisa: hindi mapakali, natatakot
+3. Alperes: opisyal ng militar
+4. Malalampaso: matatalo
+5. Ekskumonikado: bawal tanggapin ng simbahan habang nabubuhay
+6. Sagabal: hadlang

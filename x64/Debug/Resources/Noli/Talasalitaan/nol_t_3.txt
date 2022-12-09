@@ -1,8 +1,8 @@
-1.	Talakayan: usapan
-2.	Tinyente: sundalo
-3.	Kabisera: punong lungsod
-4.	Sentro: gitna
-5.	Kumpesor: taga-gawa
-6.	Kura: pari
-7.	Kinahantungan: kinalabasan
-8.	Telegrama: sulat
+1. Talakayan: usapan
+2. Tinyente: sundalo
+3. Kabisera: punong lungsod
+4. Sentro: gitna
+5. Kumpesor: taga-gawa
+6. Kura: pari
+7. Kinahantungan: kinalabasan
+8. Telegrama: sulat

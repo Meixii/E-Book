@@ -1,11 +1,6 @@
-1.	Kinahantungan: kinalabasan, kinasapitan
-2.	Sinisipat-sipat: tinatantsa
-3.	Lantsa: bangka
-4.	Nalilito: naguguluhan
-5.	Inasinta: pinatamaan
-6.	Sarhento: tagapamayapa, pulis sa parlamento
-
-
-
-
-
+1. Kinahantungan: kinalabasan, kinasapitan
+2. Sinisipat-sipat: tinatantsa
+3. Lantsa: bangka
+4. Nalilito: naguguluhan
+5. Inasinta: pinatamaan
+6. Sarhento: tagapamayapa, pulis sa parlamento

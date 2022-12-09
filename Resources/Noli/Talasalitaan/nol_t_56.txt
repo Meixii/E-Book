@@ -1,8 +1,6 @@
-1.	Lumusob: sumugod
-2.	Nagkaengkwentro: makasagupa
-3.	Dinakip: kinuha, inaresto
-4.	Bise alkalde: Bise mayor
-5.	Nagkarambulan: nagkagulo
-6.	Alperes: opisyal ng militar
-
-
+1. Lumusob: sumugod
+2. Nagkaengkwentro: makasagupa
+3. Dinakip: kinuha, inaresto
+4. Bise alkalde: Bise mayor
+5. Nagkarambulan: nagkagulo
+6. Alperes: opisyal ng militar

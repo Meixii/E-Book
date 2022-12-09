@@ -1,8 +1,8 @@
-1.	Kagalakan: kasiyahan
-2.	Karwahe: sasakyan na hilahila ng kabayo
-3.	Kareta: kariton
-4.	Baku-bako: sira sira
-5.	Lumalatay: bumabakat
-6.	Naparam: naglaho
-7.	Marikit: maganda
-8.	Kamangmangan: walang alam
+1. Kagalakan: kasiyahan
+2. Karwahe: sasakyan na hilahila ng kabayo
+3. Kareta: kariton
+4. Baku-bako: sira sira
+5. Lumalatay: bumabakat
+6. Naparam: naglaho
+7. Marikit: maganda
+8. Kamangmangan: walang alam

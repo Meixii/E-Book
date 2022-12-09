@@ -1,8 +1,8 @@
-1.	Kampanaryo: kampana
-2.	Nakahimlay: nakalibing
-3.	Luntian: berde
-4.	Umuugoy: dumuduyan
-5.	Umalingasaw: umaamoy
-6.	Masigasig: masipag
-7.	Manilenya: babaeng taga maynila
-8.	Giliw na giliw: sayang saya
+1. Kampanaryo: kampana
+2. Nakahimlay: nakalibing
+3. Luntian: berde
+4. Umuugoy: dumuduyan
+5. Umalingasaw: umaamoy
+6. Masigasig: masipag
+7. Manilenya: babaeng taga maynila
+8. Giliw na giliw: sayang saya

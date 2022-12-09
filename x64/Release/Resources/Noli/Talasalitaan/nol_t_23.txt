@@ -1,5 +1,5 @@
-1.	Kawaksi: kasangga o kaanib
-2.	Paglalakbay: paglalakad
-3.	Kundiman: uri ng kanta
-4.	Pagsulpot: biglang paglabas
-5.	Nilundag: tumalon
+1. Kawaksi: kasangga o kaanib
+2. Paglalakbay: paglalakad
+3. Kundiman: uri ng kanta
+4. Pagsulpot: biglang paglabas
+5. Nilundag: tumalon

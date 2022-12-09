@@ -1,15 +1,15 @@
-1.	Makalanghap: makaamoy
-2.	Tinyente: sundalo
-3.	Kwartel: tirahan
-4.	Inakusahan: pinagbintangan
-5.	Nangungumpisal: nagpatotoo
-6.	Artilyero: namamahala sa mga gamit sa gyera
-7.	Tampulan: tuksuhin
-8.	Kamangmangan: walang alam
-9.	Dunung-dunungan: nagpapanggap na marunong
-10.	Paslit: bata
-11.	Umitsa: bumato
-12.	Erehe: taong di sumasangayon
-13.	Pilibustero: suwail
-14.	Huwad: sinungaling
-15.	Rehas: kulungan
+1. Makalanghap: makaamoy
+2. Tinyente: sundalo
+3. Kwartel: tirahan
+4. Inakusahan: pinagbintangan
+5. Nangungumpisal: nagpatotoo
+6. Artilyero: namamahala sa mga gamit sa gyera
+7. Tampulan: tuksuhin
+8. Kamangmangan: walang alam
+9. Dunung-dunungan: nagpapanggap na marunong
+10. Paslit: bata
+11. Umitsa: bumato
+12. Erehe: taong di sumasangayon
+13. Pilibustero: suwail
+14. Huwad: sinungaling
+15. Rehas: kulungan

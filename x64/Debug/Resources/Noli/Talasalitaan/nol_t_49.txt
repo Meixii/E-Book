@@ -1,5 +1,5 @@
-1.	Hinaing: reklamo, hinanakit
-2.	Api: inaaway
-3.	Pribilehiyo: espesyal na karapatan, bentahe, o kung ano pang importanteng bagay na nakukuha
-	lamang ng illan at hindi lahat ng tao
-4.	Adhikain: layunin
+1. Hinaing: reklamo, hinanakit
+2. Api: inaaway
+3. Pribilehiyo: espesyal na karapatan, bentahe, o kung ano pang importanteng bagay na nakukuha
+   lamang ng illan at hindi lahat ng tao
+4. Adhikain: layunin

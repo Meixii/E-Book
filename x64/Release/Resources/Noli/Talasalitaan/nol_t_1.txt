@@ -1,10 +1,10 @@
-1.	Alkalde: mayor
-2.	Porselana: magandang kutis
-3.	Kalansing: tunog
-4.	Kubyertos: gamit sa pagkain
-5.	Bulwagan: gusaling pinagtatanghalan
-6.	Adorno: palamuti
-7.	Kura: pari
-8.	Paisano: katulong
-9.	Erehe: taong di sumasangayon
-10.	Batid: alam
+1. Alkalde: mayor
+2. Porselana: magandang kutis
+3. Kalansing: tunog
+4. Kubyertos: gamit sa pagkain
+5. Bulwagan: gusaling pinagtatanghalan
+6. Adorno: palamuti
+7. Kura: pari
+8. Paisano: katulong
+9. Erehe: taong di sumasangayon
+10. Batid: alam

@@ -1,5 +1,5 @@
-1.	Beateryo: tinitirahan ng mga madre
-2.	Masinsinan: seryoso
-3.	Kumbento: simbahan
-4.	Paratang: bintang
-5.	Nagpahayag: nagsabi
+1. Beateryo: tinitirahan ng mga madre
+2. Masinsinan: seryoso
+3. Kumbento: simbahan
+4. Paratang: bintang
+5. Nagpahayag: nagsabi

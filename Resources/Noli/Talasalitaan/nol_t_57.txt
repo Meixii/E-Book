@@ -1,12 +1,10 @@
-1.	Tribunal: taga husga
-2.	Rehas: kulungan
-3.	Alperes: mayor
-4.	Salawal: pambabang kasuotan
-5.	Paglusob: pagsugod
-6.	Kura: pari
-7.	Inilublob: inilubog
-8.	Binalingan: binigyan ng atensyon
-9.	Kwartel: tirahan ng mga sundalo
-10.	Ibilanggo: ikulong
-
-
+1. Tribunal: taga husga
+2. Rehas: kulungan
+3. Alperes: mayor
+4. Salawal: pambabang kasuotan
+5. Paglusob: pagsugod
+6. Kura: pari
+7. Inilublob: inilubog
+8. Binalingan: binigyan ng atensyon
+9. Kwartel: tirahan ng mga sundalo
+10. Ibilanggo: ikulong

@@ -1,7 +1,7 @@
-1.	Nagmasid-masid: tumitingin-tingin
-2.	Kinahinatnan: kinahantungan
-3.	Balakid: sagabal
-4.	Pananaw: pagkakaunawa
-5.	Manghihimasok: pakikialam
-6.	Bulwagan: silid
-7.	Alkalde: mayor
+1. Nagmasid-masid: tumitingin-tingin
+2. Kinahinatnan: kinahantungan
+3. Balakid: sagabal
+4. Pananaw: pagkakaunawa
+5. Manghihimasok: pakikialam
+6. Bulwagan: silid
+7. Alkalde: mayor

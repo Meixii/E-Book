@@ -1,10 +1,7 @@
-1.	Nailathala: naisapubliko, naibalita
-2.	Panayam: pakikipagusap
-3.	Kumbento: simbahan
-4.	Ipinagbunyi: pinagdiwang
-5.	Pilibustero: suwail
-6.	Hinuhubog: hinahasa, pinapagaling
-7.	Nangatog: nanginig
-
-
-
+1. Nailathala: naisapubliko, naibalita
+2. Panayam: pakikipagusap
+3. Kumbento: simbahan
+4. Ipinagbunyi: pinagdiwang
+5. Pilibustero: suwail
+6. Hinuhubog: hinahasa, pinapagaling
+7. Nangatog: nanginig

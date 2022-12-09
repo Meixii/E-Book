@@ -1,12 +1,7 @@
-1.	Dampa: maliit na bahay
-2.	Halakhak: malakas na tawa
-3.	Tumindig: tumayo
-4.	Kwartel: tirahan ng mga sundalo
-5.	Alperes: opisyal ng militar
-6.	Pinupog: tinadtad
-7.	Humandusay: humilata, nakahiga
-
-
-
-
-
+1. Dampa: maliit na bahay
+2. Halakhak: malakas na tawa
+3. Tumindig: tumayo
+4. Kwartel: tirahan ng mga sundalo
+5. Alperes: opisyal ng militar
+6. Pinupog: tinadtad
+7. Humandusay: humilata, nakahiga

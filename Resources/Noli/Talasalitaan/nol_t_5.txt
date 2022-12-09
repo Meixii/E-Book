@@ -1,7 +1,7 @@
-1.	Tinutuluyan: tinitirahan
-2.	Nagmasid-masid: tumingin tingin
-3.	Natanaw: nakita
-4.	Kalansing: tunog
-5.	Kubyertos: kutsara
-6.	Balingkinitan: payat
-7.	Nahimlay: nahiga
+1. Tinutuluyan: tinitirahan
+2. Nagmasid-masid: tumingin tingin
+3. Natanaw: nakita
+4. Kalansing: tunog
+5. Kubyertos: kutsara
+6. Balingkinitan: payat
+7. Nahimlay: nahiga

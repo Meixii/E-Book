@@ -87,8 +87,13 @@ void bookmark();
 void bookmark_option_toc();
 void bookmark_option_nol();
 void bookmark_option_fil();
+
+void bookmark_nol();
+void bookmark_fil();
+
 void bookmark_add();
 void bookmark_remove();
+
 
 
 /*
@@ -224,7 +229,7 @@ void toc() {
     cout <<" ------------------" << endl;
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
-    cout << "1";
+    cout << "0";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Ang Bida" << endl << endl;
 
@@ -237,17 +242,17 @@ void toc() {
 
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
-    cout << "2";
+    cout << "1";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Buod ng Nobelang \"Noli Me Tangere\"" << endl;
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
-    cout << "3";
+    cout << "2";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Pagkakakilanlan sa mga Tauhan" << endl;
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
-    cout << "4";
+    cout << "3";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Mga Kabanata ng \"Noli Me Tangere\"" << endl << endl;
 
@@ -260,17 +265,17 @@ void toc() {
 
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
-    cout << "5";
+    cout << "4";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Buod ng Nobelang \"El Filibusterismo\"" << endl;
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
-    cout << "6";
+    cout << "5";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Pagkakakilanlan sa mga Tauhan" << endl;
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
-    cout << "7";
+    cout << "6";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Mga Kabanata ng \"El Filibusterismo\"" << endl << endl;
 
@@ -281,6 +286,12 @@ void toc() {
     SetConsoleTextAttribute(hConsole, 11);
     cout << " -----------" << endl;
 
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                        [ ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "7";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ] Bookmark" << endl;
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
     cout << "8";
@@ -320,39 +331,45 @@ void toc() {
     9. Itigil ang paglalakbay
     */
     switch (table) {
-    case 1: // Dr. Jose P. Rizal
+    
+    case 0: // Dr. Jose P. Rizal
         system("cls");
         Rizal();
         break;
 
-    case 2: // Buod ng Noli Me Tangere
+    case 1: // Buod ng Noli Me Tangere
         system("cls");
         noli();
         break;
 
-    case 3: // Pagkakakilanlan sa mga Tauhan
+    case 2: // Pagkakakilanlan sa mga Tauhan
         system("cls");
         Nol_C();
         break;
 
-    case 4: // Mga Kabanata ng Noli Me Tangere
+    case 3: // Mga Kabanata ng Noli Me Tangere
         system("cls");
         chap_Nol_K();
         break;
 
-    case 5: // Buod ng El Filibusterismo
+    case 4: // Buod ng El Filibusterismo
         system("cls");
         fili();
         break;
 
-    case 6: // Pagkakakilanlan sa mga Tauhan
+    case 5: // Pagkakakilanlan sa mga Tauhan
         system("cls");
         Fil_C();
         break;
 
-    case 7: // Mga Kabanata ng El Filibusterismo
+    case 6: // Mga Kabanata ng El Filibusterismo
         system("cls");
         chap_Fil_K();
+        break;
+
+    case 7: // Bookmark
+        system("cls");
+        bookmark_option_toc();
         break;
 
     case 8: // Kilalanin ang mga gumawa
@@ -1409,17 +1426,27 @@ void print2_Nol_C() {
     }
     cout << endl;
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "                       Huling pahina: ";
+    cout << "            Huling pahina: ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "1";
+
+
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "      Mga Kabanata: ";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "2";
+
+
     SetConsoleTextAttribute(hConsole, 11);
     cout << "      Mapa ni Pepe : ";
     SetConsoleTextAttribute(hConsole, 14);
-    cout << "2";
+    cout << "3";
+
+
     SetConsoleTextAttribute(hConsole, 11);
     cout << "      Ipagliban ang Paglalakbay: ";
     SetConsoleTextAttribute(hConsole, 14);
-    cout << "3" << endl;
+    cout << "4" << endl;
 
     SetConsoleTextAttribute(hConsole, 8);
     for (int i = 1; i <= 120; i++) {
@@ -1490,10 +1517,15 @@ void print2_Nol_C() {
 
     case 50:
         system("cls");
-        toc();
+        chap_Nol_K();
         break;
 
     case 51:
+        system("cls");
+        toc();
+        break;
+
+    case 52:
         system("cls");
         quit();
         break;
@@ -1755,7 +1787,7 @@ void chap_Fil_K() {
     SetConsoleTextAttribute(hConsole, 11);
 
     cout << "                                            Mga Kabanata sa El Filibusterismo\n" << endl;
-    cout << "                                                       [ 1 - 39]" << endl;
+    cout << "                                                       [ 1 - 39 ]" << endl;
     SetConsoleTextAttribute(hConsole, 14);
     cout << "                                        __________________________________________" << endl;
     cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -1877,7 +1909,7 @@ void print_Fil_K() {
         SetConsoleTextAttribute(hConsole, 11);
 
         cout << "                                            Mga Kabanata sa El Filibusterismo\n" << endl;
-        cout << "                                                       [ 1 - 39]" << endl;
+        cout << "                                                       [ 1 - 39 ]" << endl;
         SetConsoleTextAttribute(hConsole, 14);
         cout << "                                        __________________________________________" << endl;
         cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -1909,7 +1941,7 @@ void print_Fil_K() {
         SetConsoleTextAttribute(hConsole, 11);
 
         cout << "                                            Mga Kabanata sa El Filibusterismo\n" << endl;
-        cout << "                                                       [ 1 - 39]" << endl;
+        cout << "                                                       [ 1 - 39 ]" << endl;
         SetConsoleTextAttribute(hConsole, 14);
         cout << "                                        __________________________________________" << endl;
         cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -2262,17 +2294,27 @@ void print2_Fil_C() {
     }
     cout << endl;
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "                       Huling pahina: ";
+    cout << "            Huling pahina: ";
     SetConsoleTextAttribute(hConsole, 14);
     cout << "1";
+
+
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "      Mga Kabanata: ";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "2";
+
+
     SetConsoleTextAttribute(hConsole, 11);
     cout << "      Mapa ni Pepe : ";
     SetConsoleTextAttribute(hConsole, 14);
-    cout << "2";
+    cout << "3";
+
+
     SetConsoleTextAttribute(hConsole, 11);
     cout << "      Ipagliban ang Paglalakbay: ";
     SetConsoleTextAttribute(hConsole, 14);
-    cout << "3" << endl;
+    cout << "4" << endl;
 
     SetConsoleTextAttribute(hConsole, 8);
     for (int i = 1; i <= 120; i++) {
@@ -2341,10 +2383,15 @@ void print2_Fil_C() {
 
     case 50:
         system("cls");
-        toc();
+        chap_Fil_K();
         break;
 
     case 51:
+        system("cls");
+        toc();
+        break;
+
+    case 52:
         system("cls");
         quit();
         break;
@@ -2559,7 +2606,6 @@ void AboutUs() {
 // Exit
 void quit() {
 
-    int exitprompt;
     char input;
 
     Logo();
@@ -2586,7 +2632,7 @@ void quit() {
         SetConsoleTextAttribute(hConsole, 14);
         cout << "                                        __________________________________________" << endl;
         cout << "                                       /_____/_____/_____/_____/_____/_____/_____/";
-        Sleep(2500);
+        Sleep(2000);
         exit(0);
         break;
 
@@ -2603,7 +2649,7 @@ void quit() {
         SetConsoleTextAttribute(hConsole, 14);
         cout << "                                        __________________________________________" << endl;
         cout << "                                       /_____/_____/_____/_____/_____/_____/_____/";
-        Sleep(2500);
+        Sleep(2000);
         main();
         system("cls");
         break;
@@ -2619,22 +2665,18 @@ void quit() {
 
 void bookmark() {
     //fstream view
-
+    system("TITLE Bookmark");
     /*
-    
     [Bookmark#] Time || Location || Chapter
-    
     */
-
 
 }
 
-// Bookmark for: TOC; Noli Me Tangere; El Filibusterismo
-
+// Bookmark for: TOC; Noli Me Tangere; El Filibusterismo // Done
 
 void bookmark_option_toc() {
 
-    system("TITLE Bookmark");
+    system("TITLE Bookmark - Menu");
 
     
     cout << "" << endl << endl << endl << endl << endl;
@@ -2642,21 +2684,17 @@ void bookmark_option_toc() {
     cout << "                                        __________________________________________" << endl;
     cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                                      Bookmark Menu";
+    cout << "                                                      Bookmark Menu" << endl;
     SetConsoleTextAttribute(hConsole, 14);
     cout << "                                        __________________________________________" << endl;
     cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       ------------------";
-    SetConsoleTextAttribute(hConsole, 7);
-    cout << "Options";
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << " ------------------" << endl;
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
     cout << "1";
     SetConsoleTextAttribute(hConsole, 11);
-    cout << " ] View Bookmarks" << endl << endl;
+    cout << " ] View Bookmarks" << endl;
 
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
@@ -2667,59 +2705,44 @@ void bookmark_option_toc() {
     SetConsoleTextAttribute(hConsole, 7);
     cout << "3";
     SetConsoleTextAttribute(hConsole, 11);
-    cout << " ] Remove a Bookmark" << endl;
+    cout << " ] Remove a Bookmark" << endl << endl;
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
     cout << "ESC";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Bumalik" << endl << endl;
 
-
     SetConsoleTextAttribute(hConsole, 14);
     cout << "                                        __________________________________________" << endl;
-    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl;
-    SetConsoleTextAttribute(hConsole, 8);
-    cout << "                                              Tip: Maglagay lamang ng numero" << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-    SetConsoleTextAttribute(hConsole, 7);
-    cout << "                                       Enter a number: ";
-    SetConsoleTextAttribute(hConsole, 11);
-    cin >> bm;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/";
 
     bm = _getch();
     switch (bm) {
 
     case 27:
         system("cls");
-        chap_Fil_K();
+        toc();
         break;
 
     case 49:
         system("cls");
-        bookmark_add();
+        bookmark();
         break;
 
     case 50:
         system("cls");
-        bookmark_remove();
+        bookmark_add();
         break;
 
     case 51:
         system("cls");
-        chap_Fil_K();
+        bookmark_remove();
         break;
 
-    case 52:
-        system("cls");
-        toc();
-        break;
 
     default:
         error();
-        print_Fil_K();
+        bookmark_option_toc();
         break;
     }
 
@@ -2728,24 +2751,209 @@ void bookmark_option_toc() {
 
 void bookmark_option_nol() {
 
+    system("TITLE Bookmark - Menu");
+
+
+    cout << "" << endl << endl << endl << endl << endl;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                                      Bookmark Menu" << endl;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                        [ ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "1";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ] View Bookmarks" << endl;
+
+    cout << "                                        [ ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "2";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ] Add a Bookmark" << endl;
+    cout << "                                        [ ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "3";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ] Remove a Bookmark" << endl << endl;
+    cout << "                                        [ ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "ESC";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ] Bumalik" << endl << endl;
+
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/";
+
+    bm = _getch();
+    switch (bm) {
+
+    case 27:
+        system("cls");
+        print_Nol_K();
+        break;
+
+    case 49:
+        system("cls");
+        bookmark();
+        break;
+
+    case 50:
+        system("cls");
+        bookmark_add();
+        break;
+
+    case 51:
+        system("cls");
+        bookmark_remove();
+        break;
+
+
+    default:
+        error();
+        bookmark_option_nol();
+        break;
+    }
+
 }
 
 void bookmark_option_fil() {
 
+    system("TITLE Bookmark - Menu");
+
+
+    cout << "" << endl << endl << endl << endl << endl;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                                      Bookmark Menu" << endl;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                        [ ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "1";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ] View Bookmarks" << endl;
+
+    cout << "                                        [ ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "2";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ] Add a Bookmark" << endl;
+    cout << "                                        [ ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "3";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ] Remove a Bookmark" << endl << endl;
+    cout << "                                        [ ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "ESC";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ] Bumalik" << endl << endl;
+
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/";
+
+    bm = _getch();
+    switch (bm) {
+
+    case 27:
+        system("cls");
+        print_Nol_K();
+        break;
+
+    case 49:
+        system("cls");
+        bookmark();
+        break;
+
+    case 50:
+        system("cls");
+        bookmark_add();
+        break;
+
+    case 51:
+        system("cls");
+        bookmark_remove();
+        break;
+
+
+    default:
+        error();
+        bookmark_option_fil();
+        break;
+    }
 
 }
 
 void bookmark_add() {
     // fstream add 
+    system("TITLE Bookmark - Add");
 
+    
+    //bm_noli.txt
+    //bm_fili.txt
 }
+void fstream();
+
+void fstream()
+    {
+        
+        cout << "Ano ang pamagat ng Nobela? Pindutin lamang ang katumbas na numero ng napiling Nobela" << endl;
+        cout << " [ 1 ] Noli Me Tangere, [ 2 ] El Filibusterismo";
+
+        string n_title; /* convert int nov,  1 = Noli,  2 = Fili */         // UI
+        int nov /* [ 1 ] Noli Me Tangere, [ 2 ] El Filibusterismo */, chap /* [ 1 - 64 ], [ 1 - 39 ] */;
+        nov = _getch();
+
+        switch (nov) {
+        case 49:
+            n_title = "Noli Me Tangere";
+            bookmark_nol();
+            break;
+
+        case 50:
+            n_title = "El Filibusterismo";
+            bookmark_fil();
+            break;
+
+        default:
+            system("cls");
+            cin.clear(); cin.ignore(512, '\n');
+            error();
+            return bookmark_add();          
+        }
+
+    }
+
+
 
 
 void bookmark_remove() {
     // fstream remove
+    system("TITLE Bookmark - Remove");
+
 
 }
 
+void bookmark_nol() {
+
+}
+
+void bookmark_fil() {
+
+}
 
 
 /*

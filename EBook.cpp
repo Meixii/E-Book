@@ -7,6 +7,30 @@
 *
 */
 
+/*
+
+                Coding 101:
+
+                system("mode x, y");                            // Window Size
+                system("TITLE Title Here");                     // Window Title
+                system("pause");                                // Pauses the whole function, Pressing any key will unpause the program
+                system("cls");                                  // Clears the screen
+                SetConsoleTextAttribute(hConsole, n);           // Console Text n = {0 - 9}
+                _getch();                                       // Gets Keyboard Output, returns the ASCII value of the key pressed;
+                                                                   e.g: Pressing "Esc" button will returns the value of '27';
+                                                                   see ASCII Table for ref.
+                ifstream                                        // Opens a file, reads the file
+                ofstream                                        // Opens a file, rewrites the file
+                void identifier();                              // Function
+
+
+
+
+
+*/
+
+
+
 #include <iostream>
 #include <fstream>
 #include <ctime>
@@ -18,12 +42,12 @@
 #include <iomanip>
 #include <conio.h>
 #include <stdio.h>
-#include <ctime>
 
 using namespace std;
 
 //// Function Declaration:
     // Main Menu
+void Tutorial();
 void Logo();
 void Face();
 void toc();
@@ -47,30 +71,34 @@ void nav_end();
 void noli();
 void noli2();
 
-
-    // chapter
-void chap_Nol_K();
-void chap_Fil_K();
-
-    // compiled
-void Nol_C();
-void Fil_C();
-
     // El Filibusterismo
 void fili();
 void fili2();
 
 
-    // print
-void print_Nol_C();
-void print2_Nol_C();
-void print_Fil_C();
-void print_Fil_K();
+
+int k_num, c_num;
+
+    // chapter
+void chap_Nol_K();
+void chap_Fil_K();
+
+    // chapter file
 void print_Nol_K();
+void print_Fil_K();
+
+
+    // character
+void Nol_C();
+void Fil_C();
+
+    // character file
 void print_Nol_C();
 void print2_Nol_C();
 void print_Fil_C();
 void print2_Fil_C();
+
+
 
 void nav_end();
 void AboutUs();
@@ -80,7 +108,6 @@ void quit();
 void error();
 
     // bookmark
-
 int bm;
 
 void bookmark();
@@ -94,8 +121,6 @@ void bookmark_fil();
 void bookmark_add();
 void bookmark_remove();
 
-
-
 /*
 
     <==============================================================================>
@@ -103,11 +128,8 @@ void bookmark_remove();
 
 */
 
-int k_num, c_num;
-
 // Text Color
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-
 
 /*
 
@@ -131,6 +153,7 @@ int main()
     Home();
     return 0;
 }
+
 
 // Logo
 void Logo() {
@@ -201,8 +224,78 @@ void Home() {
     SetConsoleTextAttribute(hConsole, 7);
     system("pause");
     system("cls");
+    return Tutorial();
+}
+
+// Tutorial
+void Tutorial()
+{
+    system("TITLE Gabay sa Paggamit");
+    cout << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "       ____________________________________________________________________________________________________________" << endl;
+    cout << "      /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                                     Gabay sa Paggamit" << endl << endl;
+
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "                     Ang LnP ay halos gumamit lamang ng mga NUMERO [ 0 - 9 ] upang mapagana ang mga nabigasyon, " << endl;
+    cout << "         nirerekomenda namin na gamitin ang \"Numpad\" ng inyong keyboard, at maaring gamitin din ang numero sa " << endl;
+    cout << "         itaas ng mga letra ng inyong keyboard." << endl << endl;
+
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                 .----------------. .----------------. .----------------." << endl;
+    cout << "                                | .--------------. | .--------------. | .--------------. |" << endl;
+    cout << "                                | |   _______    | | |     ____     | | |    ______    | |" << endl;
+    cout << "                                | |  |  ___  |   | | |   .' __ '.   | | |  .' ____ '.  | |" << endl;
+    cout << "                                | |  |_/  / /    | | |   | (__) |   | | |  | (____) |  | |" << endl;
+    cout << "                                | |      / /     | | |   .`____'.   | | |  '_.____. |  | |" << endl;
+    cout << "                                | |     / /      | | |  | (____) |  | | |  | \\____| |  | |" << endl;
+    cout << "                                | |    /_/       | | |  `.______.'  | | |   \\______,'  | |" << endl;
+    cout << "                                | |              | | |              | | |              | |" << endl;
+    cout << "                                | '--------------' | '--------------' | '--------------' |" << endl;
+    cout << "                                 .----------------. .----------------. .----------------." << endl;
+    cout << "                                | .--------------. | .--------------. | .--------------. |" << endl;
+    cout << "                                | |   _    _     | | |   _______    | | |    ______    | |" << endl;
+    cout << "                                | |  | |  | |    | | |  |  _____|   | | |  .' ____ \\   | |" << endl;
+    cout << "                                | |  | |__| |_   | | |  | |____     | | |  | |____\\_|  | |" << endl;
+    cout << "                                | |  |____   _|  | | |  '_.____''.  | | |  | '____`'.  | |" << endl;
+    cout << "                                | |      _| |_   | | |  | \\____) |  | | |  | (____) |  | |" << endl;
+    cout << "                                | |     |_____|  | | |   \\______.'  | | |  '.______.'  | |" << endl;
+    cout << "                                | |              | | |              | | |              | |" << endl;
+    cout << "                                | '--------------' | '--------------' | '--------------' |" << endl;
+    cout << "                                 .----------------. .----------------. .----------------." << endl;
+    cout << "                                | .--------------. | .--------------. | .--------------. |" << endl;
+    cout << "                                | |     __       | | |    _____     | | |    ______    | |" << endl;
+    cout << "                                | |    /  |      | | |   / ___ `.   | | |   / ____ `.  | |" << endl;
+    cout << "                                | |    `| |      | | |  |_/___) |   | | |   `'  __) |  | |" << endl;
+    cout << "                                | |     | |      | | |   .'____.'   | | |   _  |__ '.  | |" << endl;
+    cout << "                                | |    _| |_     | | |  / /____     | | |  | \\____) |  | |" << endl;
+    cout << "                                | |   |_____|    | | |  |_______|   | | |   \\______.'  | |" << endl;
+    cout << "                                | |              | | |              | | |              | |" << endl;
+    cout << "                                | '--------------' | '--------------' | '--------------' |" << endl;
+    cout << "                                 .-----------------------------------. .----------------." << endl;
+    cout << "                                | .---------------------------------. | .--------------. |" << endl;
+    cout << "                                | |              ____               | | |              | |" << endl;
+    cout << "                                | |            .'    '.             | | |              | |" << endl;
+    cout << "                                | |           |  .--.  |            | | |              | |" << endl;
+    cout << "                                | |           | |    | |            | | |              | |" << endl;
+    cout << "                                | |           |  `--'  |            | | |      _       | |" << endl;
+    cout << "                                | |            '.____.'             | | |     (_)      | |" << endl;
+    cout << "                                | |                                 | | |              | |" << endl;
+    cout << "                                | '---------------------------------' | '--------------' |" << endl;
+    cout << "                                 '-----------------------------------' '----------------'" << endl << endl;
+
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "       ____________________________________________________________________________________________________________" << endl;
+    cout << "      /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+
+    cout << "                                           ";
+    system("pause");
+    system("cls");
     return toc();
 }
+
 
 // Table of Contents
 void toc() {
@@ -229,7 +322,7 @@ void toc() {
     cout <<" ------------------" << endl;
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
-    cout << "0";
+    cout << "1";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Ang Bida" << endl << endl;
 
@@ -242,17 +335,17 @@ void toc() {
 
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
-    cout << "1";
+    cout << "2";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Buod ng Nobelang \"Noli Me Tangere\"" << endl;
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
-    cout << "2";
+    cout << "3";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Pagkakakilanlan sa mga Tauhan" << endl;
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
-    cout << "3";
+    cout << "4";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Mga Kabanata ng \"Noli Me Tangere\"" << endl << endl;
 
@@ -265,17 +358,17 @@ void toc() {
 
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
-    cout << "4";
+    cout << "5";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Buod ng Nobelang \"El Filibusterismo\"" << endl;
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
-    cout << "5";
+    cout << "6";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Pagkakakilanlan sa mga Tauhan" << endl;
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
-    cout << "6";
+    cout << "7";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Mga Kabanata ng \"El Filibusterismo\"" << endl << endl;
 
@@ -289,19 +382,39 @@ void toc() {
     SetConsoleTextAttribute(hConsole, 11);
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
-    cout << "7";
+    cout << "8";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Bookmark" << endl;
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
-    cout << "8";
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << " ] Kilalanin ang mga Gumawa" << endl;
-    cout << "                                        [ ";
-    SetConsoleTextAttribute(hConsole, 7);
     cout << "9";
     SetConsoleTextAttribute(hConsole, 11);
-    cout << " ] Itigil ang paglalakbay" << endl << endl;
+    cout << " ] Kilalanin ang mga Gumawa" << endl << endl;
+
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       ---------------";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << " Ibang Option";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ---------------" << endl;
+
+    cout << "                                        [ ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "10";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ]";
+    SetConsoleTextAttribute(hConsole, 8); 
+    cout << " Gabay sa Paggamit" << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                        [ ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "11";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ]";
+    SetConsoleTextAttribute(hConsole, 4); 
+    cout << " Itigil ang paglalakbay" << endl << endl;
+
+
 
     SetConsoleTextAttribute(hConsole, 14);
     cout << "                                        __________________________________________" << endl;
@@ -327,67 +440,71 @@ void toc() {
     6. Pagkakakilanlan sa mga Tauhan
     7. Mga Kabanata ng El Filibusterismo
 
-    8. Kilalanin ang mga gumawa
-    9. Itigil ang paglalakbay
+    8. Bookmark
+    9. Kilalanin ang mga gumawa
+
+    10. Gabay sa Paggamit
+    11. Itigil ang paglalakbay
     */
     switch (table) {
     
-    case 0: // Dr. Jose P. Rizal
+    case 1: // Dr. Jose P. Rizal
         system("cls");
         Rizal();
         break;
 
-    case 1: // Buod ng Noli Me Tangere
+    case 2: // Buod ng Noli Me Tangere
         system("cls");
         noli();
         break;
 
-    case 2: // Pagkakakilanlan sa mga Tauhan
+    case 3: // Pagkakakilanlan sa mga Tauhan
         system("cls");
         Nol_C();
         break;
 
-    case 3: // Mga Kabanata ng Noli Me Tangere
+    case 4: // Mga Kabanata ng Noli Me Tangere
         system("cls");
         chap_Nol_K();
         break;
 
-    case 4: // Buod ng El Filibusterismo
+    case 5: // Buod ng El Filibusterismo
         system("cls");
         fili();
         break;
 
-    case 5: // Pagkakakilanlan sa mga Tauhan
+    case 6: // Pagkakakilanlan sa mga Tauhan
         system("cls");
         Fil_C();
         break;
 
-    case 6: // Mga Kabanata ng El Filibusterismo
+    case 7: // Mga Kabanata ng El Filibusterismo
         system("cls");
         chap_Fil_K();
         break;
 
-    case 7: // Bookmark
+    case 8: // Bookmark
         system("cls");
         bookmark_option_toc();
         break;
 
-    case 8: // Kilalanin ang mga gumawa
+    case 9: // Kilalanin ang mga gumawa
         system("cls");
         AboutUs();
         break;
 
-    case 9: // Itigil ang paglalakbay
+    case 10: // Gabay sa Paggamit
+        system("cls");
+        Tutorial();
+        break;
+
+    case 11: // Itigil ang paglalakbay
         system("cls");
         quit();
         break;
 
     default:
-
-        if (cin.fail())
-        {
-            cin.clear(); cin.ignore(512, '\n');
-        }
+        cin.clear(); cin.ignore(512, '\n');
         error();
         return toc();
         break;
@@ -904,7 +1021,6 @@ void nav_noli2() {
 // Noli Me Tangere - Chapters
 void chap_Nol_K() {
     system("TITLE Noli Me Tangere - Kabanata");
-    using namespace std;
 
     cout << "" << endl << endl << endl << endl << endl << endl << endl;
     SetConsoleTextAttribute(hConsole, 14);
@@ -1095,6 +1211,7 @@ void print_Nol_K() {
         cout << "=";
     }
     nav_Nol_K();
+
 }
 
 void nav_Nol_K() {
@@ -2486,7 +2603,6 @@ void nav_end() {
         nav_end();
         break;
     }
-
 }
 
 // ERROR
@@ -2663,14 +2779,18 @@ void quit() {
 
 }
 
+
+
 void bookmark() {
     //fstream view
     system("TITLE Bookmark");
     /*
     [Bookmark#] Time || Location || Chapter
+    
     */
 
 }
+
 
 // Bookmark for: TOC; Noli Me Tangere; El Filibusterismo // Done
 
@@ -2905,9 +3025,9 @@ void bookmark_add() {
     //bm_noli.txt
     //bm_fili.txt
 }
-void fstream();
+void test();
 
-void fstream()
+void test()
     {
         
         cout << "Ano ang pamagat ng Nobela? Pindutin lamang ang katumbas na numero ng napiling Nobela" << endl;
@@ -2938,17 +3058,84 @@ void fstream()
     }
 
 
-
-
 void bookmark_remove() {
     // fstream remove
     system("TITLE Bookmark - Remove");
+    //dito gawa ni fungo design
 
+
+   cout << "" << endl << endl << endl << endl << endl;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                                         Bookmark" << endl;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "                                     |";
+    SetConsoleTextAttribute(hConsole, 14); 
+    cout << "       Nobela    	  ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << " |  ";
+    SetConsoleTextAttribute(hConsole, 14); 
+    cout << "Kabanata  ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << " |  ";
+    SetConsoleTextAttribute(hConsole, 14); 
+    cout << "Oras   ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "|"<< endl;
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "                                 1.  | El filibusterismo   |     32      |  00:00  |" << endl;
+    cout << "                                 2.  | Noli Me tangere     |     32      |  00:00  |" << endl;
+    											//++ nalang sa number
+    											//eto is by code ang labass
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       ------------";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << " Ibang option";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ------------" << endl;
+   
+    //bukod to sa taas
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                           [ ";
+     SetConsoleTextAttribute(hConsole, 7);
+    cout << "1";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ]" ;
+	SetConsoleTextAttribute(hConsole, 8);
+    cout << " Magbalik sa Mapa ni Pepe"  << endl;  
+    //dito ay dapat bumalik sa main menu ang user 
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                           [ ";
+     SetConsoleTextAttribute(hConsole, 7);
+    cout << "2";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ] Magdagdag ng Bookmark " << endl;
+    //if magkakaroon, pwede na dito magdagdag ng bookmark ang user
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                           [ ";
+     SetConsoleTextAttribute(hConsole, 7);
+    cout << "3";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ]";
+    SetConsoleTextAttribute(hConsole, 4);
+    cout << " Magbawas ng Bookmark "  << endl;
+    //pwede ito gamitin kapag magbabawas ang user ng bookmark
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+	
+    system("pause");
+    //dito sila mamimili ng path
 
 }
 
 void bookmark_nol() {
-
+ 
 }
 
 void bookmark_fil() {

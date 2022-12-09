@@ -1,10 +1,10 @@
 
 /*
-* 
-* 
-                    Lakbay ni Pepe   ||    Group 3 "Mga Bata ni Sir RR"   ||    BSCS1A@2022      
 *
-* 
+*
+                    Lakbay ni Pepe   ||    Group 3 "Mga Bata ni Sir RR"   ||    BSCS1A@2022
+*
+*
 */
 
 #include <iostream>
@@ -105,7 +105,6 @@ int main()
     system("TITLE Lakbay ni Pepe - Group 3");
     Logo();
 
-
     cout << "                                             ";
     system("pause");
     system("cls");
@@ -116,9 +115,9 @@ int main()
 
 // Logo
 void Logo() {
- 
+
     system("TITLE Lakbay ni Pepe - Group 3");
-    
+
     cout << endl;
     cout << endl;
     SetConsoleTextAttribute(hConsole, 14);
@@ -147,8 +146,8 @@ void Logo() {
 void Home() {
 
     system("TITLE Lakbay ni Pepe - Home");
-    
-     
+
+
 
     Logo();
 
@@ -159,17 +158,27 @@ void Home() {
     cout << "           na ito ay pinamagatang \"Noli Me Tangere\" at \"El Filibusterismo\". Ang programang ito ay naglalaman" << endl;
     cout << "           ng buod sa bawat kabanata, mga pagkikilanlan sa mga tauhan, at mga talasalitaan nang mas maunawaan " << endl;
     cout << "           ng mga mangbabasa ang mga salitang matatalinghaga sa bawat nobelang nabanggit." << endl << endl;
+    
+    cout << endl << "           " ;
+    SetConsoleTextAttribute(hConsole, 8);
+    for (int i = 1; i <= 97; i++) {
+        cout << "-";
+    }
+    
+    cout << endl;
+    
+    SetConsoleTextAttribute(hConsole, 8);
+    cout << "             The \"Lakbay ni Pepe\" app was created for offline browsing of Dr. Jose P. Rizal's books such as" << endl;
+    cout << "           \"Noli Me Tangere\" and \"El Filibusterismo\". This program was created for educational purposes only" << endl;
+    cout << "           and makes no claims for any public use. Check \"Kilalanin ang mga Gumawa\" for the references used." << endl;
+    cout << "           ";
 
     SetConsoleTextAttribute(hConsole, 8);
-    cout << "           The \"Lakbay ni Pepe\" application was created for offline browsing of Dr. Jose P. Rizal's books" << endl;
-    cout << "           such as \"Noli Me Tangere\" and \"El Filibusterismo.\" This program was created for educational" << endl;
-    cout << "           purposes only and makes no claims for public use." << endl << endl;
-    SetConsoleTextAttribute(hConsole, 14);
-    cout << "            ________________________________________________________________________________________________" << endl;
-    cout << "           /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    for (int i = 1; i <= 97; i++) {
+        cout << "-";
+    }
 
-
-    cout << "                                             ";
+    cout << endl << endl << "                                             ";
     SetConsoleTextAttribute(hConsole, 7);
     system("pause");
     system("cls");
@@ -178,9 +187,9 @@ void Home() {
 
 // Table of Contents
 void toc() {
- 
+
     system("TITLE Lakbay ni Pepe - Mapa");
-    
+
     int table;
     cout << "" << endl << endl << endl << endl << endl;
     SetConsoleTextAttribute(hConsole, 14);
@@ -199,7 +208,7 @@ void toc() {
     cout << " Rizal";
     SetConsoleTextAttribute(hConsole, 11);
     cout <<" ------------------" << endl;
-    cout << "                                        [ "; 
+    cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
     cout << "1";
     SetConsoleTextAttribute(hConsole, 11);
@@ -218,12 +227,12 @@ void toc() {
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Buod ng Nobelang \"Noli Me Tangere\"" << endl;
     cout << "                                        [ ";
-    SetConsoleTextAttribute(hConsole, 7); 
+    SetConsoleTextAttribute(hConsole, 7);
     cout << "3";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Pagkakakilanlan sa mga Tauhan" << endl;
     cout << "                                        [ ";
-    SetConsoleTextAttribute(hConsole, 7); 
+    SetConsoleTextAttribute(hConsole, 7);
     cout << "4";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Mga Kabanata ng \"Noli Me Tangere\"" << endl << endl;
@@ -236,14 +245,14 @@ void toc() {
     cout << " ------------" << endl;
 
     cout << "                                        [ ";
-    SetConsoleTextAttribute(hConsole, 7); 
+    SetConsoleTextAttribute(hConsole, 7);
     cout << "5";
-    SetConsoleTextAttribute(hConsole, 11); 
+    SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Buod ng Nobelang \"El Filibusterismo\"" << endl;
     cout << "                                        [ ";
-    SetConsoleTextAttribute(hConsole, 7); 
+    SetConsoleTextAttribute(hConsole, 7);
     cout << "6";
-    SetConsoleTextAttribute(hConsole, 11); 
+    SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Pagkakakilanlan sa mga Tauhan" << endl;
     cout << "                                        [ ";
     SetConsoleTextAttribute(hConsole, 7);
@@ -259,12 +268,12 @@ void toc() {
     cout << " -----------" << endl;
 
     cout << "                                        [ ";
-    SetConsoleTextAttribute(hConsole, 7); 
+    SetConsoleTextAttribute(hConsole, 7);
     cout << "8";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Kilalanin ang mga Gumawa" << endl;
     cout << "                                        [ ";
-    SetConsoleTextAttribute(hConsole, 7); 
+    SetConsoleTextAttribute(hConsole, 7);
     cout << "9";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ] Itigil ang paglalakbay" << endl << endl;
@@ -286,7 +295,7 @@ void toc() {
     1. Ang Bida
 
     2. Buod ng Noli Me Tangere
-    3. Pagkakakilanlan sa mga Tauhan 
+    3. Pagkakakilanlan sa mga Tauhan
     4. Mga Kabanata ng Noli Me Tangere
 
     5. Buod ng El Filibusterismo
@@ -301,22 +310,22 @@ void toc() {
         system("cls");
         Rizal();
         break;
-    
+
     case 2: // Buod ng Noli Me Tangere
         system("cls");
         noli();
         break;
-    
-    case 3: // Pagkakakilanlan sa mga Tauhan 
+
+    case 3: // Pagkakakilanlan sa mga Tauhan
         system("cls");
         Nol_C();
         break;
-    
+
     case 4: // Mga Kabanata ng Noli Me Tangere
         system("cls");
         chap_Nol_K();
         break;
-    
+
     case 5: // Buod ng El Filibusterismo
         system("cls");
         fili();
@@ -341,7 +350,7 @@ void toc() {
         system("cls");
         quit();
         break;
-    
+
     default:
 
         if (cin.fail())
@@ -391,8 +400,8 @@ void Face() {
 
 void Rizal() {
     system("TITLE Lakbay ni Pepe - Ang Bayani");
-    
-     
+
+
     SetConsoleTextAttribute(hConsole, 14);
     cout << "       ____________________________________________________________________________________________________________" << endl;
     cout << "      /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -403,39 +412,39 @@ void Rizal() {
     cout << "              Si";
     SetConsoleTextAttribute(hConsole, 7);
     cout << " Dr. Jose Protacio Rizal Mercado y Alonzo Realonda";
-    SetConsoleTextAttribute(hConsole, 11); 
+    SetConsoleTextAttribute(hConsole, 11);
     cout << " (pinanganak noong ";
     SetConsoleTextAttribute(hConsole, 7);
     cout << "19 Hunyo 1861";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " at namatay" << endl;
     cout << "         noong ";
-    SetConsoleTextAttribute(hConsole, 7); 
+    SetConsoleTextAttribute(hConsole, 7);
     cout << "30 Disyembre 1896";
-    SetConsoleTextAttribute(hConsole, 11); 
+    SetConsoleTextAttribute(hConsole, 11);
     cout << ") ay isang Pilipinong bayani at isa sa pinakatanyag na tagapagtaguyod ng " << endl;
     cout << "         pagbabago sa Pilipinas noong panahon ng pananakop ng mga Kastila. Siya ang kinikilala bilang  " << endl;
     cout << "         pinakamagaling na bayani at tinala bilang isa sa mga";
-    SetConsoleTextAttribute(hConsole, 7); 
+    SetConsoleTextAttribute(hConsole, 7);
     cout << " pambansang bayani ng Pilipinas";
-    SetConsoleTextAttribute(hConsole, 11); 
+    SetConsoleTextAttribute(hConsole, 11);
     cout << " ng Lupon ng mga" << endl;
     cout << "         Pambansang Bayani." << endl << endl;
 
     cout << "         Pinanganak si Rizal sa isang mayamang angkan sa";
-    SetConsoleTextAttribute(hConsole, 7); 
+    SetConsoleTextAttribute(hConsole, 7);
     cout << " Calamba, Laguna";
-    SetConsoleTextAttribute(hConsole, 11); 
+    SetConsoleTextAttribute(hConsole, 11);
     cout << " at";
     SetConsoleTextAttribute(hConsole, 7);
     cout << " pampito sa labing - isang anak";
     SetConsoleTextAttribute(hConsole, 11);
     cout << " ng" << endl;
     cout << "         mag-asawang";
-    SetConsoleTextAttribute(hConsole, 7); 
-    cout << " Francisco Engracio Rizal Mercado y Alejandro"; 
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << " Francisco Engracio Rizal Mercado y Alejandro";
     SetConsoleTextAttribute(hConsole, 11);
-    cout << " at"; 
+    cout << " at";
     SetConsoleTextAttribute(hConsole, 7);
     cout << " Teodora Morales Alonzo Realonda y Quintos." << endl;
     SetConsoleTextAttribute(hConsole, 11);
@@ -507,84 +516,83 @@ void Rizal2() {
     }
     cout << endl << endl;
 
+    {
+        SetConsoleTextAttribute(hConsole, 14);
+        cout << "       ____________________________________________________________________________________________________________" << endl;
+        cout << "      /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+
+        SetConsoleTextAttribute(hConsole, 11);
+
+        cout << "              Isang polimata si Rizal; maliban sa medisina, mahusay siya sa pagpinta, pagguhit, paglilok at " << endl;
+        cout << "         pag-ukit. Isa siyang makata, manunulat, at nobelista na ang pinakatanyag sa kanyang mga gawa ay ang" << endl;
+        cout << "         nobela ng ";
+        SetConsoleTextAttribute(hConsole, 7);
+        cout << "Noli Me Tangere";
+        SetConsoleTextAttribute(hConsole, 11);
+        cout << ", at ang kasunod nitong ";
+        SetConsoleTextAttribute(hConsole, 7);
+        cout << "El filibusterismo";
+        SetConsoleTextAttribute(hConsole, 11);
+        cout << ". Isa ring poliglota si Rizal, na " << endl;
+        cout << "         nakakaunawa ng ";
+        SetConsoleTextAttribute(hConsole, 7);
+        cout << "dalawampu\'t dalawang mga wika." << endl << endl;
+
+        SetConsoleTextAttribute(hConsole, 11);
+        cout << "              Itinatag ni Jose Rizal ang ";
+        SetConsoleTextAttribute(hConsole, 7);
+        cout << "La Liga Filipina";
+        SetConsoleTextAttribute(hConsole, 11);
+        cout << ", isang samahan na naging daan sa pagkabuo ng ";
+        SetConsoleTextAttribute(hConsole, 7);
+        cout << "Katipunan" << endl;
+        SetConsoleTextAttribute(hConsole, 11);
+        cout << "         na pinamunuan ni ";
+        SetConsoleTextAttribute(hConsole, 7);
+        cout << "Andres Bonifacio";
+        SetConsoleTextAttribute(hConsole, 11);
+        cout << ", isang lihim na samahan na nagpasimula ng Himagsikang Pilipino laban" << endl;
+        cout << "         sa Espanya na naging saligan ng Unang Republika ng Pilipinas sa ilalim ni ";
+        SetConsoleTextAttribute(hConsole, 7);
+        cout << "Emilio Aguinaldo";
+        SetConsoleTextAttribute(hConsole, 11);
+        cout << ". Siya ay" << endl;
+        cout << "         tagapagtaguyod ng pagkakaroon ng Pilipinas ng sarili nitong pamahalaan sa mayapang pamamaraan kaysa sa" << endl;
+        cout << "         marahas na himagsikan, at susuportahan lamang ang karahasan bilang huling dulugan. Naniniwala si Rizal" << endl;
+        cout << "         na ang tanging katwiran sa pagpapalaya sa Pilipinas at pagkakaroon nito ng sariling pamahalaan ay ang " << endl;
+        cout << "         pagbabalik ng karangalan ng mga mamamayan, at kanyang winika: ";
+        SetConsoleTextAttribute(hConsole, 7);
+        cout << "Bakit kalayaan, kung ang mga alipin ngayon" << endl;
+        cout << "         ay magiging maniniil ng hinaharap?";
+        SetConsoleTextAttribute(hConsole, 11);
+        cout << "; Ang pangkahalatang napagsang-ayunan ng mga dalubhasa sa buhay ni " << endl;
+        cout << "         Rizal ay ang pagbitay dito ang naghudyat upang magsimula ang Himagsikang Pilipino." << endl << endl;
+
+        cout << "              Si Jose Rizal ay ";
+        SetConsoleTextAttribute(hConsole, 7);
+        cout << "nahatulan noong Disyembre 26, 1896";
+        SetConsoleTextAttribute(hConsole, 11);
+        cout << " ng kamatay sa dahilang napagbintangan siya na" << endl;
+        cout << "         nagpasimula ng rebelyon laban sa mga Kastila. Bago dumating ang araw ng kanyang kamatayan ay naisulat" << endl;
+        cout << "         niya ang ";
+        SetConsoleTextAttribute(hConsole, 7);
+        cout << "\"Mi Ultimo Adios\"";
+        SetConsoleTextAttribute(hConsole, 11);
+        cout << " o mas kilala bilang \"Ang Huling Paalam\" bilang gabay sa susunod pang mga" << endl;
+        cout << "         henerasyon. Noong ";
+        SetConsoleTextAttribute(hConsole, 7);
+        cout << "Disyembre 30, 1896";
+        SetConsoleTextAttribute(hConsole, 11);
+        cout << " ay binaril si Dr. Jose Protacio Rizal Mercado y Alonzo Realonda sa" << endl;
+        SetConsoleTextAttribute(hConsole, 7);
+        cout << "         Bagumbayan";
+        SetConsoleTextAttribute(hConsole, 11);
+        cout << " na mas kilala na ngayon bilang Luneta." << endl << endl;
+    }
 
     SetConsoleTextAttribute(hConsole, 14);
     cout << "       ____________________________________________________________________________________________________________" << endl;
-    cout << "      /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
-
-    SetConsoleTextAttribute(hConsole, 11);
-    
-    cout << "              Isang polimata si Rizal; maliban sa medisina, mahusay siya sa pagpinta, pagguhit, paglilok at " << endl;
-    cout << "         pag-ukit. Isa siyang makata, manunulat, at nobelista na ang pinakatanyag sa kanyang mga gawa ay ang" << endl;
-    cout << "         nobela ng ";
-    SetConsoleTextAttribute(hConsole, 7); 
-    cout << "Noli Me Tangere";
-    SetConsoleTextAttribute(hConsole, 11); 
-    cout << ", at ang kasunod nitong ";
-    SetConsoleTextAttribute(hConsole, 7); 
-    cout << "El filibusterismo";
-    SetConsoleTextAttribute(hConsole, 11); 
-    cout << ". Isa ring poliglota si Rizal, na " << endl;
-    cout << "         nakakaunawa ng ";
-    SetConsoleTextAttribute(hConsole, 7); 
-    cout << "dalawampu\'t dalawang mga wika." << endl << endl;
-
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "              Itinatag ni Jose Rizal ang ";
-    SetConsoleTextAttribute(hConsole, 7); 
-    cout << "La Liga Filipina";
-    SetConsoleTextAttribute(hConsole, 11); 
-    cout << ", isang samahan na naging daan sa pagkabuo ng ";
-    SetConsoleTextAttribute(hConsole, 7); 
-    cout << "Katipunan" << endl;
-    SetConsoleTextAttribute(hConsole, 11);
-    cout << "         na pinamunuan ni ";
-    SetConsoleTextAttribute(hConsole, 7); 
-    cout << "Andres Bonifacio";
-    SetConsoleTextAttribute(hConsole, 11); 
-    cout << ", isang lihim na samahan na nagpasimula ng Himagsikang Pilipino laban" << endl;
-    cout << "         sa Espanya na naging saligan ng Unang Republika ng Pilipinas sa ilalim ni ";
-    SetConsoleTextAttribute(hConsole, 7); 
-    cout << "Emilio Aguinaldo";
-    SetConsoleTextAttribute(hConsole, 11); 
-    cout << ". Siya ay" << endl;
-    cout << "         tagapagtaguyod ng pagkakaroon ng Pilipinas ng sarili nitong pamahalaan sa mayapang pamamaraan kaysa sa" << endl;
-    cout << "         marahas na himagsikan, at susuportahan lamang ang karahasan bilang huling dulugan. Naniniwala si Rizal" << endl;
-    cout << "         na ang tanging katwiran sa pagpapalaya sa Pilipinas at pagkakaroon nito ng sariling pamahalaan ay ang " << endl;
-    cout << "         pagbabalik ng karangalan ng mga mamamayan, at kanyang winika: ";
-    SetConsoleTextAttribute(hConsole, 7); 
-    cout << "Bakit kalayaan, kung ang mga alipin ngayon" << endl;
-    cout << "         ay magiging maniniil ng hinaharap?";
-    SetConsoleTextAttribute(hConsole, 11); 
-    cout << "; Ang pangkahalatang napagsang-ayunan ng mga dalubhasa sa buhay ni " << endl;
-    cout << "         Rizal ay ang pagbitay dito ang naghudyat upang magsimula ang Himagsikang Pilipino." << endl << endl;
-
-    cout << "              Si Jose Rizal ay ";
-    SetConsoleTextAttribute(hConsole, 7); 
-    cout <<"nahatulan noong Disyembre 26, 1896";
-    SetConsoleTextAttribute(hConsole, 11); 
-    cout << " ng kamatay sa dahilang napagbintangan siya na" << endl;
-    cout << "         nagpasimula ng rebelyon laban sa mga Kastila. Bago dumating ang araw ng kanyang kamatayan ay naisulat" << endl;
-    cout << "         niya ang ";
-    SetConsoleTextAttribute(hConsole, 7); 
-    cout << "\"Mi Ultimo Adios\"";
-    SetConsoleTextAttribute(hConsole, 11); 
-    cout << " o mas kilala bilang \"Ang Huling Paalam\" bilang gabay sa susunod pang mga" << endl;
-    cout << "         henerasyon. Noong ";
-    SetConsoleTextAttribute(hConsole, 7); 
-    cout << "Disyembre 30, 1896";
-    SetConsoleTextAttribute(hConsole, 11); 
-    cout << " ay binaril si Dr. Jose Protacio Rizal Mercado y Alonzo Realonda sa" << endl;
-    SetConsoleTextAttribute(hConsole, 7);
-    cout << "         Bagumbayan";
-    SetConsoleTextAttribute(hConsole, 11); 
-    cout << " na mas kilala na ngayon bilang Luneta." << endl;
-    cout << "         " << endl;
-
-
-    SetConsoleTextAttribute(hConsole, 14);
-    cout << "       ____________________________________________________________________________________________________________" << endl;
-    cout << "      /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    cout << "      /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/";
     SetConsoleTextAttribute(hConsole, 7);
 
     nav_Rizal2();
@@ -1017,7 +1025,7 @@ void print_Nol_K() {
         chap_Nol_K();
     }
 
-    else // if user inputted 0 or 
+    else // if user inputted 0 or
     {
         system("cls");
 
@@ -1092,7 +1100,7 @@ void nav_Nol_K() {
         else {
             nav_end();
         }
- 
+
         break;
 
     case 51:
@@ -1172,7 +1180,7 @@ void Nol_C() {
 
         fstream nol_c;
         nol_c.open("Resources/Noli/Tauhan/nol_c" + to_string(c_num) + ".txt", ios::in);
-        
+
         if (nol_c.is_open()) {
             SetConsoleTextAttribute(hConsole, 7);
             string line;
@@ -1282,12 +1290,12 @@ void print_Nol_C() {
         cout << "=";
     }
 
-    
+
 
     cout << endl << endl;
     fstream nol_c;
     nol_c.open("Resources/Noli/Tauhan/nol_c" + to_string(c_num) + ".txt", ios::in);
-    
+
 
     if (nol_c.is_open()) {
         SetConsoleTextAttribute(hConsole, 7);
@@ -1641,7 +1649,7 @@ void fili2()
     for (int i = 1; i <= 120; i++) {
         cout << "=";
     }
-    
+
     nav_fili2();
 
 }
@@ -1876,7 +1884,7 @@ void print_Fil_K() {
         chap_Fil_K();
     }
 
-    else // if user inputted 0 or 
+    else // if user inputted 0 or
     {
         system("cls");
 
@@ -2346,11 +2354,11 @@ void nav_end() {
     SetConsoleTextAttribute(hConsole, 11);
 
     cout << "                                                   Mahusay ";
-    SetConsoleTextAttribute(hConsole, 7); 
+    SetConsoleTextAttribute(hConsole, 7);
     cout << "manlalakbay!" << endl;
     SetConsoleTextAttribute(hConsole, 11);
     cout << "                                                Iyong natapos ang ";
-    SetConsoleTextAttribute(hConsole, 7); 
+    SetConsoleTextAttribute(hConsole, 7);
     cout << "Kwento!" << endl;
 
     SetConsoleTextAttribute(hConsole, 14);
@@ -2496,18 +2504,33 @@ void AboutUs() {
     cout << "                                       - ";
     SetConsoleTextAttribute(hConsole, 7);
     cout << "MONTE, MARTIN LORENCE \n\n";
+    
     SetConsoleTextAttribute(hConsole, 11);
     cout << "                                     Campus: \n";
     SetConsoleTextAttribute(hConsole, 7);
     cout << "                                       University of Caloocan City - North Congress \n\n";
+    
     SetConsoleTextAttribute(hConsole, 11);
     cout << "                                     Program: \n";
     SetConsoleTextAttribute(hConsole, 7);
     cout << "                                       Bachelor of Science in Computer Science (BSCS) \n\n";
+    
     SetConsoleTextAttribute(hConsole, 11);
     cout << "                                     Section: \n";
     SetConsoleTextAttribute(hConsole, 7);
     cout << "                                       1st - A \n\n";
+
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                     References: \n";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "                                       Noli Me Tangere (noypi.com.ph) \n";
+    SetConsoleTextAttribute(hConsole, 8);
+    cout << "                                       https://noypi.com.ph/noli-me-tangere-buod/ \n\n";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "                                       El Filibusterismo (noypi.com.ph) \n";
+    SetConsoleTextAttribute(hConsole, 8);
+    cout << "                                       https://noypi.com.ph/el-filibusterismo-buod/ \n\n";
+
     SetConsoleTextAttribute(hConsole, 14);
     cout << "                                        __________________________________________" << endl;
     cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
@@ -2548,7 +2571,7 @@ void quit() {
         cout << "                                                  Paalam mula sa Group 3" << endl;
         SetConsoleTextAttribute(hConsole, 14);
         cout << "                                        __________________________________________" << endl;
-        cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+        cout << "                                       /_____/_____/_____/_____/_____/_____/_____/";
         Sleep(2500);
         exit(0);
         break;
@@ -2565,7 +2588,7 @@ void quit() {
         cout << "Simula.." << endl;
         SetConsoleTextAttribute(hConsole, 14);
         cout << "                                        __________________________________________" << endl;
-        cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+        cout << "                                       /_____/_____/_____/_____/_____/_____/_____/";
         Sleep(2500);
         main();
         system("cls");
@@ -2578,3 +2601,91 @@ void quit() {
     }
 
 }
+
+/*
+
+    NYI Features:
+    - Bookmark System
+    : Let's you bookmark a specific chapter and save it to your computer for future use
+    : Stores the current integer you had selected in any Novel Chapters' and you can revert back to your bookmarked
+
+    > Example Interface
+
+            Would you like to:
+        [ 1 ] Select a Bookmark
+        [ 2 ] Add a Bookmark
+        [ 3 ] Remove a Bookmark
+
+    [ 1 ] Bookmark:
+
+    ; [1]   Time: 3:23pm, 10/23/22        |       Bookmark Location:  El Filibusterismo       |       Chapter: 23
+    ; [2]   Time: 11:05pm, 11/03/22       |       Bookmark Location:  Noli Me Tangere         |       Chapter: 54
+    ; [3]   Time: 8:47am, 11/11/22        |       Bookmark Location:  El Filibusterismo       |       Chapter: 32
+
+    // cls
+
+    [ 2 ] Add a Bookmark:
+
+    Please select a location: [ 1 ] Noli Me Tangere     ||      [ 2 ] El Filibusterismo
+
+    Enter here: 1
+
+    // cls
+    ========================================================================================
+        Currently Selected: El Filibusterismo                  Time: 8:47am, 11/11/22
+    ========================================================================================
+    Please select a chapter: [ 1 - 39 ]
+
+    Enter here: 32
+
+    // cls
+    ========================================================================================
+        Currently Selected: El Filibusterismo [ 32 ]           Time: 8:47am, 11/11/22
+    ========================================================================================
+        Please confirm the selection:
+        [ Esc ] Try Again
+        [ Enter ] To Continue
+
+    [ 3 ] Remove a Bookmark:
+
+    ; [1]   Time: 3:23pm, 10/23/22        |       Bookmark Location:  El Filibusterismo       |       Chapter: 23
+    ; [2]   Time: 11:05pm, 11/03/22       |       Bookmark Location:  Noli Me Tangere         |       Chapter: 54
+    ; [3]   Time: 8:47am, 11/11/22        |       Bookmark Location:  El Filibusterismo       |       Chapter: 32
+
+    Please select bookmark number:
+
+    Enter here: 1
+
+    // cls
+
+    Updating Bookmark..
+
+    // cls
+
+    Bookmark:
+
+    ; [1]   Time: 11:05pm, 11/03/22       |       Bookmark Location:  Noli Me Tangere         |       Chapter: 54
+    ; [2]   Time: 8:47am, 11/11/22        |       Bookmark Location:  El Filibusterismo       |       Chapter: 32
+
+    // cls
+
+    - Find/Look For Function
+    : Reads the file/s for specified terms/string
+    : Gives the user data/list where the located words are;
+
+    > Example UI
+    ========================================================================================
+        Selected Word: Karwahe
+    ========================================================================================
+        Noli Me Tangere     Chapter ##
+        El Filibusterismo   Chapter ##
+        El Filibusterismo   Chapter 24
+        El Filibusterismo   Chapter ##
+        Noli Me Tangere     Chapter ##
+        Noli Me Tangere     Chapter ##
+
+
+
+    - Scroll Function
+
+*/

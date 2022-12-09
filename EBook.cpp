@@ -2,7 +2,7 @@
 /*
 *
 *
-                    Lakbay ni Pepe   ||    Group 3 "Mga Bata ni Sir RR"   ||    BSCS1A@2022
+                    Lakbay ni Pepe   ||    Group 3 "Mga Bata ni Sir RR"   ||    BSCS1A @2022
 *
 *
 */
@@ -18,9 +18,11 @@
 #include <iomanip>
 #include <conio.h>
 #include <stdio.h>
+#include <ctime>
 
 using namespace std;
 
+//// Function Declaration:
     // Main Menu
 void Logo();
 void Face();
@@ -77,6 +79,17 @@ void quit();
     // error
 void error();
 
+    // bookmark
+
+int bm;
+
+void bookmark();
+void bookmark_option_toc();
+void bookmark_option_nol();
+void bookmark_option_fil();
+void bookmark_add();
+void bookmark_remove();
+
 
 /*
 
@@ -85,8 +98,9 @@ void error();
 
 */
 
-
 int k_num, c_num;
+
+// Text Color
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
 
@@ -101,7 +115,7 @@ HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 int main()
 {
     // Start Menu
-    system("mode 120, 52");
+    system("mode 120, 95");
     system("TITLE Lakbay ni Pepe - Group 3");
     Logo();
 
@@ -2595,12 +2609,144 @@ void quit() {
         break;
 
     default:
+        cin.clear(); cin.ignore(512, '\n');
         error();
-        quit();
+        return quit();
         break;
     }
 
 }
+
+void bookmark() {
+    //fstream view
+
+    /*
+    
+    [Bookmark#] Time || Location || Chapter
+    
+    */
+
+
+}
+
+// Bookmark for: TOC; Noli Me Tangere; El Filibusterismo
+
+
+void bookmark_option_toc() {
+
+    system("TITLE Bookmark");
+
+    
+    cout << "" << endl << endl << endl << endl << endl;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                                      Bookmark Menu";
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       ------------------";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "Options";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ------------------" << endl;
+    cout << "                                        [ ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "1";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ] View Bookmarks" << endl << endl;
+
+    cout << "                                        [ ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "2";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ] Add a Bookmark" << endl;
+    cout << "                                        [ ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "3";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ] Remove a Bookmark" << endl;
+    cout << "                                        [ ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "ESC";
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << " ] Bumalik" << endl << endl;
+
+
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "                                        __________________________________________" << endl;
+    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       -------------------------------------------" << endl;
+    SetConsoleTextAttribute(hConsole, 8);
+    cout << "                                              Tip: Maglagay lamang ng numero" << endl;
+    SetConsoleTextAttribute(hConsole, 11);
+    cout << "                                       -------------------------------------------" << endl << endl;
+    SetConsoleTextAttribute(hConsole, 7);
+    cout << "                                       Enter a number: ";
+    SetConsoleTextAttribute(hConsole, 11);
+    cin >> bm;
+
+    bm = _getch();
+    switch (bm) {
+
+    case 27:
+        system("cls");
+        chap_Fil_K();
+        break;
+
+    case 49:
+        system("cls");
+        bookmark_add();
+        break;
+
+    case 50:
+        system("cls");
+        bookmark_remove();
+        break;
+
+    case 51:
+        system("cls");
+        chap_Fil_K();
+        break;
+
+    case 52:
+        system("cls");
+        toc();
+        break;
+
+    default:
+        error();
+        print_Fil_K();
+        break;
+    }
+
+
+}
+
+void bookmark_option_nol() {
+
+}
+
+void bookmark_option_fil() {
+
+
+}
+
+void bookmark_add() {
+    // fstream add 
+
+}
+
+
+void bookmark_remove() {
+    // fstream remove
+
+}
+
+
 
 /*
 
@@ -2609,7 +2755,7 @@ void quit() {
     : Let's you bookmark a specific chapter and save it to your computer for future use
     : Stores the current integer you had selected in any Novel Chapters' and you can revert back to your bookmarked
 
-    > Example Interface
+    > Example Interface // bookmark_option();
 
             Would you like to:
         [ 1 ] Select a Bookmark
@@ -2618,33 +2764,49 @@ void quit() {
 
     [ 1 ] Bookmark:
 
-    ; [1]   Time: 3:23pm, 10/23/22        |       Bookmark Location:  El Filibusterismo       |       Chapter: 23
-    ; [2]   Time: 11:05pm, 11/03/22       |       Bookmark Location:  Noli Me Tangere         |       Chapter: 54
-    ; [3]   Time: 8:47am, 11/11/22        |       Bookmark Location:  El Filibusterismo       |       Chapter: 32
+            Time                            Novel                           Chapter
+
+    ; [1]   3:23pm, 10/23/22        |       El Filibusterismo       |       23
+    ; [2]   11:05pm, 11/03/22       |       Noli Me Tangere         |       54
+    ; [3]   8:47am, 11/11/22        |       El Filibusterismo       |       32
 
     // cls
+
+
+
 
     [ 2 ] Add a Bookmark:
 
-    Please select a location: [ 1 ] Noli Me Tangere     ||      [ 2 ] El Filibusterismo
+    Please select a location: 
+    
+    [ 1 ] Noli Me Tangere     ||      [ 2 ] El Filibusterismo
 
-    Enter here: 1
+    Enter here: 2
 
     // cls
+
+
+
     ========================================================================================
-        Currently Selected: El Filibusterismo                  Time: 8:47am, 11/11/22
+        Currently Selected: El Filibusterismo                  
     ========================================================================================
     Please select a chapter: [ 1 - 39 ]
 
     Enter here: 32
 
     // cls
+
+
+
     ========================================================================================
-        Currently Selected: El Filibusterismo [ 32 ]           Time: 8:47am, 11/11/22
+        Currently Selected: El Filibusterismo [ 32 ]           
     ========================================================================================
         Please confirm the selection:
         [ Esc ] Try Again
         [ Enter ] To Continue
+
+
+
 
     [ 3 ] Remove a Bookmark:
 
@@ -2668,24 +2830,5 @@ void quit() {
     ; [2]   Time: 8:47am, 11/11/22        |       Bookmark Location:  El Filibusterismo       |       Chapter: 32
 
     // cls
-
-    - Find/Look For Function
-    : Reads the file/s for specified terms/string
-    : Gives the user data/list where the located words are;
-
-    > Example UI
-    ========================================================================================
-        Selected Word: Karwahe
-    ========================================================================================
-        Noli Me Tangere     Chapter ##
-        El Filibusterismo   Chapter ##
-        El Filibusterismo   Chapter 24
-        El Filibusterismo   Chapter ##
-        Noli Me Tangere     Chapter ##
-        Noli Me Tangere     Chapter ##
-
-
-
-    - Scroll Function
 
 */

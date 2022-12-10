@@ -112,10 +112,11 @@ void Face();
 void error();
 
     // bookmark
-int bm, nobel;
+int bm, nobel, selectNobel;
 
 void bookmark(int nobel);
 void bookmark_selection();
+void bookmark_selection_nav(int selectNobel);
 
 void bookmark_view_noli();
 void bookmark_view_fili();
@@ -123,7 +124,7 @@ void bookmark_view_fili();
 void bookmark_option();
 
 void bookmark_option_select(int nobel);
-void bookmark_option_nav();
+void bookmark_option_nav(int bm);
 
 void bookmark_file_noli();
 void bookmark_file_fili();
@@ -534,8 +535,8 @@ void toc() {
 
     case 8: // Bookmark
         system("cls");
+        cin.clear(); cin.ignore(512, '\n');
         bookmark_option_select(3);
-        
         break;
 
     case 9: // Kilalanin ang mga gumawa
@@ -1219,13 +1220,18 @@ void nav_Nol_K() {
         system("cls");
         chap_noli();
         break;
-
+    
     case 52:
+        system("cls");
+        bookmark_option_select(1);
+        break;
+
+    case 53:
         system("cls");
         toc();
         break;
 
-    case 53:
+    case 54:
         system("cls");
         quit();
         break;
@@ -2587,7 +2593,6 @@ void bookmark_selection() {
     
     system("TITLE Bookmark - Selection");
 
-    int novel_select;
     gotoxy(0, 5);
 
     line_short();
@@ -2621,6 +2626,8 @@ void bookmark_selection() {
     cout << "                                          Pumili ng Nobela: ";
     color(14);
 
+    bookmark_selection_nav(selectNobel);
+
     /*
     switch (novel_select) {
 
@@ -2649,12 +2656,14 @@ void bookmark_selection() {
         bookmark_selection();
     }
 */
+    /*
     novel_select = _getch();
+
     switch (novel_select) {
 
     case 27:
         system("cls");
-        bookmark_option();
+        toc();
         break;
 
     case 49:
@@ -2665,14 +2674,96 @@ void bookmark_selection() {
         bookmark(2);
         break;
 
-    case 51:
-        system("cls");
-        bookmark_option();
-        break;
-
-
     default:
         system("cls");
+        error();
+        bookmark_selection();
+    }
+    */
+
+}
+
+void bookmark_selection_nav(int selectNobel) {
+
+    if (selectNobel == 1) // bookmark_selection_nav(1)
+    {
+        bookmark_selection();
+        bm = _getch();
+
+        switch (bm) {
+        case 27:
+            system("cls");
+            chap_file_noli();
+            break;
+
+        case 49:
+            bookmark(1);
+            break;
+
+        case 50:
+            bookmark(2);
+            break;
+
+        default:
+            system("cls");
+            error();
+            bookmark_selection();
+        }
+    }
+
+    else if (selectNobel == 2) // bookmark_selection_nav(2)
+    {
+        bookmark_selection();
+        bm = _getch();
+        switch (bm) {
+        case 27:
+            system("cls");
+            chap_file_fili();
+            break;
+
+        case 49:
+            bookmark(1);
+            break;
+
+        case 50:
+            bookmark(2);
+            break;
+
+        default:
+            system("cls");
+            error();
+            bookmark_selection();
+        }
+    }
+
+    else if (selectNobel == 3) // bookmark_selection_nav(3)
+    {
+        bookmark_selection();
+        bm = _getch();
+        switch (bm) {
+        case 27:
+            system("cls");
+            toc();
+            break;
+
+        case 49:
+            bookmark(1);
+            break;
+
+        case 50:
+            bookmark(2);
+            break;
+
+        default:
+            system("cls");
+            error();
+            bookmark_selection();
+        }
+    }
+
+    else {
+        system("cls");
+        cin.clear(); cin.ignore(512, '\n');
         error();
         bookmark_selection();
     }
@@ -2706,7 +2797,7 @@ void bookmark_view_noli() {
     cout << "                                           ";
     system("pause");
     system("cls");
-    bookmark_option();
+    bookmark_option_select(3);
 }
 
 void bookmark_view_fili() {
@@ -2735,7 +2826,7 @@ void bookmark_view_fili() {
     cout << "                                           ";
     system("pause");
     system("cls");
-    bookmark_option();
+    bookmark_option_select(3);
 }
 // Bookmark for: TOC; Noli Me Tangere; El Filibusterismo // Done
 
@@ -2774,7 +2865,6 @@ void bookmark_option() {
     cout << " ] ";
     color(4);
     cout << "Bumalik " << endl << endl;
-
     line_short();
 
 }
@@ -2813,6 +2903,15 @@ void bookmark_option_nav() {
     }
 }
 
+/*
+
+Error on bookmark_option_select
+bookmark_selection_nav
+
+no specified value
+
+
+*/
 
 void bookmark_option_select(int nobel) {
 
@@ -2844,13 +2943,15 @@ void bookmark_option_select(int nobel) {
 
 
         default:
-            nobel == 4;
+            system("cls");
+            cin.clear(); cin.ignore(512, '\n');
+            error();
             bookmark_option();
             break;
         }
 
-
     }
+
     else if (nobel == 2)
     {
         bookmark_option();
@@ -2878,48 +2979,15 @@ void bookmark_option_select(int nobel) {
 
 
         default:
-            nobel == 4;
+            system("cls");
+            cin.clear(); cin.ignore(512, '\n');
+            error();
             bookmark_option();
             break;
-
-
         }
     }
+
     else if (nobel == 3)
-    {
-        bookmark_option(); 
-        bm = _getch();
-        switch (bm) {
-        case 27:
-            system("cls");
-            toc();
-            break;
-
-        case 49:
-            system("cls");
-            bookmark_selection();
-            break;
-
-        case 50:
-            system("cls");
-            bookmark_add();
-            break;
-
-        case 51:
-            system("cls");
-            bookmark_remove();
-            break;
-
-
-        default:
-            nobel == 4;
-            bookmark_option();
-            break;
-
-        }
-    }
-
-    else if (nobel == 4)
     {
         bookmark_option();
         bm = _getch();
@@ -2946,12 +3014,16 @@ void bookmark_option_select(int nobel) {
 
 
         default:
-            nobel == 4;
+            system("cls");
+            cin.clear(); cin.ignore(512, '\n');
+            error();
             bookmark_option();
             break;
 
         }
+
     }
+
 
     else {
         system("cls");
@@ -3008,20 +3080,21 @@ void addtest()
 void bookmark_remove() {
     // fstream remove
     system("TITLE Bookmark - Remove");
-    
-
+    system("pause");
+    bookmark_selection();
 }
 
 
 void bookmark_file_noli() {
     //ofstream bm_nol;
-
-
+    system("pause");
+    bookmark_selection();
 }
 
 void bookmark_file_fili() {
     //ofstream bm_fil;
-
+    system("pause");
+    bookmark_selection();
 }
 
 

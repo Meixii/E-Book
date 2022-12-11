@@ -1,25 +1,83 @@
 
+
+
 /*
 *
 *
                     Lakbay ni Pepe   ||    Group 3 "Actual na Mga Bata ni Sir RR"   ||    BSCS1A @2022
 *
-*
+*/
+
+/*
+    Lakbay ni Pepe (LnP):
+
+    Offline E-Book Application made with C++ only, naglalaman siya ng details about kay Rizal, tapos sa Noli, at El Fili,
+    yung app natin mostly ginagamitan lang ng numkeys, tas "esc" for 'back feature' lalo na yung sa navigation, sa start
+    ng program natin may Logo ng title ng app natin, tas yung user any key pede nya pindutin at this point para mag proceed,
+    then lalabas yung short introduction ng app natin (kung may dadagdag kayo sige lang kc parang kulang pa ata yon),
+    tas some disclaimer lang din ayon, then tutorial ung next once na nag proceed na ung user, dito may heads up na nirecommend
+    ung numpad(ung nasa right side ng keyboard) or pede rin naman gamitin ung sa taas ng mga may letters basta numbers ung
+    pinaka main user input kaya ayon nilagay narin dyan para mas malessen ung error inputs although may error function naman
+    ung app and safe na nag rerevert sa last session ung app once na maka encounter ng error, anyway, after ng small tutorial/tips,
+    lalabas yung "Mapa ni Pepe" which is ung  Main Menu ng program, nandon nakalagay lahat ng 'pages' kung baga, dito yung first
+    "cin" na ginamit since nag exceed ung options niya sa 9; bali maglalagay ng number si user from 1 to 11, may error check
+    nadin siya and hindi nag lloop ung error so guds na siya, dun tayo sa una:
+
+                ------------------ Rizal ------------------
+                [ 1 ] Ang Bida
+
+                ------------- Noli Me Tangere -------------
+                [ 2 ] Buod ng Nobelang "Noli Me Tangere"
+                [ 3 ] Pagkakakilanlan sa mga Tauhan
+                [ 4 ] Mga Kabanata ng "Noli Me Tangere"
+
+                ------------ El Filibusterismo ------------
+                [ 5 ] Buod ng Nobelang "El Filibusterismo"
+                [ 6 ] Pagkakakilanlan sa mga Tauhan
+                [ 7 ] Mga Kabanata ng "El Filibusterismo"
+
+                ----------- Tungkol sa Programa -----------
+                [ 8 ] Bookmark
+                [ 9 ] Kilalanin ang mga Gumawa
+                [ 10 ] Gabay sa Paggamit
+
+                ------------ Ibang Pagpipilian ------------
+                [ 11 ] Itigil ang paglalakbay
+
+    ayan ung nasa main menu natin, naka separate na sya para mas madali makita, sa [ 1 ] Ang Bida, dito yung tungkol kay rizal,
+    ayon nilagyan ko rin ng image using ascii para medyo may design, mostly dun sa navigation natin ay _getch() nalang or mag
+    ppress kanalang ng key sa keyboard tapos madedetect yung key nayon and magpproceed sa kung ano man function na nilagay mo;
+    ung navigation natin is naka dipende kung saan sya so magkakaiba yung navigation except sa mga nauulit like ung sa kabanata
+    ng nobela, yung iba 1 to 5 lang, sa kabanata 1 to 6 yung pede i press na key, basta iba-iba sa bawat type, tsaka ung navigation
+    ginawa kong flexible or wala masyadong restriction, pede ka mag quit by pressing [5] or kung ano mang last option na ndon,
+    or pede kang bumalik sa main menu anytime without damaging the app, yung mga nakasulat dun sa Rizal may mga ibang may color,
+    ang ginawa ko doon hard coded na sa app mismo, bali dun ko mismo tinype ung info about kay rizal,
+
+    moving on, puro fstream lang ginamit pagdating na sa Tauhan, Kabanata, then Talasalitaan, although need rin i revise ung
+    mismong textfile kasi hindi papatay un sa app pag hindi inayos sa textfile
+
+    sa [ 4 ] or [ 7 ] parehas lang nmn ng function pero iba lang context, mag iinput yung user ng number dyan either 1 to 64
+    or 1 to 39 dipende kung pinili nya ba ung noli or el fili, then lalabas yung chapter pati ung talasalitaan sa ibaba non,
+    pede ka mag next and back using [ 1 ] and [ 2 ], tas pede rin bumalik ka sa chapter selector like if usto mo pumunta agad
+    for example chap 23 ganon tas ayon may option para bumalik sa main menu or close the app.
+
+    what will happen if u select chap [ 1 ] and pressed Previous Chapter? Babalik lang sya sa Chapter Selector, kapag sa dulo
+    naman tapos ni next mo, may parang End screen na lalabas tas may option ka na pumunta sa kung san mo gusto or iterminate
+    ung app, for errors oks na siguro ung app, ang ginawa ko lang for error is nagcout lang din ako ng "Maling Input eme" tas
+    ayon mag bback sya kung san sya huling nanggaling. so aun ung iba wala nmn special dun,
+
+    yung option pala ng bookmark sa kabanata (noli palang ata nakalagay) is hindi pa nakalay visually, pero ung function para
+    mag move from chapter to bookmark is nandon by pressing [ 4 ] kahit iba nakasulat, di pa kc nadadagdag ung cout.
+
+    pano naman kapag nag try ka mag exit ng program, may prompt na lalaabas confirmation lang, para kapag malay mo ma pindot
+    lang ung exit may confirmation siya either mag quit ung app or bumalik, for now mag bback sya sa Start hindi sa previous
+    function kasi hindi pa nalalagay yun since kaka discover ko lng din pano gawin dahil dun sa bookmark.
 */
 
 /*
     Optimization:
-    Navigation
-        done:
-        - Rizal
-        - TOC
-        - Bookmark
-        - chap_fili & noli
-
-
-
-
-    // To Do:
+    - Navigation // done
+    - Exit Prompt: Back function // tb
 
     Time:
     - format: 24:00 or 12:00 (AM/PM) MM / DD / YYYY
@@ -30,7 +88,6 @@
     - Remove
 
 */
-
 
 /*
                 Coding 101:
@@ -79,9 +136,21 @@
                 ...
                 57 = 9
 
-                if may tanong i-question n'yo
+                // time
+                int tm_sec;                                     // seconds of minutes from 0 to 61
+                int tm_min;                                     // minutes of hour from 0 to 59
+                int tm_hour;                                    // hours of day from 0 to 24
 
-*/
+                // date
+                int tm_mday;                                    // day of month from 1 to 31
+                int tm_mon;                                     // month of year from 0 to 11
+                int tm_year;                                    // year since 1900
+
+                if may tanong i-question n'yo
+    */
+
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <chrono>
 #include <ctime>
 
@@ -109,7 +178,7 @@ void Home();
 void AboutUs();
 void quit();
 void gotoxy(int x, int y);
-void time();
+void td();
 
     // Rizal
 void Rizal();
@@ -200,6 +269,7 @@ void bookmark_remove();
 // Text Color
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
+
 /*
 
     <==============================================================================>
@@ -209,17 +279,13 @@ HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
 
 int main()
-{
+{ 
     // Start Menu
     system("mode 120, 100");
     system("TITLE Lakbay ni Pepe - Group 3");
-    Logo();
- 
-    cout << "                                             ";
-    system("pause");
-    system("cls");
-
-    Home();
+    //Logo();
+    bookmark_view_noli();
+    //Home();
     return 0;
 }
 
@@ -618,13 +684,6 @@ void toc() {
 }
 
 
-/*
-
-    <==============================================================================>
-    <==============================================================================>
-
-*/
-
 
 // Rizal
 void Face() {
@@ -895,13 +954,6 @@ void nav_Rizal2() {
 }
 
 
-/*
-
-    <==============================================================================>
-    <==============================================================================>
-
-*/
-
 
 // Noli Me Tangere - Buod
 void noli() {
@@ -921,24 +973,34 @@ void noli() {
 
 
     color(11);
-    cout << "       Bumalik  (Rizal):  ";
-    color(14);
+    cout << "                     [ ";
+    color(7);
     cout << "1";
-
     color(11);
-    cout << "       Susunod (Buod): ";
-    color(14);
+    cout << " ] Bumalik";
+    color(11);
+    cout << "         [ ";
+    color(7);
     cout << "2";
+    color(11);
+    cout << " ] Susunod" << endl;
 
     color(11);
-    cout << "       Mapa ni Pepe : ";
-    color(14);
+    cout << "                     [ ";
+    color(7);
     cout << "3";
-
     color(11);
-    cout << "       Ipagpaliban ang Paglalakbay: ";
-    color(14);
-    cout << "4" << endl;
+    cout << " ] ";
+    color(8);
+    cout << "Mapa ni Pepe";
+    color(11);
+    cout << "         [ ";
+    color(7);
+    cout << "4";
+    color(11);
+    cout << " ] ";
+    color(4);
+    cout << "Ipagpaliban ang Paglalakbay" << endl;
 
     design(4);
     cout << endl << endl;
@@ -975,29 +1037,41 @@ system("TITLE Lakbay ni Pepe - Noli Me Tangere");
     cout << endl;
 
     color(11);
-    cout << "                               Bumalik  (Buod):  ";
-    color(14);
+    cout << "                               [ ";
+    color(7);
     cout << "1";
-
     color(11);
-    cout << "       Mga Tauhan : ";
-    color(14);
+    cout << " ] Bumalik";
+    color(11);
+    cout << "              [ ";
+    color(7);
     cout << "2";
+    color(11);
+    cout << " ] Mga Tauhan";
+    color(11);
+    cout << "            [ ";
+    color(7);
+    cout << "3";
+    color(11);
+    cout << " ] Mga Kabanata" << endl;
 
     color(11);
-    cout << "       Mga Kabanata : ";
-    color(14);
-    cout << "3" << endl;
-
-    color(11);
-    cout << "                                       Mapa ni Pepe : ";
-    color(14);
+    cout << "                     [ ";
+    color(7);
     cout << "4";
+    color(11);
+    cout << " ] ";
+    color(8);
+    cout << "Mapa ni Pepe";
 
     color(11);
-    cout << "       Ipagpaliban ang Paglalakbay: ";
-    color(14);
-    cout << "5" << endl;
+    cout << "         [ ";
+    color(7);
+    cout << "5";
+    color(11);
+    cout << " ] ";
+    color(4);
+    cout << "Ipagpaliban ang Paglalakbay" << endl;
 
     design(4);
     cout << endl << endl;
@@ -1089,6 +1163,7 @@ void nav_noli2() {
     }
 
 }
+
 
 
 // Noli Me Tangere - Kabanata
@@ -1342,6 +1417,7 @@ void nav_Nol_K() {
     }
 
 }
+
 
 
 // Noli Me Tangere - Tauhan 1
@@ -1676,13 +1752,6 @@ void char_file_noli_2() {
 }
 
 
-/*
-
-    <==============================================================================>
-    <==============================================================================>
-
-*/
-
 
 // El Filibusterismo - Buod
 void fili() {
@@ -1700,24 +1769,34 @@ void fili() {
     cout << endl;
 
     color(11);
-    cout << "       Bumalik  (Rizal):  ";
-    color(14);
+    cout << "                     [ ";
+    color(7);
     cout << "1";
-
     color(11);
-    cout << "       Susunod (Buod): ";
-    color(14);
+    cout << " ] Bumalik";
+    color(11);
+    cout << "         [ ";
+    color(7);
     cout << "2";
+    color(11);
+    cout << " ] Susunod" << endl;
 
     color(11);
-    cout << "       Mapa ni Pepe : ";
-    color(14);
+    cout << "                     [ ";
+    color(7);
     cout << "3";
-
     color(11);
-    cout << "       Ipagpaliban ang Paglalakbay: ";
-    color(14);
-    cout << "4" << endl;
+    cout << " ] ";
+    color(8);
+    cout << "Mapa ni Pepe";
+    color(11);
+    cout << "         [ ";
+    color(7);
+    cout << "4";
+    color(11);
+    cout << " ] ";
+    color(4);
+    cout << "Ipagpaliban ang Paglalakbay" << endl;
 
     design(4);
     cout << endl << endl;
@@ -1756,29 +1835,41 @@ void fili2()
     cout << endl;
 
     color(11);
-    cout << "                               Bumalik  (Buod):  ";
-    color(14);
+    cout << "                     [ ";
+    color(7);
     cout << "1";
-
     color(11);
-    cout << "       Mga Tauhan: ";
-    color(14);
+    cout << " ] Bumalik";
+    color(11);
+    cout << "              [ ";
+    color(7);
     cout << "2";
+    color(11);
+    cout << " ] Mga Tauhan";
+    color(11);
+    cout << "            [ ";
+    color(7);
+    cout << "3";
+    color(11);
+    cout << " ] Mga Kabanata" << endl;
 
     color(11);
-    cout << "       Mga Kabanata: ";
-    color(14);
-    cout << "3" << endl;
-
-    color(11);
-    cout << "                                       Mapa ni Pepe : ";
-    color(14);
+    cout << "                     [ ";
+    color(7);
     cout << "4";
+    color(11);
+    cout << " ] ";
+    color(8);
+    cout << "Mapa ni Pepe";
 
     color(11);
-    cout << "       Ipagpaliban ang Paglalakbay: ";
-    color(14);
-    cout << "5" << endl;
+    cout << "         [ ";
+    color(7);
+    cout << "5";
+    color(11);
+    cout << " ] ";
+    color(4);
+    cout << "Ipagpaliban ang Paglalakbay" << endl;
 
     design(4);
     cout << endl << endl;
@@ -2455,244 +2546,6 @@ void char_file_fili_2() {
 }
 
 
-// End
-void nav_end() {
-
-    system("cls");
-    gotoxy(0, 12);
-    gotoxy(0, 12);
-    design(1);
-    color(11);
-
-    cout << "                                                   Mahusay ";
-    color(7);
-    cout << "manlalakbay!" << endl;
-    color(11);
-    cout << "                                                Iyong natapos ang ";
-    color(7);
-    cout << "Kwento!" << endl;
-
-    design(1);
-
-    color(7);
-    cout << "                                   Maari kang maglakbay muli sa iba pang destinasyon:" << endl;
-
-    design(4);
-    cout << endl;
-    color(11);
-    cout << "          Noli Me Tangere: ";
-    color(14);
-    cout << "1";
-    color(11);
-    cout << "      El Filibusterismo: ";
-    color(14);
-    cout << "2";
-    color(11);
-    cout << "      Mapa ni Pepe : ";
-    color(14);
-    cout << "3";
-    color(11);
-    cout << "      Ipagpaliban ang Paglalakbay: ";
-    color(14);
-    cout << "4" << endl;
-
-    design(4);
-
-    int nav;
-
-    nav = _getch();
-    switch (nav) {
-
-    case 49: // ,
-        system("cls");
-        noli();
-        break;
-
-    case 50: // ,
-        system("cls");
-        fili();
-        break;
-
-    case 51:
-        system("cls");
-        toc();
-        break;
-
-    case 52:
-        system("cls");
-        quit();
-        break;
-
-    default:
-        error();
-        nav_end();
-        break;
-    }
-}
-
-// ERROR
-void error() {
-
-    system("cls");
-    gotoxy(0, 7);
-    color(11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-    color(5);
-    cout << "                                         ERROR: ";
-    color(8);
-    cout << "Maglagay lamang ng tamang input." << endl << endl;
-    color(11);
-    cout << "                                       -------------------------------------------" << endl << endl;
-
-    cout << "                                           Babalik sa huling pinanggalingan...";
-    Sleep(1500);
-    system("cls");
-
-}
-
-// About Us
-void AboutUs() {
-    system("TITLE Lakbay ni Pepe - About Us");
-
-
-    gotoxy(0, 7);
-    design(1);
-    color(11);
-    cout << "                                                     Tungkol sa Amin\n" << endl;
-
-
-    cout << "                                              Group 3: \"";
-    color(14);
-    cout << "MGA BATA NI SIR RR";
-    color(11);
-    cout << "\"\n\n";
-
-    cout << "                                     Programmers: \n";
-    color(11);
-    cout << "                                       - ";
-    color(7);
-    cout << "FUNGO, GIAN HIGINO \n";
-    color(11);
-    cout << "                                       - ";
-    color(7);
-    cout << "JULIANE, CARL JAMES \n";
-    color(11);
-    cout << "                                       - ";
-    color(7);
-    cout << "LISTANGCO, LAURENZ \n";
-    color(11);
-    cout << "                                       - ";
-    color(7);
-    cout << "LLANES, KEVIN \n";
-    color(11);
-    cout << "                                       - ";
-    color(7);
-    cout << "LONOZA, JOSHUA OLIVERA \n";
-    color(11);
-    cout << "                                       - ";
-    color(7);
-    cout << "LUGTU, BEA \n";
-    color(11);
-    cout << "                                       - ";
-    color(7);
-    cout << "MAYONADO, CHRISTIAN \n";
-    color(11);
-    cout << "                                       - ";
-    color(7);
-    cout << "MIRANDA, KARL \n";
-    color(11);
-    cout << "                                       - ";
-    color(7);
-    cout << "MONTE, MARTIN LORENCE \n\n";
-    
-    color(11);
-    cout << "                                     Campus: \n";
-    color(7);
-    cout << "                                       University of Caloocan City - North Congress \n\n";
-    
-    color(11);
-    cout << "                                     Program: \n";
-    color(7);
-    cout << "                                       Bachelor of Science in Computer Science (BSCS) \n\n";
-    
-    color(11);
-    cout << "                                     Section: \n";
-    color(7);
-    cout << "                                       1st - A \n\n";
-
-    color(11);
-    cout << "                                     References: \n";
-    color(7);
-    cout << "                                       Noli Me Tangere (noypi.com.ph) \n";
-    color(8);
-    cout << "                                       https://noypi.com.ph/noli-me-tangere-buod/ \n\n";
-    color(7);
-    cout << "                                       El Filibusterismo (noypi.com.ph) \n";
-    color(8);
-    cout << "                                       https://noypi.com.ph/el-filibusterismo-buod/ \n\n";
-
-    color(14);
-    design(1);
-    color(11);
-    cout << "                                             ";
-    color(7);
-    system("pause");
-    system("cls");
-    toc();
-}
-
-// Exit
-void quit() {
-
-    char input;
-
-    Logo();
-    cout << "                            Sigurado ka ba na gusto mong itigil ang paglalakbay? ";
-    color(7);
-    cout << "[y / n]: ";
-    color(11);
-    cin >> input;
-
-    cout << "" << endl << endl;
-    switch (toupper(input)) {
-    case 'Y':
-        system("cls");
-        Logo();
-        design(1);
-        color(7);
-        cout << "                                           Salamat sa pagsama sa ";
-        color(11);
-        cout << "Lakbay ni Pepe!" << endl;
-        color(7);
-        cout << "                                                  Paalam mula sa Group 3" << endl;
-        design(1);
-        Sleep(2000);
-        exit(0);
-        break;
-
-    case 'N':
-        system("cls");
-        Logo();
-        design(1);
-        color(7);
-        cout << "                                                    Babalik sa ";
-        color(11);
-        cout << "Simula.." << endl;
-        design(1);
-        Sleep(2000);
-        main();
-        system("cls");
-        break;
-
-    default:
-        cin.clear(); cin.ignore(512, '\n');
-        error();
-        return quit();
-        break;
-    }
-
-}
-
 // Bookmark 
 
 void bookmark_option() // Bookmark Menu
@@ -2879,7 +2732,6 @@ void bookmark_option_select(int nobel) // FIXED
 
 
 
-
 void bookmark(int nobel) {
 
     if (nobel == 1)
@@ -3029,6 +2881,8 @@ void bookmark_selection_nav(int selectNobel) {
 
 }
 
+
+
 void bookmark_view_noli() {
     //fstream view
     system("TITLE Bookmark - Noli Me Tangere");
@@ -3045,9 +2899,9 @@ void bookmark_view_noli() {
     cout << " Noli Me Tangere" << endl << endl;
 
     color(7);
-    cout << "                                Bm#   |  Nobela                   |  Kabanata     |  Oras" << endl;
-    cout << "                               [ 1 ]  |  Noli Me Tangere          |  23           |  6:12 12/06/2022" << endl;
-    cout << "                               [ 2 ]  |  Noli Me Tangere          |  35           |  8:42 12/10/2022" << endl;
+    cout << "                                        Bm#   |  Kabanata     |  Oras" << endl;
+    cout << "                                       [ 1 ]  |  23           |  "; td(); cout << endl;
+    cout << "                                       [ 2 ]  |  35           |  "; td(); cout << endl;
     cout << endl;
     
     design(1);
@@ -3067,16 +2921,16 @@ void bookmark_view_fili() {
     */
     design(1);
     color(11);
-    cout << "                                                Bookmark:";
+    cout << "                                               Bookmark:";
     color(14);
     cout << " El Filibusterismo" << endl << endl << endl;
 
 
 
     color(7);
-    cout << "                                Bm#   |  Nobela                   |  Kabanata     |  Oras" << endl;
-    cout << "                               [ 1 ]  |  El Filibusterismo        |  13           |  14:32 11/28/2022" << endl;
-    cout << "                               [ 2 ]  |  El Filibusterismo        |  22           |  22:17 12/01/2022" << endl;
+    cout << "                                        Bm#   |  Kabanata     |  Oras" << endl;
+    cout << "                                       [ 1 ]  |  23           |  "; td(); cout << endl;
+    cout << "                                       [ 2 ]  |  35           |  "; td(); cout << endl;
     cout << endl;
 
     design(1);
@@ -3091,56 +2945,51 @@ void bookmark_view_fili() {
 
 
 
-void time() {
-    // time here
-
-    time_t t = time(0);   // get time now
-    tm* now = localtime(&t);
-    cout << (now->tm_year + 1900) << '-'
-        << (now->tm_mon + 1) << '-'
-        << now->tm_mday
-        << "\n";
-
-}
-
 void bookmark_add() {
     // fstream add 
     system("TITLE Bookmark - Add");
 
+    gotoxy(0, 5);
+
+    design(1);
+    color(11);
+    cout << "                                                      Add Bookmark" << endl;
+    design(1);
+
+    color(8);
+    cout << "                                        --------------------------------------------" << endl;
+    color(11);
+    cout << "                                        [ ";
+    color(7);
+    cout << "1";
+    color(11);
+    cout << " ] Noli Me Tangere";
+
+    cout << "                   [ ";
+    color(7);
+    cout << "2";
+    color(11);
+    cout << " ] El Filibusterismo" << endl;
+
+
+    cout << "                                        [ ";
+    color(7);
+    cout << "3";
+    color(11);
+    cout << " ] Remove a Bookmark" << endl << endl;
+
+    cout << "                                        [ ";
+    color(7);
+    cout << "ESC";
+    color(11);
+    cout << " ] ";
+    color(4);
+    cout << "Bumalik " << endl << endl;
+    design(1);
     
     //bm_noli.txt
     //bm_fili.txt
 }
-void addtest();
-
-void addtest()
-    {
-        cout << "Ano ang pamagat ng Nobela? Pindutin lamang ang katumbas na numero ng napiling Nobela" << endl;
-        cout << " [ 1 ] Noli Me Tangere, [ 2 ] El Filibusterismo";
-
-        string n_title; /* convert int nov,  1 = Noli,  2 = Fili */         // UI
-        int nov /* [ 1 ] Noli Me Tangere, [ 2 ] El Filibusterismo */, chap /* [ 1 - 64 ], [ 1 - 39 ] */;
-        nov = _getch();
-
-        switch (nov) {
-        case 49:
-            n_title = "Noli Me Tangere";
-            bookmark_file_noli();
-            break;
-
-        case 50:
-            n_title = "El Filibusterismo";
-            bookmark_file_fili();
-            break;
-
-        default:
-            system("cls");
-            cin.clear(); cin.ignore(512, '\n');
-            error();
-            return bookmark_add();          
-        }
-    }
-
 
 void bookmark_remove() {
     // fstream remove
@@ -3148,7 +2997,6 @@ void bookmark_remove() {
     system("pause");
     bookmark_selection();
 }
-
 
 void bookmark_file_noli() {
     //ofstream bm_nol;
@@ -3162,9 +3010,16 @@ void bookmark_file_fili() {
     bookmark_selection();
 }
 
+// Time and Date        
+
+void td() {
+    time_t t = time(0);   // get time now /// Format: [ 24:00 12/12/2022 ]
+    tm* now = localtime(&t);
+    cout << (now->tm_hour) << ':' << (now->tm_min + 1) << ' ' << (now->tm_mon + 1) << '/' << now->tm_mday << '/' << (now->tm_year + 1900);
+}
 
 // Design:
-void gotoxy(int x, int y)
+void gotoxy(int x, int y) // System Coordinates
 {
     COORD d;
     d.X = x;
@@ -3172,11 +3027,13 @@ void gotoxy(int x, int y)
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), d);
 }
 
-void color(int color) {
+void color(int color) // Color 
+{
     SetConsoleTextAttribute(hConsole, color);
 }
 
-void design(int lineType) {
+void design(int lineType) // Lines Design
+{
     if (lineType == 1) // short
     {
         color(14);
@@ -3202,6 +3059,280 @@ void design(int lineType) {
         for (int i = 1; i <= 120; i++) {
             cout << "-";
         }
+    }
+}
+
+
+
+// End
+void nav_end() {
+
+    system("cls");
+    gotoxy(0, 12);
+    gotoxy(0, 12);
+    design(1);
+    color(11);
+
+    cout << "                                                   Mahusay ";
+    color(7);
+    cout << "manlalakbay!" << endl;
+    color(11);
+    cout << "                                                Iyong natapos ang ";
+    color(7);
+    cout << "Kwento!" << endl;
+
+    design(1);
+
+    color(7);
+    cout << "                                   Maari kang maglakbay muli sa iba pang destinasyon:" << endl;
+
+    design(4);
+    cout << endl;
+    color(11);
+    cout << "          Noli Me Tangere: ";
+    color(14);
+    cout << "1";
+    color(11);
+    cout << "      El Filibusterismo: ";
+    color(14);
+    cout << "2";
+    color(11);
+    cout << "      Mapa ni Pepe : ";
+    color(14);
+    cout << "3";
+    color(11);
+    cout << "      Ipagpaliban ang Paglalakbay: ";
+    color(14);
+    cout << "4" << endl;
+
+    design(4);
+
+    int nav;
+
+    nav = _getch();
+    switch (nav) {
+
+    case 49: // ,
+        system("cls");
+        noli();
+        break;
+
+    case 50: // ,
+        system("cls");
+        fili();
+        break;
+
+    case 51:
+        system("cls");
+        toc();
+        break;
+
+    case 52:
+        system("cls");
+        quit();
+        break;
+
+    default:
+        error();
+        nav_end();
+        break;
+    }
+}
+
+// ERROR
+void error() {
+
+    system("cls");
+    gotoxy(0, 7);
+    color(11);
+    cout << "                                       -------------------------------------------" << endl << endl;
+    color(5);
+    cout << "                                         ERROR: ";
+    color(8);
+    cout << "Maglagay lamang ng tamang input." << endl << endl;
+    color(11);
+    cout << "                                       -------------------------------------------" << endl << endl;
+
+    cout << "                                           Babalik sa huling pinanggalingan...";
+    Sleep(1500);
+    system("cls");
+
+}
+
+// About Us
+void AboutUs() {
+    system("TITLE Lakbay ni Pepe - About Us");
+
+
+    gotoxy(0, 7);
+    design(1);
+    color(11);
+    cout << "                                                     Tungkol sa Amin\n" << endl;
+
+
+    cout << "                                              Group 3: \"";
+    color(14);
+    cout << "MGA BATA NI SIR RR";
+    color(11);
+    cout << "\"\n\n";
+
+    cout << "                                     Programmers: \n";
+    color(11);
+    cout << "                                       - ";
+    color(7);
+    cout << "FUNGO, GIAN HIGINO \n";
+    color(11);
+    cout << "                                       - ";
+    color(7);
+    cout << "JULIANE, CARL JAMES \n";
+    color(11);
+    cout << "                                       - ";
+    color(7);
+    cout << "LISTANGCO, LAURENZ \n";
+    color(11);
+    cout << "                                       - ";
+    color(7);
+    cout << "LLANES, KEVIN \n";
+    color(11);
+    cout << "                                       - ";
+    color(7);
+    cout << "LONOZA, JOSHUA OLIVERA \n";
+    color(11);
+    cout << "                                       - ";
+    color(7);
+    cout << "LUGTU, BEA \n";
+    color(11);
+    cout << "                                       - ";
+    color(7);
+    cout << "MAYONADO, CHRISTIAN \n";
+    color(11);
+    cout << "                                       - ";
+    color(7);
+    cout << "MIRANDA, KARL \n";
+    color(11);
+    cout << "                                       - ";
+    color(7);
+    cout << "MONTE, MARTIN LORENCE \n\n";
+
+    color(11);
+    cout << "                                     Campus: \n";
+    color(7);
+    cout << "                                       University of Caloocan City - North Congress \n\n";
+
+    color(11);
+    cout << "                                     Program: \n";
+    color(7);
+    cout << "                                       Bachelor of Science in Computer Science (BSCS) \n\n";
+
+    color(11);
+    cout << "                                     Section: \n";
+    color(7);
+    cout << "                                       1st - A \n\n";
+
+    color(11);
+    cout << "                                     References: \n";
+    color(7);
+    cout << "                                       Noli Me Tangere (noypi.com.ph) \n";
+    color(8);
+    cout << "                                       https://noypi.com.ph/noli-me-tangere-buod/ \n\n";
+    color(7);
+    cout << "                                       El Filibusterismo (noypi.com.ph) \n";
+    color(8);
+    cout << "                                       https://noypi.com.ph/el-filibusterismo-buod/ \n\n";
+
+    color(14);
+    design(1);
+    color(11);
+    cout << "                                             ";
+    color(7);
+    system("pause");
+    system("cls");
+    toc();
+}
+
+// Exit
+void quit() {
+
+    char input;
+
+    Logo();
+    cout << "                            Sigurado ka ba na gusto mong itigil ang paglalakbay? ";
+    color(7);
+    cout << "[y / n]: ";
+    color(11);
+    cin >> input;
+
+    cout << "" << endl << endl;
+    switch (toupper(input)) {
+    case 'Y':
+        system("cls");
+        Logo();
+        design(1);
+        color(7);
+        cout << "                                           Salamat sa pagsama sa ";
+        color(11);
+        cout << "Lakbay ni Pepe!" << endl;
+        color(7);
+        cout << "                                                  Paalam mula sa Group 3" << endl;
+        design(1);
+        Sleep(2000);
+        exit(0);
+        break;
+
+    case 'N':
+        system("cls");
+        Logo();
+        design(1);
+        color(7);
+        cout << "                                                    Babalik sa ";
+        color(11);
+        cout << "Simula.." << endl;
+        design(1);
+        Sleep(2000);
+        main();
+        system("cls");
+        break;
+
+    default:
+        cin.clear(); cin.ignore(512, '\n');
+        error();
+        return quit();
+        break;
+    }
+
+}
+
+
+
+// Beta:
+
+void addtest();
+
+void addtest()
+{
+    cout << "Ano ang pamagat ng Nobela? Pindutin lamang ang katumbas na numero ng napiling Nobela" << endl;
+    cout << " [ 1 ] Noli Me Tangere, [ 2 ] El Filibusterismo";
+
+    string n_title; /* convert int nov,  1 = Noli,  2 = Fili */         // UI
+    int nov /* [ 1 ] Noli Me Tangere, [ 2 ] El Filibusterismo */, chap /* [ 1 - 64 ], [ 1 - 39 ] */;
+    nov = _getch();
+
+    switch (nov) {
+    case 49:
+        n_title = "Noli Me Tangere";
+        bookmark_file_noli();
+        break;
+
+    case 50:
+        n_title = "El Filibusterismo";
+        bookmark_file_fili();
+        break;
+
+    default:
+        system("cls");
+        cin.clear(); cin.ignore(512, '\n');
+        error();
+        return bookmark_add();
     }
 }
 

@@ -2,13 +2,37 @@
 /*
 *
 *
-                    Lakbay ni Pepe   ||    Group 3 "Mga Bata ni Sir RR"   ||    BSCS1A @2022
+                    Lakbay ni Pepe   ||    Group 3 "Actual na Mga Bata ni Sir RR"   ||    BSCS1A @2022
 *
 *
 */
 
 /*
+    Optimization:
+    Navigation
+        done:
+        - Rizal
+        - TOC
+        - Bookmark
+        - chap_fili & noli
 
+
+
+
+    // To Do:
+
+    Time:
+    - format: 24:00 or 12:00 (AM/PM) MM / DD / YYYY
+
+    Bookmark:
+    - Navigation [TOC, Noli, Fili] // done
+    - Add
+    - Remove
+
+*/
+
+
+/*
                 Coding 101:
 
                 system("mode x, y");                            // Window Size
@@ -23,25 +47,57 @@
                 ofstream                                        // Opens a file, rewrites the file
                 void identifier();                              // Function
 
+                Identifiers:
 
+                color(color#);
+                    // change color# 
+                        values (color pallete):
+                        
+                        4 = red
+                        7 = white
+                        8 = gray
+                        11 = blue
+                        14 = yellow
 
+                new      // old (di pa naiiba)
+                line(1); // void design(1);
+                    // Short Horizontal Border Line 
 
+                line(2); // void design(2);
+                    // Long Horizontal Border Line
+
+                line(3); // void design(3); // 11
+                    // full line; chapter
+
+                line(4); // void design(4); // 8
+                    // full line; nav
+
+                ASCII value = Key:
+                27 = Esc
+                49 = 1
+                50 = 2
+                ...
+                57 = 9
+
+                if may tanong i-question n'yo
 
 */
+#include <chrono>
+#include <ctime>
 
-
+#include <fstream>
 
 #include <iostream>
-#include <fstream>
-#include <ctime>
+
 #include <string>
-#include <Windows.h>
-#include <dos.h>
 #include <wchar.h>
 #include <locale.h>
 #include <iomanip>
 #include <conio.h>
 #include <stdio.h>
+
+#include <dos.h>
+#include <Windows.h>
 
 using namespace std;
 
@@ -101,10 +157,10 @@ void char_file_fili_2();
 
     // graphic design
 void color(int color);
-void line_long();
-void line_short();
-void line_chap(); // 11
-void line_nav(); // 8
+
+// will change this soon; merging to one function: 
+void design(int lineType);
+
 void Logo();
 void Face();
 
@@ -124,7 +180,7 @@ void bookmark_view_fili();
 void bookmark_option();
 
 void bookmark_option_select(int nobel);
-void bookmark_option_nav(int bm);
+void bookmark_option_nav();
 
 void bookmark_file_noli();
 void bookmark_file_fili();
@@ -173,7 +229,7 @@ void Logo() {
     system("TITLE Lakbay ni Pepe - Group 3");
 
     gotoxy(0, 2);
-    line_long();
+    design(2);
     cout << "                                         Group III: Mga Bata ni Sir RR Presents.." << endl << endl;
     color(11);
     cout << "                .____            __   ___.                         .__  __________                               " << endl;
@@ -182,7 +238,7 @@ void Logo() {
     cout << "                |    |___ / __ \\|    < | \\_\\ \\/ __ \\\\___  | |   |  \\  |  |    |   \\  ___/|  |_> >  ___/          " << endl;
     cout << "                |_______ (____  /__|_ \\|___  (____  / ____| |___|  /__|  |____|    \\___  >   __/ \\___  >         " << endl;
     cout << "                        \\/    \\/     \\/    \\/     \\/\\/           \\/                    \\/|__|        \\/          " << endl << endl;
-    line_long();
+    design(2);
 
     cout << endl;
     cout << endl;
@@ -191,7 +247,7 @@ void Logo() {
 
 }
 
-// Home
+// Start
 void Home() {
 
     system("TITLE Lakbay ni Pepe - Home");
@@ -234,11 +290,11 @@ void Home() {
     return Tutorial();
 }
 
-// Tutorial
+// Gabay sa Paggamit
 void Tutorial()
 {
     system("TITLE Gabay sa Paggamit");
-    line_long();
+    design(2);
     color(14);
     cout << "                                                     Gabay sa Paggamit" << endl;
     color(7);
@@ -289,7 +345,7 @@ void Tutorial()
     cout << "                                | '---------------------------------' | '--------------' |" << endl;
     cout << "                                 '-----------------------------------' '----------------'" << endl;
 
-    line_long();
+    design(2);
     color(7);
     cout << "                                               ";
     system("pause");
@@ -297,15 +353,14 @@ void Tutorial()
     return toc();
 }
 
-
-// Table of Contents
+// Mapa ni Pepe
 void toc() {
 
     system("TITLE Lakbay ni Pepe - Mapa");
 
     int table;
     gotoxy(0, 5);
-    line_short();
+    design(1);
 
 /*
                                    ------------------ Rizal ------------------
@@ -316,7 +371,7 @@ void toc() {
     cout << "                                                       Mapa ni ";
     color(7);
     cout << "Pepe\n" << endl;
-    line_short();
+    design(1);
     color(11);
     cout << "                                       ------------------";
     color(7);
@@ -468,7 +523,7 @@ void toc() {
 
 
 
-    line_short();
+    design(1);
     color(11);
     cout << "                                       -------------------------------------------" << endl;
     color(8);
@@ -563,6 +618,14 @@ void toc() {
 }
 
 
+/*
+
+    <==============================================================================>
+    <==============================================================================>
+
+*/
+
+
 // Rizal
 void Face() {
     color(7);
@@ -601,7 +664,7 @@ void Rizal() {
     system("TITLE Lakbay ni Pepe - Ang Bayani");
 
 
-    line_long();
+    design(2);
 
     Face();
 
@@ -650,7 +713,7 @@ void Rizal() {
     cout << "         Universidad Central de Madrid sa Madrid, Espanya, at nakakuha ng Lisensiya sa Medisina, na nagbigay " << endl;
     cout << "         sa kanyan ng karapatan  sanayin ang medisina. Nag-aral din siya sa Pamantasan ng Paris at Pamantasan " << endl;
     cout << "         ng Heidelberg." << endl;
-    line_long();
+    design(2);
     color(7);
     cout << "                                               ";
     system("pause");
@@ -662,47 +725,60 @@ void Rizal2() {
     system("TITLE Lakbay ni Pepe - Ang Bayani");
     system("cls");
 
-    line_short();
+    design(1);
     color(11);
     cout << "                                                          Rizal" << endl;
-    line_short();
+    design(1);
 
     color(7);
     cout << "                                                       Nabigasyon:" << endl;
 
-    line_nav();
+    design(4);
     cout << endl;
 
     color(11);
-    cout << "                               Bumalik :  ";
-    color(14);
+    cout << "                     [ ";
+    color(7);
     cout << "1";
-
     color(11);
-    cout << "       Noli Me Tangere : ";
-    color(14);
+    cout << " ] Bumalik";
+    color(11);
+    cout << "              [ ";
+    color(7);
     cout << "2";
+    color(11);
+    cout << " ] Noli Me Tangere";
+    color(11);
+    cout << "            [ ";
+    color(7);
+    cout << "3";
+    color(11);
+    cout << " ] El Filibusterismo" << endl;
 
     color(11);
-    cout << "       El Filibusterismo : ";
-    color(14);
-    cout << "3" << endl;
-
-    color(11);
-    cout << "                                       Mapa ni Pepe : ";
-    color(14);
+    cout << "                     [ ";
+    color(7);
     cout << "4";
+    color(11);
+    cout << " ] ";
+    color(8);
+    cout << "Mapa ni Pepe";
 
     color(11);
-    cout << "       Ipagliban ang Paglalakbay: ";
-    color(14);
-    cout << "5" << endl;
+    cout << "         [ ";
+    color(7);
+    cout << "5";
+    color(11);
+    cout << " ] ";
+    color(4);
+    cout << "Ipagpaliban ang Paglalakbay" << endl;
 
-    line_nav();
+
+    design(4);
     cout << endl << endl;
 
     {
-        line_long();
+        design(2);
 
         color(11);
 
@@ -773,7 +849,7 @@ void Rizal2() {
         cout << " na mas kilala na ngayon bilang Luneta." << endl << endl;
     }
 
-    line_long();
+    design(2);
     color(7);
     nav_Rizal2();
 
@@ -831,15 +907,15 @@ void nav_Rizal2() {
 void noli() {
     system("TITLE Lakbay ni Pepe - Noli Me Tangere");
 
-    line_short();
+    design(1);
     color(11);
     cout << "                                                     Noli Me Tangere"<< endl;
-    line_short();
+    design(1);
 
     color(7);
     cout << "                                                       Nabigasyon:" << endl;
 
-    line_nav();
+    design(4);
     cout << endl;
 
 
@@ -860,14 +936,14 @@ void noli() {
     cout << "3";
 
     color(11);
-    cout << "       Ipagliban ang Paglalakbay: ";
+    cout << "       Ipagpaliban ang Paglalakbay: ";
     color(14);
     cout << "4" << endl;
 
-    line_nav();
+    design(4);
     cout << endl << endl;
 
-    line_chap();
+    design(3);
     cout << "\n" << endl;
 
     color(7);
@@ -879,7 +955,7 @@ void noli() {
 
     cout << endl;
 
-    line_chap();
+    design(3);
     nav_noli();
 }
 
@@ -887,15 +963,15 @@ void noli2()
 {
 system("TITLE Lakbay ni Pepe - Noli Me Tangere");
 
-    line_short();
+    design(1);
     color(11);
     cout << "                                                     Noli Me Tangere" << endl;
-    line_short();
+    design(1);
 
     color(7);
     cout << "                                                       Nabigasyon:" << endl;
 
-    line_nav();
+    design(4);
     cout << endl;
 
     color(11);
@@ -919,14 +995,14 @@ system("TITLE Lakbay ni Pepe - Noli Me Tangere");
     cout << "4";
 
     color(11);
-    cout << "       Ipagliban ang Paglalakbay: ";
+    cout << "       Ipagpaliban ang Paglalakbay: ";
     color(14);
     cout << "5" << endl;
 
-    line_nav();
+    design(4);
     cout << endl << endl;
 
-    line_chap();
+    design(3);
     cout << "\n" << endl;
 
     color(7);
@@ -937,7 +1013,7 @@ system("TITLE Lakbay ni Pepe - Noli Me Tangere");
     }
 
     cout << endl;
-    line_chap();
+    design(3);
     nav_noli2();
 }
 
@@ -1015,17 +1091,17 @@ void nav_noli2() {
 }
 
 
-// Noli Me Tangere - Chapters
+// Noli Me Tangere - Kabanata
 void chap_noli() {
     system("TITLE Noli Me Tangere - Kabanata");
 
     gotoxy(0, 7);
-    line_short();
+    design(1);
     color(11);
 
     cout << "                                            Mga Kabanata sa Noli Me Tangere\n" << endl;
     cout << "                                                       [ 1 - 64 ]" << endl;
-    line_short();
+    design(1);
     color(11);
 
     cout << "                                       Pumili ng kabanata: ";
@@ -1045,48 +1121,71 @@ void chap_file_noli() {
     if (nol_k.is_open())
     {
 
-        line_short();
+        design(1);
         color(11);
         cout << "                                                       Kabanata " << k_num << " " << endl;
-        line_short();
+        design(1);
         color(11);
 
 
         // Navigation UI
 
         color(7);
+        design(4);
+
         cout << "                                                       Nabigasyon:" << endl;
 
-        line_nav();
-        cout << endl;
         color(11);
-        cout << "                           Huling Kabanata: ";
-        color(14);
+        cout << "                  [ ";
+        color(7);
         cout << "1";
         color(11);
-        cout << "      Kasunod na Kabanata : ";
-        color(14);
+        cout << " ] Huling Kabanata";
+        color(11);
+        cout << "      [ ";
+        color(7);
         cout << "2";
         color(11);
-        cout << "      Mga Kabanata : ";
-        color(14);
-        cout << "3" << endl;
-
+        cout << " ] Kasunod na Kabanata";
+        color(11);
+        cout << "      [ ";
+        color(7);
+        cout << "3";
+        color(11);
+        cout << " ] Mga Kabanata" << endl;
 
         color(11);
-        cout << "                                    Mapa ni Pepe : ";
-        color(14);
+        cout << "                  [ ";
+        color(7);
         cout << "4";
         color(11);
-        cout << "      Ipagliban ang Paglalakbay: ";
-        color(14);
-        cout << "5" << endl;
+        cout << " ] ";
+        color(10);
+        cout << "Bookmark";
 
-        line_nav();
+        color(11);
+        cout << "             [ ";
+        color(7);
+        cout << "5";
+        color(11);
+        cout << " ] ";
+        color(8);
+        cout << "Mapa ni Pepe";
+
+        color(11);
+        cout << "             [ ";
+        color(7);
+        cout << "6";
+        color(11);
+        cout << " ] ";
+        color(4);
+        cout << "Ipagpaliban ang Paglalakbay" << endl;
+
+        design(4);
 
         cout << endl << endl;
 
-        line_chap();
+        design(3);
         cout << "\n" << endl;
         color(7);
         string line;
@@ -1102,7 +1201,7 @@ void chap_file_noli() {
 
     if (nol_t.is_open())
     {
-        line_chap();
+        design(3);
         cout << endl << endl;
 
         color(14);
@@ -1120,12 +1219,12 @@ void chap_file_noli() {
     {
         cin.clear(); cin.ignore(512, '\n');
         gotoxy(0, 7);
-        line_short();
+        design(1);
         color(11);
 
         cout << "                                            Mga Kabanata sa Noli Me Tangere\n" << endl;
         cout << "                                                       [ 1 - 64 ]" << endl;
-        line_short();
+        design(1);
         color(11);
 
         color(11);
@@ -1149,12 +1248,12 @@ void chap_file_noli() {
         system("cls");
 
         gotoxy(0, 7);
-        line_short();
+        design(1);
         color(11);
 
         cout << "                                            Mga Kabanata sa Noli Me Tangere\n" << endl;
         cout << "                                                       [ 1 - 64 ]" << endl;
-        line_short();
+        design(1);
         color(11);
 
         color(11);
@@ -1174,7 +1273,7 @@ void chap_file_noli() {
     }
 
     cout << endl;
-    line_chap();
+    design(3);
     nav_Nol_K();
 
 }
@@ -1249,16 +1348,16 @@ void nav_Nol_K() {
 void char_noli() {
         system("TITLE Noli Me Tangere - Tauhan");
 
-        line_short();
+        design(1);
         color(11);
         cout << "                                                Kilalanin ang mga Tauhan" << endl;
         cout << "                                                mula sa \"Noli Me Tangere\"" << endl;
-        line_short();
+        design(1);
 
         color(7);
         cout << "                                                       Nabigasyon:" << endl;
 
-        line_nav();
+        design(4);
         cout << endl;
         color(11);
         cout << "                       Susunod na pahina: ";
@@ -1269,15 +1368,15 @@ void char_noli() {
         color(14);
         cout << "2";
         color(11);
-        cout << "      Ipagliban ang Paglalakbay: ";
+        cout << "      Ipagpaliban ang Paglalakbay: ";
         color(14);
         cout << "3" << endl;
 
-        line_nav();
+        design(4);
 
         cout << endl << endl;
 
-        line_chap();
+        design(3);
 
         cout << endl << endl;
 
@@ -1297,7 +1396,7 @@ void char_noli() {
 
             cout << endl << endl;
 
-            line_chap();
+            design(3);
 
         }
 
@@ -1345,16 +1444,16 @@ void char_noli() {
 void char_file_noli() {
     system("TITLE Noli Me Tangere - Tauhan");
 
-    line_short();
+    design(1);
     color(11);
     cout << "                                                Kilalanin ang mga Tauhan" << endl;
     cout << "                                                mula sa \"Noli Me Tangere\"" << endl;
-    line_short();
+    design(1);
 
     color(7);
     cout << "                                                       Nabigasyon:" << endl;
 
-    line_nav();
+    design(4);
     cout << endl;
     color(11);
     cout << "            Huling pahina: ";
@@ -1369,15 +1468,15 @@ void char_file_noli() {
     color(14);
     cout << "3";
     color(11);
-    cout << "      Ipagliban ang Paglalakbay: ";
+    cout << "      Ipagpaliban ang Paglalakbay: ";
     color(14);
     cout << "4" << endl;
 
-    line_nav();
+    design(4);
 
     cout << endl << endl;
 
-    line_chap();
+    design(3);
 
 
 
@@ -1397,7 +1496,7 @@ void char_file_noli() {
 
         cout << endl << endl;
 
-        line_chap();
+        design(3);
     }
 
     else if (cin.fail())
@@ -1462,16 +1561,16 @@ void char_file_noli() {
 void char_file_noli_2() {
     system("TITLE Noli Me Tangere - Tauhan");
 
-    line_short();
+    design(1);
     color(11);
     cout << "                                                Kilalanin ang mga Tauhan" << endl;
     cout << "                                                mula sa \"Noli Me Tangere\"" << endl;
-    line_short();
+    design(1);
 
     color(7);
     cout << "                                                       Nabigasyon:" << endl;
 
-    line_nav();
+    design(4);
     cout << endl;
     color(11);
     cout << "            Huling pahina: ";
@@ -1492,15 +1591,15 @@ void char_file_noli_2() {
 
 
     color(11);
-    cout << "      Ipagliban ang Paglalakbay: ";
+    cout << "      Ipagpaliban ang Paglalakbay: ";
     color(14);
     cout << "4" << endl;
 
-    line_nav();
+    design(4);
 
     cout << endl << endl;
 
-    line_chap();
+    design(3);
 
 
     cout << endl << endl;
@@ -1521,7 +1620,7 @@ void char_file_noli_2() {
 
         cout << endl << endl;
 
-        line_chap();
+        design(3);
     }
 
     else if (cin.fail())
@@ -1588,16 +1687,16 @@ void char_file_noli_2() {
 // El Filibusterismo - Buod
 void fili() {
     system("TITLE El Filibusterismo - Buod");
-    line_short();
+    design(1);
     color(11);
     cout << "                                                    El Filibusterismo" << endl;
-    line_short();
+    design(1);
 
 
     color(7);
     cout << "                                                       Nabigasyon:" << endl;
 
-    line_nav();
+    design(4);
     cout << endl;
 
     color(11);
@@ -1616,15 +1715,15 @@ void fili() {
     cout << "3";
 
     color(11);
-    cout << "       Ipagliban ang Paglalakbay: ";
+    cout << "       Ipagpaliban ang Paglalakbay: ";
     color(14);
     cout << "4" << endl;
 
-    line_nav();
+    design(4);
     cout << endl << endl;
 
 
-    line_chap();
+    design(3);
     cout << "\n" << endl;
 
     color(7);
@@ -1636,7 +1735,7 @@ void fili() {
 
     cout << endl;
 
-    line_chap();
+    design(3);
 
     nav_fili();
 }
@@ -1644,16 +1743,16 @@ void fili() {
 void fili2()
 {
     system("TITLE El Filibusterismo - Buod");
-    line_short();
+    design(1);
     color(11);
     cout << "                                                    El Filibusterismo" << endl;
-    line_short();
+    design(1);
 
 
     color(7);
     cout << "                                                       Nabigasyon:" << endl;
 
-    line_nav();
+    design(4);
     cout << endl;
 
     color(11);
@@ -1677,16 +1776,16 @@ void fili2()
     cout << "4";
 
     color(11);
-    cout << "       Ipagliban ang Paglalakbay: ";
+    cout << "       Ipagpaliban ang Paglalakbay: ";
     color(14);
     cout << "5" << endl;
 
-    line_nav();
+    design(4);
     cout << endl << endl;
 
 
 
-    line_chap();
+    design(3);
     cout << "\n" << endl;
 
     color(7);
@@ -1698,7 +1797,7 @@ void fili2()
 
     cout << endl;
 
-    line_chap();
+    design(3);
 
     nav_fili2();
 
@@ -1779,18 +1878,18 @@ void nav_fili2() {
 }
 
 
-// El Filibusterismo - Chapters
+// El Filibusterismo - Kabanata
 void chap_fili() {
     system("TITLE El Filibusterismo - Kabanata");
     using namespace std;
 
     gotoxy(0, 7);
-    line_short();
+    design(1);
     color(11);
 
     cout << "                                            Mga Kabanata sa El Filibusterismo\n" << endl;
     cout << "                                                       [ 1 - 39 ]" << endl;
-    line_short();
+    design(1);
 
 
     cout << "                                       Pumili ng kabanata: ";
@@ -1810,10 +1909,10 @@ void chap_file_fili() {
     if (fil_k.is_open())
     {
 
-        line_short();
+        design(1);
         color(11);
         cout << "                                                       Kabanata " << k_num << " " << endl;
-        line_short();
+        design(1);
         color(11);
 
         // Navigation
@@ -1821,37 +1920,60 @@ void chap_file_fili() {
         color(7);
         cout << "                                                       Nabigasyon:" << endl;
 
-        line_nav();
-
+        design(4);
         cout << endl;
+
         color(11);
-        cout << "                           Huling Kabanata: ";
-        color(14);
+        cout << "                  [ ";
+        color(7);
         cout << "1";
         color(11);
-        cout << "      Kasunod na Kabanata : ";
-        color(14);
+        cout << " ] Huling Kabanata";
+        color(11);
+        cout << "      [ ";
+        color(7);
         cout << "2";
         color(11);
-        cout << "      Mga Kabanata : ";
-        color(14);
-        cout << "3" << endl;
-
+        cout << " ] Kasunod na Kabanata";
+        color(11);
+        cout << "      [ ";
+        color(7);
+        cout << "3";
+        color(11);
+        cout << " ] Mga Kabanata" << endl;
 
         color(11);
-        cout << "                                    Mapa ni Pepe : ";
-        color(14);
+        cout << "                  [ ";
+        color(7);
         cout << "4";
         color(11);
-        cout << "      Ipagliban ang Paglalakbay: ";
-        color(14);
-        cout << "5" << endl;
+        cout << " ] "; 
+        color(10);
+        cout << "Bookmark";
 
-        line_nav();
+        color(11);
+        cout << "             [ ";
+        color(7);
+        cout << "5";
+        color(11);
+        cout << " ] ";
+        color(8);
+        cout << "Mapa ni Pepe";
+
+        color(11);
+        cout << "             [ ";
+        color(7);
+        cout << "6";
+        color(11);
+        cout << " ] ";
+        color(4);
+        cout << "Ipagpaliban ang Paglalakbay" << endl;
+
+        design(4);
 
         cout << endl;
 
-        line_chap();
+        design(3);
         cout << "\n" << endl;
         color(7);
         string line;
@@ -1868,7 +1990,7 @@ void chap_file_fili() {
     if (fil_t.is_open())
     {
 
-        line_chap();
+        design(3);
         cout << "\n" << endl;
 
         color(14);
@@ -1886,12 +2008,12 @@ void chap_file_fili() {
     {
         cin.clear(); cin.ignore(512, '\n');
         gotoxy(0, 7);
-        line_short();
+        design(1);
         color(11);
 
         cout << "                                            Mga Kabanata sa El Filibusterismo\n" << endl;
         cout << "                                                       [ 1 - 39 ]" << endl;
-        line_short();
+        design(1);
         color(11);
 
         color(11);
@@ -1914,12 +2036,12 @@ void chap_file_fili() {
         system("cls");
 
         gotoxy(0, 7);
-        line_short();
+        design(1);
         color(11);
 
         cout << "                                            Mga Kabanata sa El Filibusterismo\n" << endl;
         cout << "                                                       [ 1 - 39 ]" << endl;
-        line_short();
+        design(1);
         color(11);
 
         color(11);
@@ -1937,7 +2059,7 @@ void chap_file_fili() {
         chap_fili();
     }
     cout << endl;
-    line_chap();
+    design(3);
     nav_Fil_K();
 }
 
@@ -1985,10 +2107,15 @@ void nav_Fil_K() {
 
         case 52:
             system("cls");
-            toc();
+            bookmark_option_select(2);
             break;
 
         case 53:
+            system("cls");
+            toc();
+            break;
+
+        case 54:
             system("cls");
             quit();
             break;
@@ -2005,16 +2132,16 @@ void nav_Fil_K() {
 void char_fili() {
     system("TITLE El Filibusterismo - Tauhan");
 
-    line_short();
+    design(1);
     color(11);
     cout << "                                                Kilalanin ang mga Tauhan" << endl;
     cout << "                                               mula sa \"El Filibusterismo\"" << endl;
-    line_short();
+    design(1);
 
     color(7);
     cout << "                                                       Nabigasyon:" << endl;
 
-    line_nav();
+    design(4);
     cout << endl;
     color(11);
     cout << "                       Susunod na pahina: ";
@@ -2025,15 +2152,15 @@ void char_fili() {
     color(14);
     cout << "2";
     color(11);
-    cout << "      Ipagliban ang Paglalakbay: ";
+    cout << "      Ipagpaliban ang Paglalakbay: ";
     color(14);
     cout << "3" << endl;
 
-    line_nav();
+    design(4);
 
     cout << endl << endl;
 
-    line_chap();
+    design(3);
 
     cout << endl << endl;
 
@@ -2053,7 +2180,7 @@ void char_fili() {
 
         cout << endl << endl;
 
-        line_chap();
+        design(3);
 
     }
 
@@ -2099,16 +2226,16 @@ void char_fili() {
 void char_file_fili() {
     system("TITLE El Filibusterismo - Tauhan");
 
-    line_short();
+    design(1);
     color(11);
     cout << "                                                Kilalanin ang mga Tauhan" << endl;
     cout << "                                               mula sa \"El Filibusterismo\"" << endl;
-    line_short();
+    design(1);
 
     color(7);
     cout << "                                                       Nabigasyon:" << endl;
 
-    line_nav();
+    design(4);
     cout << endl;
     color(11);
     cout << "            Huling pahina: ";
@@ -2123,15 +2250,15 @@ void char_file_fili() {
     color(14);
     cout << "3";
     color(11);
-    cout << "      Ipagliban ang Paglalakbay: ";
+    cout << "      Ipagpaliban ang Paglalakbay: ";
     color(14);
     cout << "4" << endl;
 
-    line_nav();
+    design(4);
 
     cout << endl << endl;
 
-    line_chap();
+    design(3);
 
 
 
@@ -2151,7 +2278,7 @@ void char_file_fili() {
 
         cout << endl << endl;
 
-        line_chap();
+        design(3);
     }
 
     else if (cin.fail())
@@ -2215,16 +2342,16 @@ void char_file_fili() {
 void char_file_fili_2() {
     system("TITLE Noli Me Tangere - Tauhan");
 
-    line_short();
+    design(1);
     color(11);
     cout << "                                                Kilalanin ang mga Tauhan" << endl;
     cout << "                                               mula sa \"El Filibusterismo\"" << endl;
-    line_short();
+    design(1);
 
     color(7);
     cout << "                                                       Nabigasyon:" << endl;
 
-    line_nav();
+    design(4);
     cout << endl;
     color(11);
     cout << "            Huling pahina: ";
@@ -2245,15 +2372,15 @@ void char_file_fili_2() {
 
 
     color(11);
-    cout << "      Ipagliban ang Paglalakbay: ";
+    cout << "      Ipagpaliban ang Paglalakbay: ";
     color(14);
     cout << "4" << endl;
 
-    line_nav();
+    design(4);
 
     cout << endl << endl;
 
-    line_chap();
+    design(3);
 
     c_num = 5;
     cout << endl << endl;
@@ -2272,7 +2399,7 @@ void char_file_fili_2() {
 
         cout << endl << endl;
 
-        line_chap();
+        design(3);
     }
 
     else if (cin.fail())
@@ -2334,7 +2461,7 @@ void nav_end() {
     system("cls");
     gotoxy(0, 12);
     gotoxy(0, 12);
-    line_short();
+    design(1);
     color(11);
 
     cout << "                                                   Mahusay ";
@@ -2345,12 +2472,12 @@ void nav_end() {
     color(7);
     cout << "Kwento!" << endl;
 
-    line_short();
+    design(1);
 
     color(7);
     cout << "                                   Maari kang maglakbay muli sa iba pang destinasyon:" << endl;
 
-    line_nav();
+    design(4);
     cout << endl;
     color(11);
     cout << "          Noli Me Tangere: ";
@@ -2365,11 +2492,11 @@ void nav_end() {
     color(14);
     cout << "3";
     color(11);
-    cout << "      Ipagliban ang Paglalakbay: ";
+    cout << "      Ipagpaliban ang Paglalakbay: ";
     color(14);
     cout << "4" << endl;
 
-    line_nav();
+    design(4);
 
     int nav;
 
@@ -2429,7 +2556,7 @@ void AboutUs() {
 
 
     gotoxy(0, 7);
-    line_short();
+    design(1);
     color(11);
     cout << "                                                     Tungkol sa Amin\n" << endl;
 
@@ -2505,7 +2632,7 @@ void AboutUs() {
     cout << "                                       https://noypi.com.ph/el-filibusterismo-buod/ \n\n";
 
     color(14);
-    line_short();
+    design(1);
     color(11);
     cout << "                                             ";
     color(7);
@@ -2531,14 +2658,14 @@ void quit() {
     case 'Y':
         system("cls");
         Logo();
-        line_short();
+        design(1);
         color(7);
         cout << "                                           Salamat sa pagsama sa ";
         color(11);
         cout << "Lakbay ni Pepe!" << endl;
         color(7);
         cout << "                                                  Paalam mula sa Group 3" << endl;
-        line_short();
+        design(1);
         Sleep(2000);
         exit(0);
         break;
@@ -2546,12 +2673,12 @@ void quit() {
     case 'N':
         system("cls");
         Logo();
-        line_short();
+        design(1);
         color(7);
         cout << "                                                    Babalik sa ";
         color(11);
         cout << "Simula.." << endl;
-        line_short();
+        design(1);
         Sleep(2000);
         main();
         system("cls");
@@ -2567,6 +2694,192 @@ void quit() {
 }
 
 // Bookmark 
+
+void bookmark_option() // Bookmark Menu
+{
+    system("TITLE Bookmark - Menu");
+    gotoxy(0, 5);
+
+    design(1);
+    color(11);
+    cout << "                                                      Bookmark Menu" << endl;
+    design(1);
+
+    color(11);
+    cout << "                                        [ ";
+    color(7);
+    cout << "1";
+    color(11);
+    cout << " ] View Bookmarks" << endl;
+
+    cout << "                                        [ ";
+    color(7);
+    cout << "2";
+    color(11);
+    cout << " ] Add a Bookmark" << endl;
+    cout << "                                        [ ";
+    color(7);
+    cout << "3";
+    color(11);
+    cout << " ] Remove a Bookmark" << endl << endl;
+
+    cout << "                                        [ ";
+    color(7);
+    cout << "ESC";
+    color(11);
+    cout << " ] ";
+    color(4);
+    cout << "Bumalik " << endl << endl;
+    design(1);
+
+}
+
+void bookmark_option_nav() // Navigation ITO YUNG GAGAMITIN sa CODE
+{
+    switch (bm) {
+    case 27:
+        system("cls");
+        toc();
+        break;
+
+    case 49: // Noli
+        system("cls");
+        bookmark_option_select(1);
+        break;
+
+    case 50: // Fili
+        system("cls");
+        bookmark_option_select(2);
+        break;
+
+    case 51: // TOC
+        system("cls");
+        bookmark_option_select(3);
+        break;
+
+    default:
+        system("cls");
+        bookmark_option_select(3);
+        break;
+    }
+}
+
+void bookmark_option_select(int nobel) // FIXED
+{
+    if (nobel == 1)
+    {
+        bookmark_option();
+        bm = _getch();
+
+        switch (bm) {
+        case 27:
+            system("cls");
+            chap_file_noli();
+            break;
+
+        case 49:
+            system("cls");
+            bookmark_selection();
+            break;
+
+        case 50:
+            system("cls");
+            bookmark_add();
+            break;
+
+        case 51:
+            system("cls");
+            bookmark_remove();
+            break;
+
+
+        default:
+            system("cls");
+            cin.clear(); cin.ignore(512, '\n');
+            error();
+            bookmark_option();
+            bookmark_option_select(nobel);
+            break;
+        }
+
+    }
+
+    else if (nobel == 2)
+    {
+        bookmark_option();
+        bm = _getch();
+        switch (bm) {
+        case 27:
+            system("cls");
+            chap_file_fili();
+            break;
+
+        case 49:
+            system("cls");
+            bookmark_selection();
+            break;
+
+        case 50:
+            system("cls");
+            bookmark_add();
+            break;
+
+        case 51:
+            system("cls");
+            bookmark_remove();
+            break;
+
+
+        default:
+            system("cls");
+            error();
+            bookmark_option();
+            bookmark_option_select(nobel);
+            break;
+        }
+    }
+
+    else 
+    {
+        bookmark_option();
+        bm = _getch();
+        switch (bm) {
+        case 27:
+            system("cls");
+            toc();
+            break;
+
+        case 49:
+            system("cls");
+            bookmark_selection();
+            break;
+
+        case 50:
+            system("cls");
+            bookmark_add();
+            break;
+
+        case 51:
+            system("cls");
+            bookmark_remove();
+            break;
+
+        default:
+            system("cls");
+            error();
+            bookmark_option();
+            bookmark_option_select(nobel);
+            break;
+
+        }
+
+    }
+
+}
+
+
+
+
 void bookmark(int nobel) {
 
     if (nobel == 1)
@@ -2595,10 +2908,10 @@ void bookmark_selection() {
 
     gotoxy(0, 5);
 
-    line_short();
+    design(1);
     color(7);
     cout << "                                                        Nobela" << endl;
-    line_short();
+    design(1);
     color(11);
     cout << "                                        [ ";
     color(7);
@@ -2620,67 +2933,13 @@ void bookmark_selection() {
     color(4);
     cout << "Bumalik " << endl << endl;
 
-    line_short();
+    design(1);
 
     color(7);
     cout << "                                          Pumili ng Nobela: ";
     color(14);
 
     bookmark_selection_nav(selectNobel);
-
-    /*
-    switch (novel_select) {
-
-    case 1:
-        bookmark(1);
-        break;
-
-    case 2:
-        bookmark(2);
-        break;
-
-    case 3:
-        system("cls");
-        bookmark_option_toc();
-        break;
-    
-    case 4:
-        system("cls");
-        toc();
-        break;
-
-    default:
-        system("cls");
-        cin.clear(); cin.ignore(512, '\n');
-        error();
-        bookmark_selection();
-    }
-*/
-    /*
-    novel_select = _getch();
-
-    switch (novel_select) {
-
-    case 27:
-        system("cls");
-        toc();
-        break;
-
-    case 49:
-        bookmark(1);
-        break;
-
-    case 50:
-        bookmark(2);
-        break;
-
-    default:
-        system("cls");
-        error();
-        bookmark_selection();
-    }
-    */
-
 }
 
 void bookmark_selection_nav(int selectNobel) {
@@ -2778,7 +3037,7 @@ void bookmark_view_noli() {
     /*
     [Bookmark#] Time || Location || Chapter
     */
-    line_short();
+    design(1);
 
     color(11);
     cout << "                                                Bookmark:";
@@ -2791,7 +3050,7 @@ void bookmark_view_noli() {
     cout << "                               [ 2 ]  |  Noli Me Tangere          |  35           |  8:42 12/10/2022" << endl;
     cout << endl;
     
-    line_short();
+    design(1);
 
     color(11);
     cout << "                                           ";
@@ -2806,7 +3065,7 @@ void bookmark_view_fili() {
     /*
     [Bookmark#] Time || Location || Chapter
     */
-    line_short();
+    design(1);
     color(11);
     cout << "                                                Bookmark:";
     color(14);
@@ -2820,7 +3079,7 @@ void bookmark_view_fili() {
     cout << "                               [ 2 ]  |  El Filibusterismo        |  22           |  22:17 12/01/2022" << endl;
     cout << endl;
 
-    line_short();
+    design(1);
 
     color(11);
     cout << "                                           ";
@@ -2830,212 +3089,18 @@ void bookmark_view_fili() {
 }
 // Bookmark for: TOC; Noli Me Tangere; El Filibusterismo // Done
 
-void bookmark_option() {
 
-    system("TITLE Bookmark - Menu");
-    gotoxy(0, 5);
-
-    line_short();
-    color(11);
-    cout << "                                                      Bookmark Menu" << endl;
-    line_short();
-
-    color(11);
-    cout << "                                        [ ";
-    color(7);
-    cout << "1";
-    color(11);
-    cout << " ] View Bookmarks" << endl;
-
-    cout << "                                        [ ";
-    color(7);
-    cout << "2";
-    color(11);
-    cout << " ] Add a Bookmark" << endl;
-    cout << "                                        [ ";
-    color(7);
-    cout << "3";
-    color(11);
-    cout << " ] Remove a Bookmark" << endl << endl;
-
-    cout << "                                        [ ";
-    color(7);
-    cout << "ESC";
-    color(11);
-    cout << " ] ";
-    color(4);
-    cout << "Bumalik " << endl << endl;
-    line_short();
-
-}
-
-void bookmark_option_nav() {
-    
-    bm = _getch();
-
-    switch (bm) {
-
-    case 27:
-        system("cls");
-        toc();
-        break;
-
-    case 49: // Noli
-        system("cls");
-        bookmark_option_select(1);
-        break;
-
-    case 50: // Fili
-        system("cls");
-        bookmark_option_select(2);
-        break;
-
-    case 51: // TOC
-        system("cls");
-        bookmark_option_select(3);
-        break;
-
-
-    default:
-        error();
-        bookmark_option_select(nobel);
-        break;
-    }
-}
-
-/*
-
-Error on bookmark_option_select
-bookmark_selection_nav
-
-no specified value
-
-
-*/
-
-void bookmark_option_select(int nobel) {
-
-    if (nobel == 1)
-    {
-        bookmark_option();
-        bm = _getch();
-
-        switch (bm) {
-        case 27:
-            system("cls");
-            chap_file_noli();
-            break;
-
-        case 49:
-            system("cls");
-            bookmark_selection();
-            break;
-
-        case 50:
-            system("cls");
-            bookmark_add();
-            break;
-
-        case 51:
-            system("cls");
-            bookmark_remove();
-            break;
-
-
-        default:
-            system("cls");
-            cin.clear(); cin.ignore(512, '\n');
-            error();
-            bookmark_option();
-            break;
-        }
-
-    }
-
-    else if (nobel == 2)
-    {
-        bookmark_option();
-        bm = _getch();
-        switch (bm) {
-        case 27:
-            system("cls");
-            chap_file_fili();
-            break;
-
-        case 49:
-            system("cls");
-            bookmark_selection();
-            break;
-
-        case 50:
-            system("cls");
-            bookmark_add();
-            break;
-
-        case 51:
-            system("cls");
-            bookmark_remove();
-            break;
-
-
-        default:
-            system("cls");
-            cin.clear(); cin.ignore(512, '\n');
-            error();
-            bookmark_option();
-            break;
-        }
-    }
-
-    else if (nobel == 3)
-    {
-        bookmark_option();
-        bm = _getch();
-        switch (bm) {
-        case 27:
-            system("cls");
-            toc();
-            break;
-
-        case 49:
-            system("cls");
-            bookmark_selection();
-            break;
-
-        case 50:
-            system("cls");
-            bookmark_add();
-            break;
-
-        case 51:
-            system("cls");
-            bookmark_remove();
-            break;
-
-
-        default:
-            system("cls");
-            cin.clear(); cin.ignore(512, '\n');
-            error();
-            bookmark_option();
-            break;
-
-        }
-
-    }
-
-
-    else {
-        system("cls");
-        cin.clear(); cin.ignore(512, '\n');
-        error();
-        bookmark_selection();
-    }
-
-}
 
 void time() {
     // time here
+
+    time_t t = time(0);   // get time now
+    tm* now = localtime(&t);
+    cout << (now->tm_year + 1900) << '-'
+        << (now->tm_mon + 1) << '-'
+        << now->tm_mday
+        << "\n";
+
 }
 
 void bookmark_add() {
@@ -3107,36 +3172,41 @@ void gotoxy(int x, int y)
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), d);
 }
 
-void line_short() {
-    color(14);
-    cout << "                                        __________________________________________" << endl;
-    cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
-}
-
-void line_long() {
-    color(14);
-    cout << "       ____________________________________________________________________________________________________________" << endl;
-    cout << "      /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
-}
-
 void color(int color) {
     SetConsoleTextAttribute(hConsole, color);
 }
 
-
-void line_chap() {
-    color(11);
-    for (int i = 1; i <= 120; i++) {
-        cout << "=";
+void design(int lineType) {
+    if (lineType == 1) // short
+    {
+        color(14);
+        cout << "                                        __________________________________________" << endl;
+        cout << "                                       /_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    }
+    else if (lineType == 2) // long
+    {
+        color(14);
+        cout << "       ____________________________________________________________________________________________________________" << endl;
+        cout << "      /_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/_____/" << endl << endl;
+    }
+    else if (lineType == 3) // chapter line
+    {
+        color(11);
+        for (int i = 1; i <= 120; i++) {
+            cout << "=";
+        }
+    }
+    else if (lineType == 4) // navigation line
+    {
+        color(8);
+        for (int i = 1; i <= 120; i++) {
+            cout << "-";
+        }
     }
 }
 
-void line_nav() {
-    color(8);
-    for (int i = 1; i <= 120; i++) {
-        cout << "-";
-    }
-}
+
+
 /*
 
     NYI Features:

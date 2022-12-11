@@ -1,11 +1,12 @@
 ﻿  EBook.cpp
-C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(204,13): warning C4129: '-': unrecognized character escape sequence
-C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(205,13): warning C4129: '-': unrecognized character escape sequence
-C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(1775,9): warning C4551: function call missing argument list
-C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(3072,71): warning C4101: 'chap': unreferenced local variable
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(234,13): warning C4129: '-': unrecognized character escape sequence
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(235,13): warning C4129: '-': unrecognized character escape sequence
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(1805,9): warning C4551: function call missing argument list
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(3087,71): warning C4101: 'chap': unreferenced local variable
   Generating code
-  6 of 250 functions ( 2.4%) were compiled, the rest were copied from previous compilation.
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(2714): warning C4717: 'bookmark_selection': recursive on all control paths, function will cause runtime stack overflow
+  4 of 250 functions ( 1.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    23 functions had inline decision re-evaluated but remain unchanged
+    20 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   EBook.vcxproj -> C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\x64\Release\EBook.exe

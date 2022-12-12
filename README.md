@@ -18,14 +18,13 @@ then lalabas yung short introduction ng app natin.
 
 Planned (✘) and currently working (✓) - but not necessarily fully completed - features:
 
-### Guest (Public)
 - ✓ Read Novels
     * ✓ Noli Me Tangere
       + ✓ Buod ng Nobelang "Noli Me Tangere"
       + ✓ Pagkakakilanlan sa mga Tauhan
       + ✓ Mga Kabanata ng "Noli Me Tangere"
     * ✓ El Filibusterismo
-        + ✓ Buod ng Nobelang "El Filibusterismo"
+      + ✓ Buod ng Nobelang "El Filibusterismo"
       + ✓ Pagkakakilanlan sa mga Tauhan
       + ✓ Mga Kabanata ng "El Filibusterismo"
     * ✘ Bookmark
@@ -63,8 +62,6 @@ Planned (✘) and currently working (✓) - but not necessarily fully completed 
 
 ## Limitation 
 - No GUI interface
-- Can only take 1 order at a time
-- Can't display product images
 
 > Note: Some issues were not yet fixed thus I will be updating this in several upcoming weeks/months. And I hope that this project will be used for educational purposes and that the system itself maintains its copyrights as proposed.
 

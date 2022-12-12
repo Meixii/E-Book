@@ -283,9 +283,8 @@ int main()
     // Start Menu
     system("mode 120, 100");
     system("TITLE Lakbay ni Pepe - Group 3");
-    // Logo();
-    bookmark_view_noli();
-    // Home();
+    Logo();
+    Home();
     return 0;
 }
 
@@ -808,7 +807,7 @@ void Rizal2() {
     color(11);
     cout << " ] Noli Me Tangere";
     color(11);
-    cout << "            [ ";
+    cout << "              [ ";
     color(7);
     cout << "3";
     color(11);
@@ -973,20 +972,20 @@ void noli() {
 
 
     color(11);
-    cout << "                     [ ";
+    cout << "                                    [ ";
     color(7);
     cout << "1";
     color(11);
     cout << " ] Bumalik";
     color(11);
-    cout << "         [ ";
+    cout << "              [ ";
     color(7);
     cout << "2";
     color(11);
     cout << " ] Susunod" << endl;
 
     color(11);
-    cout << "                     [ ";
+    cout << "                                    [ ";
     color(7);
     cout << "3";
     color(11);
@@ -1037,7 +1036,7 @@ system("TITLE Lakbay ni Pepe - Noli Me Tangere");
     cout << endl;
 
     color(11);
-    cout << "                               [ ";
+    cout << "                          [ ";
     color(7);
     cout << "1";
     color(11);
@@ -1056,7 +1055,7 @@ system("TITLE Lakbay ni Pepe - Noli Me Tangere");
     cout << " ] Mga Kabanata" << endl;
 
     color(11);
-    cout << "                     [ ";
+    cout << "                          [ ";
     color(7);
     cout << "4";
     color(11);
@@ -1769,20 +1768,20 @@ void fili() {
     cout << endl;
 
     color(11);
-    cout << "                     [ ";
+    cout << "                                    [ ";
     color(7);
     cout << "1";
     color(11);
     cout << " ] Bumalik";
     color(11);
-    cout << "         [ ";
+    cout << "              [ ";
     color(7);
     cout << "2";
     color(11);
     cout << " ] Susunod" << endl;
 
     color(11);
-    cout << "                     [ ";
+    cout << "                                    [ ";
     color(7);
     cout << "3";
     color(11);
@@ -1835,7 +1834,7 @@ void fili2()
     cout << endl;
 
     color(11);
-    cout << "                     [ ";
+    cout << "                          [ ";
     color(7);
     cout << "1";
     color(11);
@@ -1854,7 +1853,7 @@ void fili2()
     cout << " ] Mga Kabanata" << endl;
 
     color(11);
-    cout << "                     [ ";
+    cout << "                          [ ";
     color(7);
     cout << "4";
     color(11);
@@ -2912,6 +2911,15 @@ void bookmark_view_noli() {
     system("cls");
     bookmark_option_select(3);
 }
+
+/*
+
++ vector
+
+
+
+*/
+
 
 void bookmark_view_fili() {
     //fstream view

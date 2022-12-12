@@ -283,9 +283,9 @@ int main()
     // Start Menu
     system("mode 120, 100");
     system("TITLE Lakbay ni Pepe - Group 3");
-    //Logo();
+    // Logo();
     bookmark_view_noli();
-    //Home();
+    // Home();
     return 0;
 }
 
@@ -353,7 +353,7 @@ void Home() {
     color(7);
     system("pause");
     system("cls");
-    return Tutorial();
+    Tutorial();
 }
 
 // Gabay sa Paggamit

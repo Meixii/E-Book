@@ -1,1 +1,6 @@
-﻿  EBook.vcxproj -> C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\x64\Debug\EBook.exe
+﻿  EBook.cpp
+C:\Users\jkrbn\Downloads\E-Book\EBook.cpp(326,13): warning C4129: '-': unrecognized character escape sequence
+C:\Users\jkrbn\Downloads\E-Book\EBook.cpp(327,13): warning C4129: '-': unrecognized character escape sequence
+C:\Users\jkrbn\Downloads\E-Book\EBook.cpp(1965,9): warning C4551: function call missing argument list
+C:\Users\jkrbn\Downloads\E-Book\EBook.cpp(3317,67): warning C4101: 'chap': unreferenced local variable
+  EBook.vcxproj -> C:\Users\jkrbn\Downloads\E-Book\x64\Debug\EBook.exe

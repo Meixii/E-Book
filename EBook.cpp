@@ -247,35 +247,16 @@ void bookmark_view_fili();
 void bookmark_option(); // Bookmark Main Menu
 void bookmark_option_select(int nobel); // use this
 
-
-
-
 void bookmark_file_noli();
 void bookmark_file_fili();
 
 void bookmark_add();
+void bookmark_add_function();
+
 void bookmark_remove();
-
-
-
-/*
-
-    <==============================================================================>
-    <==============================================================================>
-
-*/
 
 // Text Color
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-
-
-/*
-
-    <==============================================================================>
-    <==============================================================================>
-
-*/
-
 
 int main()
 { 
@@ -654,7 +635,7 @@ void toc() {
 
     case 8: // Bookmark
         system("cls");
-        cin.clear(); cin.ignore(512, '\n');
+        nobel = 3;
         bookmark_option_select(3);
         break;
 
@@ -1283,7 +1264,7 @@ void chap_file_noli() {
         string line_t;
         while (getline(nol_t, line_t))
         {
-        cout << "       " << line_t << endl;
+        cout << "           " << line_t << endl;
         }
         nol_t.close();
     }
@@ -1395,6 +1376,7 @@ void nav_Nol_K() {
     
     case 52:
         system("cls");
+        nobel = 1;
         bookmark_option_select(1);
         break;
 
@@ -2131,7 +2113,7 @@ void chap_file_fili() {
         string line_t;
         while (getline(fil_t, line_t))
         {
-            cout << "        " << line_t << endl;
+            cout << "           " << line_t << endl;
         }
         fil_t.close();
     }
@@ -2239,6 +2221,7 @@ void nav_Fil_K() {
 
         case 52:
             system("cls");
+            nobel = 2;
             bookmark_option_select(2);
             break;
 
@@ -2638,7 +2621,8 @@ void bookmark_option() // Bookmark Menu
     design(1);
     color(11);
     cout << "                                                      Bookmark Menu" << endl;
-    design(1);
+
+    design(5);
 
     color(11);
     cout << "                                        [ ";
@@ -2664,7 +2648,7 @@ void bookmark_option() // Bookmark Menu
     color(11);
     cout << " ] ";
     color(12);
-    cout << "Bumalik " << endl << endl;
+    cout << "Bumalik " << endl;
     design(1);
 
 }
@@ -2793,8 +2777,10 @@ void bookmark_selection() {
 
     design(1);
     color(7);
-    cout << "                                                        Nobela" << endl;
-    design(1);
+    cout << "                                                         Nobela" << endl;
+
+    design(5);
+
     color(11);
     cout << "                                        [ ";
     color(7);
@@ -2814,7 +2800,7 @@ void bookmark_selection() {
     color(11);
     cout << " ] "; 
     color(12);
-    cout << "Bumalik " << endl << endl;
+    cout << "Bumalik " << endl;
 
     design(1);
 
@@ -2828,12 +2814,13 @@ void bookmark_selection() {
         switch (bm_menu) {
         case 27:
             system("cls");
-            toc();
+            bookmark_option_select(nobel);
             break;
 
         case 49:
             system("cls");
             bookmark_view_noli();
+            
             break;
 
         case 50:
@@ -2863,37 +2850,66 @@ void bookmark_view_noli() {
     color(14);
     cout << " Noli Me Tangere" << endl << endl;
 
+    int bm_num = 0;
+    ifstream bm_noli("Resources/Bookmarks/bm_noli.txt");
+    ifstream time_noli("Resources/Bookmarks/time_noli.txt");
+
     color(7);
-    cout << "                                        Bm#   |  Kabanata     |  Oras" << endl;
-    cout << "                                       [ 1 ]  |  23           |  "; td(); cout << endl;
-    cout << "                                       [ 2 ]  |  35           |  "; td(); cout << endl;
+    cout << "                                        Bm#   |  Kabanata\t|  Oras" << endl;
+
+    string line;
+    string line2;
+    while (getline(bm_noli, line) && getline(time_noli, line2)) // chapter
+    {
+        bm_num++;
+        cout << "                                       [ " << bm_num << " ]  |  " << line << "\t\t|  " << line2 << endl;
+    }
+
+    bm_noli.close();
+    time_noli.close();
+
     cout << endl;
-    
+
     design(1);
 
     color(11);
     cout << "                                           ";
     system("pause");
     system("cls");
-    bookmark_option_select(3);
+    bookmark_option_select(nobel);
 }
 
 // Bookmark: Viewing El Filibusterismo BM-Summary
 void bookmark_view_fili() {
     system("TITLE Bookmark - El Filibusterismo");
 
+    gotoxy(0, 5);
+
     design(1);
     color(11);
     cout << "                                               Bookmark:";
     color(14);
-    cout << " El Filibusterismo" << endl << endl << endl;
+    cout << " El Filibusterismo" << endl << endl;
 
 
+    int bm_num = 0;
+    ifstream bm_fili("Resources/Bookmarks/bm_fili.txt");
+    ifstream time_fili("Resources/Bookmarks/time_fili.txt");
 
     color(7);
-    cout << "                                        Bm#   |  Kabanata     |  Oras" << endl;
-    cout << "                                       [ 1 ]  |  23           |  "; td(); cout << endl;
-    cout << "                                       [ 2 ]  |  35           |  "; td(); cout << endl;
+    cout << "                                        Bm#   |  Kabanata\t|  Oras" << endl;
+
+    string line;
+    string line2;
+    while (getline(bm_fili, line) && getline(time_fili, line2)) // chapter
+    {
+        bm_num++;
+        cout << "                                       [ " << bm_num << " ]  |  " << line << "\t\t|  " << line2 << endl;
+    }
+
+    bm_fili.close();
+    time_fili.close();
+
     cout << endl;
 
     design(1);
@@ -2902,7 +2918,7 @@ void bookmark_view_fili() {
     cout << "                                           ";
     system("pause");
     system("cls");
-    bookmark_option_select(3);
+    bookmark_option_select(nobel);
 }
 // Bookmark for: TOC; Noli Me Tangere; El Filibusterismo // Done
 
@@ -2938,12 +2954,29 @@ void bookmark_add() {
     color(11);
     cout << " ] ";
     color(12);
-    cout << "Bumalik " << endl << endl;
+    cout << "Bumalik " << endl;
     design(1);
     
     //bm_noli.txt
     //bm_fili.txt
 }
+
+void bookmark_add_function() {
+
+    /*
+    int bm_add;
+    bm_add = _getch();
+    switch (bm_add) {
+    case 49:
+        //noli == 1
+    }
+    ofstream add_chapter("Resources/Bookmarks/bm_noli.txt");
+    ofstream time_fili("Resources/Bookmarks/time_fili.txt");
+    td()
+*/
+
+}
+
 
 void bookmark_remove() {
     // fstream remove
@@ -2975,7 +3008,7 @@ void bookmark_remove() {
     color(11);
     cout << " ] ";
     color(12);
-    cout << "Bumalik " << endl << endl;
+    cout << "Bumalik " << endl;
     design(1);
 
     system("pause");
@@ -3044,6 +3077,12 @@ void design(int lineType) // Lines Design
             cout << "-";
         }
     }
+    else if (lineType == 5)
+    {
+        color(8);
+        cout << "                                        ........................................." << endl;
+    }
+
 }
 
 
@@ -3300,41 +3339,6 @@ void quit() {
     }
 
 }
-
-
-
-// Beta:
-
-void addtest();
-
-void addtest()
-{
-    cout << "Ano ang pamagat ng Nobela? Pindutin lamang ang katumbas na numero ng napiling Nobela" << endl;
-    cout << " [ 1 ] Noli Me Tangere, [ 2 ] El Filibusterismo";
-
-    string n_title; /* convert int nov,  1 = Noli,  2 = Fili */         // UI
-    int nov /* [ 1 ] Noli Me Tangere, [ 2 ] El Filibusterismo */, chap /* [ 1 - 64 ], [ 1 - 39 ] */;
-    nov = _getch();
-
-    switch (nov) {
-    case 49:
-        n_title = "Noli Me Tangere";
-        bookmark_file_noli();
-        break;
-
-    case 50:
-        n_title = "El Filibusterismo";
-        bookmark_file_fili();
-        break;
-
-    default:
-        system("cls");
-        cin.clear(); cin.ignore(512, '\n');
-        error();
-        return bookmark_add();
-    }
-}
-
 
 
 /*

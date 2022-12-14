@@ -1,11 +1,10 @@
 ﻿  EBook.cpp
-C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(324,13): warning C4129: '-': unrecognized character escape sequence
-C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(325,13): warning C4129: '-': unrecognized character escape sequence
-C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(2006,9): warning C4551: function call missing argument list
-C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(3316,67): warning C4101: 'chap': unreferenced local variable
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(303,13): warning C4129: '-': unrecognized character escape sequence
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(304,13): warning C4129: '-': unrecognized character escape sequence
+C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\EBook.cpp(1986,9): warning C4551: function call missing argument list
   Generating code
-  11 of 249 functions ( 4.4%) were compiled, the rest were copied from previous compilation.
+  2 of 246 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    14 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   EBook.vcxproj -> C:\Users\Ryzen\Documents\Programming\Group 3\EBook\E-Book\x64\Release\EBook.exe

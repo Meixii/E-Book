@@ -151,24 +151,24 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
+    // Header
 #include <chrono>
 #include <ctime>
-
 #include <fstream>
-
 #include <iostream>
-
 #include <string>
 #include <wchar.h>
 #include <locale.h>
 #include <iomanip>
 #include <conio.h>
 #include <stdio.h>
-
 #include <dos.h>
 #include <Windows.h>
 
 using namespace std;
+
+    // Global Variables
+int k_num, c_num, bm, nobel, selectNobel, bm_menu;
 
 //// Function Declaration:
     // Program
@@ -202,9 +202,6 @@ void noli2();
 void fili();
 void fili2();
 
-
-int k_num, c_num;
-
     // chapter
 void chap_noli();
 void chap_fili();
@@ -224,21 +221,22 @@ void char_file_noli_2();
 void char_file_fili();
 void char_file_fili_2();
 
-    // graphic design
+    // color design
 void color(int color);
 
-// will change this soon; merging to one function: 
+    // line design
 void design(int lineType);
 
+    // LnP Logo
 void Logo();
+
+    // Rizal
 void Face();
 
     // error
 void error();
 
     // bookmark
-int bm, nobel, selectNobel, bm_menu;
-
 void bookmark_selection();
 
 void bookmark_view_noli();
@@ -251,9 +249,11 @@ void bookmark_file_noli();
 void bookmark_file_fili();
 
 void bookmark_add();
-void bookmark_add_function();
+void bookmark_add_chapter();
 
 void bookmark_remove();
+
+void confirm(int confirm_nobel);
 
 // Text Color
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -395,7 +395,7 @@ void Tutorial()
     cout << "                                               ";
     system("pause");
     system("cls");
-    return toc();
+    toc();
 }
 
 // Mapa ni Pepe
@@ -579,23 +579,7 @@ void toc() {
     cout << "                                       Pumili ng inyong destinasyon: ";
     color(11);
     cin >> table;
-    /*
-    1. Ang Bida
-
-    2. Buod ng Noli Me Tangere
-    3. Pagkakakilanlan sa mga Tauhan
-    4. Mga Kabanata ng Noli Me Tangere
-
-    5. Buod ng El Filibusterismo
-    6. Pagkakakilanlan sa mga Tauhan
-    7. Mga Kabanata ng El Filibusterismo
-
-    8. Bookmark
-    9. Kilalanin ang mga gumawa
-
-    10. Gabay sa Paggamit
-    11. Itigil ang paglalakbay
-    */
+  
     switch (table) {
     
     case 1: // Dr. Jose P. Rizal
@@ -666,36 +650,36 @@ void toc() {
 
 // Rizal
 void Face() {
-    color(7);
-    cout << "                                               ,,,*,/," << endl;
-    cout << "                                              ,((*,,**/(#%%&%#(###%%%#(#%*" << endl;
-    cout << "                                            //(((##**/(//***(#(%%%%%%%%%%&#%&*" << endl;
-    cout << "                                          //*(%&&@&%,/**////((#((/(#/(%@@&&&&&&#" << endl;
-    cout << "                                        *(%%%&&&&&#(#/#*/#(#%(/(////(#&/*,,,*/#%#(*," << endl;
-    cout << "                                       ,#&&&&&@@&&&%&&&%&%&&%%#(#&@&%*,,,,,,,,,,,,,(%#" << endl;
-    cout << "                                     ,(*%&@&@&@@@@&&%&@@@@@@@@@&&&#*,,,,,,.,,,,,,,,,/##" << endl;
-    cout << "                                    ,*%&&&&&&&@&&&&#/****,,,,,,,,,,,,,,,.,.,,,,,****/#%%" << endl;
-    cout << "                                    /(&&&&&&&@@@@&%#***,,,,,,,,.,.............,,,,**(&&#(" << endl;
-    cout << "                                    /&&@&@@@@@@@@&&/**,,,,,...................,,,,,,/&&#*" << endl;
-    cout << "                                     (&@@@@&@@@&%**,,,,,,,,,,*/#%%%#*,..,,,,*/(#(//((&&" << endl;
-    cout << "                                      #@@@@&&@@&*,,,,,,,**,,*(#%#/*#%#/,,*/%&&#**,,//#," << endl;
-    cout << "                                     *#,.*(&&&&(,,,,,,,,/&((,#@&,(&**,..../%#%&@@&%&&/" << endl;
-    cout << "                                    *&,/&/*,*##/,,,,,.......,,*,,,,.......,/**///((#((&" << endl;
-    cout << "                                    **,*(@#,,*/***,,,......................***,******/#" << endl;
-    cout << "                                    *,.,(./,,,////***,,,,,,,..,...,,........(,,,,,,*/(," << endl;
-    cout << "                                     ***,...,**/(/**/****,,,,,,.,,*.......,,/,,,,,,/#/" << endl;
-    cout << "                                        ,*,.,.*///********,,,,....../##&&&&&&/,,**(%," << endl;
-    cout << "                                           %&%*********,,,,,,,.....,,..,,,((*,,*(#/" << endl;
-    cout << "                                            &#(/*****,,,,,,,,,,(#%&%%%%%&%%%((#(##" << endl;
-    cout << "                                            ***#(*/****,*,,,,,,,,,,,.,....,**(#(#," << endl;
-    cout << "                                            ,./*#&%#(/*****,****,***/#%&&%##((#%/" << endl;
-    cout << "                                       ,%@&%......,&&%%(//*,,,,,,,...,,,**//(#%," << endl;
-    cout << "                                     &&&&@&&%.........,/#&&%%(/*,,,,,,***/(##*" << endl;
-    cout << "                                  *&&&&&@&&&&&#..........,***/%&&&&&&&&&&&&&&&&#" << endl;
-    cout << "                     *&&&&#**(&&&&&&&&&@&&&&&&&&#..........,,****#(/*///#&&&&&&&&&#" << endl;
-    cout << "                    &&%@&&&&@@@@&&&&&&&&&&&&&&&&&&%.........,,,*/(/**//(&&&&&&&&&&&&&%" << endl;
-    cout << "                  %&&&&&&&&&&@&&&&&&&&&&&&%%%&&&&&&&%&&#.....,,**/////%&&&&&&&&&&&&&&&&&&%," << endl;
-    cout << "               /&&&&&&&&&&&&&&&&&&&&&&&&&#%%%%%&&&&&&%%%&&&&@&&&&&&&&&&&&&&&&&&&&&%%%%%%&%&&&&&*" << endl << endl;
+    color(112);
+    cout << "                                               ,,,*,/,                                                                  " << endl;
+    cout << "                                              ,((*,,**/(#%%&%#(###%%%#(#%*                                              " << endl;
+    cout << "                                            //(((##**/(//***(#(%%%%%%%%%%&#%&*                                          " << endl;
+    cout << "                                          //*(%&&@&%,/**////((#((/(#/(%@@&&&&&&#                                        " << endl;
+    cout << "                                        *(%%%&&&&&#(#/#*/#(#%(/(////(#&/*,,,*/#%#(*,                                    " << endl;
+    cout << "                                       ,#&&&&&@@&&&%&&&%&%&&%%#(#&@&%*,,,,,,,,,,,,,(%#                                  " << endl;
+    cout << "                                     ,(*%&@&@&@@@@&&%&@@@@@@@@@&&&#*,,,,,,.,,,,,,,,,/##                                 " << endl;
+    cout << "                                    ,*%&&&&&&&@&&&&#/****,,,,,,,,,,,,,,,.,.,,,,,****/#%%                                " << endl;
+    cout << "                                    /(&&&&&&&@@@@&%#***,,,,,,,,.,.............,,,,**(&&#(                               " << endl;
+    cout << "                                    /&&@&@@@@@@@@&&/**,,,,,...................,,,,,,/&&#*                               " << endl;
+    cout << "                                     (&@@@@&@@@&%**,,,,,,,,,,*/#%%%#*,..,,,,*/(#(//((&&                                 " << endl;
+    cout << "                                      #@@@@&&@@&*,,,,,,,**,,*(#%#/*#%#/,,*/%&&#**,,//#,                                 " << endl;
+    cout << "                                     *#,.*(&&&&(,,,,,,,,/&((,#@&,(&**,..../%#%&@@&%&&/                                  " << endl;
+    cout << "                                    *&,/&/*,*##/,,,,,.......,,*,,,,.......,/**///((#((&                                 " << endl;
+    cout << "                                    **,*(@#,,*/***,,,......................***,******/#                                 " << endl;
+    cout << "                                    *,.,(./,,,////***,,,,,,,..,...,,........(,,,,,,*/(,                                 " << endl;
+    cout << "                                     ***,...,**/(/**/****,,,,,,.,,*.......,,/,,,,,,/#/                                  " << endl;
+    cout << "                                        ,*,.,.*///********,,,,....../##&&&&&&/,,**(%,                                   " << endl;
+    cout << "                                           %&%*********,,,,,,,.....,,..,,,((*,,*(#/                                     " << endl;
+    cout << "                                            &#(/*****,,,,,,,,,,(#%&%%%%%&%%%((#(##                                      " << endl;
+    cout << "                                            ***#(*/****,*,,,,,,,,,,,.,....,**(#(#,                                      " << endl;
+    cout << "                                            ,./*#&%#(/*****,****,***/#%&&%##((#%/                                       " << endl;
+    cout << "                                       ,%@&%......,&&%%(//*,,,,,,,...,,,**//(#%,                                        " << endl;
+    cout << "                                     &&&&@&&%.........,/#&&%%(/*,,,,,,***/(##*                                          " << endl;
+    cout << "                                  *&&&&&@&&&&&#..........,***/%&&&&&&&&&&&&&&&&#                                        " << endl;
+    cout << "                     *&&&&#**(&&&&&&&&&@&&&&&&&&#..........,,****#(/*///#&&&&&&&&&#                                     " << endl;
+    cout << "                    &&%@&&&&@@@@&&&&&&&&&&&&&&&&&&%.........,,,*/(/**//(&&&&&&&&&&&&&%                                  " << endl;
+    cout << "                  %&&&&&&&&&&@&&&&&&&&&&&&%%%&&&&&&&%&&#.....,,**/////%&&&&&&&&&&&&&&&&&&%,                             " << endl;
+    cout << "               /&&&&&&&&&&&&&&&&&&&&&&&&&#%%%%%&&&&&&%%%&&&&@&&&&&&&&&&&&&&&&&&&&&%%%%%%&%&&&&&*                        " << endl << endl;
 }
 
 void Rizal() {
@@ -2957,26 +2941,179 @@ void bookmark_add() {
     cout << "Bumalik " << endl;
     design(1);
     
-    //bm_noli.txt
-    //bm_fili.txt
+    bookmark_add_chapter();
 }
 
-void bookmark_add_function() {
+void bookmark_add_auto();
+void bookmark_add_auto() {
 
-    /*
+
+}
+
+void bookmark_add_chapter() {
+
     int bm_add;
+
+    
     bm_add = _getch();
     switch (bm_add) {
+    case 27:
+        system("cls");
+        bookmark_option_select(nobel);
+        break;
+
     case 49:
-        //noli == 1
+        system("cls");
+        gotoxy(0, 5);
+
+        design(1);
+        color(11);
+        cout << "                                                      Add Bookmark" << endl;
+        design(1);
+
+        // Entering Chapter
+        cout << "                                       Enter a Chapter: ";
+        cin >> k_num;
+        system("cls");
+        confirm(1);
+        break;
+
+    case 50:
+        design(1);
+        color(11);
+        cout << "                                                      Add Bookmark" << endl;
+        design(1);
+
+        // Entering Chapter
+        cout << "                                       Enter a Chapter: ";
+        cin >> k_num;
+        system("cls");
+        confirm(2);
+        break;
     }
-    ofstream add_chapter("Resources/Bookmarks/bm_noli.txt");
-    ofstream time_fili("Resources/Bookmarks/time_fili.txt");
-    td()
-*/
+
+
+
+
 
 }
 
+void confirm(int confirm_nobel) {
+
+    if (confirm_nobel == 1) {
+
+    
+    // Confirmation
+    int confirm;
+
+    ofstream add_chapter("Resources/Bookmarks/bm_noli.txt");
+    ofstream add_time("Resources/Bookmarks/time_noli.txt");
+
+    gotoxy(0, 5);
+    design(1);
+    color(11);
+    cout << "                                                    Magdagdag ng Marka" << endl;
+    design(1);
+
+    cout << "                                       Pinili: Noli Me Tangere (" << k_num << ")" << endl;
+    cout << "                                       [ 1 ] Magpatuloy" << endl;
+    cout << "                                       [ Esc ] Bumalik" << endl;
+
+    confirm = _getch();
+    if (confirm == 49) {
+        add_chapter << k_num << endl;
+
+        time_t t = time(0);   // get time now /// Format: [ 24:00 12/12/2022 ]
+        tm* now = localtime(&t);
+        add_time << (now->tm_hour) << ':' << (now->tm_min + 1) << ' ' << (now->tm_mon + 1) << '/' << now->tm_mday << '/' << (now->tm_year + 1900) << endl;
+
+        add_chapter.close();
+        add_time.close();
+
+        cout << "                                    ";
+        system("pause");
+        system("cls");
+        bookmark_view_fili();
+
+    }
+    else {
+        system("cls");
+        cin.clear(); cin.ignore(512, '\n');
+        bookmark_add;
+    }
+    }
+
+    else if (confirm_nobel == 2)
+    {
+    // Confirmation
+    int confirm;
+
+    ofstream add_chapter("Resources/Bookmarks/bm_fili.txt");
+    ofstream add_time("Resources/Bookmarks/time_fili.txt");
+
+    gotoxy(0, 5);
+    design(1);
+    color(11);
+    cout << "                                                    Magdagdag ng Marka" << endl;
+    design(1);
+
+    cout << "                                       Pinili: Noli Me Tangere (" << k_num << ")" << endl;
+    cout << "                                       [ 1 ] Magpatuloy" << endl;
+    cout << "                                       [ Esc ] Bumalik" << endl;
+
+    confirm = _getch();
+    if (confirm == 49) {
+
+        // chapter
+        add_chapter << k_num << endl;
+
+        // time
+        time_t t = time(0);   // get time now /// Format: [ 24:00 12/12/2022 ]
+        tm* now = localtime(&t);
+        add_time << (now->tm_hour) << ':' << (now->tm_min + 1) << ' ' << (now->tm_mon + 1) << '/' << now->tm_mday << '/' << (now->tm_year + 1900) << endl;
+
+        add_chapter.close();
+        add_time.close();
+
+        cout << "                                  ";
+        system("pause");
+        system("cls");
+        bookmark_view_noli();
+    }
+    else {
+        system("cls");
+        cin.clear(); cin.ignore(512, '\n');
+        bookmark_add;
+    }
+    }
+}
+
+
+void test();
+
+void test() {
+    int bm_add;
+
+    bm_add = _getch();
+
+    switch (bm_add) {
+    case 27:
+        system("cls");
+        bookmark_option_select(nobel);
+        break;
+
+    case 49:
+        system("cls");
+        bookmark_add();
+
+    }
+    if (k_num > 5) {
+
+
+
+    }
+
+}
 
 void bookmark_remove() {
     // fstream remove

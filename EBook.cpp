@@ -27,14 +27,14 @@
                 [ 1 ] Ang Bida
 
                 ------------- Noli Me Tangere -------------
-                [ 2 ] Buod ng Nobelang "Noli Me Tangere"
+                [ 2 ] Buod
                 [ 3 ] Pagkakakilanlan sa mga Tauhan
-                [ 4 ] Mga Kabanata ng "Noli Me Tangere"
+                [ 4 ] Mga Kabanata
 
                 ------------ El Filibusterismo ------------
-                [ 5 ] Buod ng Nobelang "El Filibusterismo"
+                [ 5 ] Buod
                 [ 6 ] Pagkakakilanlan sa mga Tauhan
-                [ 7 ] Mga Kabanata ng "El Filibusterismo"
+                [ 7 ] Mga Kabanata
 
                 ----------- Tungkol sa Programa -----------
                 [ 8 ] Bookmark
@@ -168,7 +168,7 @@
 using namespace std;
 
     // Global Variables
-int k_num, c_num, bm, nobel, selectNobel, bm_menu;
+int k_num, c_num, bm, nobel, selectNobel, bm_menu, c_auto, bm_selectNav;
 
 //// Function Declaration:
     // Program
@@ -193,6 +193,7 @@ void nav_fili2();
 void nav_Fil_K();
 void nav_Nol_K();
 void nav_end();
+void nav_bookmark(int bm_selectNav);
 
     // Noli Me Tangere
 void noli();
@@ -245,13 +246,12 @@ void bookmark_view_fili();
 void bookmark_option(); // Bookmark Main Menu
 void bookmark_option_select(int nobel); // use this
 
-void bookmark_file_noli();
-void bookmark_file_fili();
-
 void bookmark_add();
 void bookmark_add_chapter();
 
-void bookmark_remove();
+void bookmark_add_auto(int file);
+void confirm_auto(int c_auto); // Auto Bookmark (Chapter)
+void confirm_auto_nobel(int c_auto);
 
 void confirm(int confirm_nobel);
 
@@ -419,7 +419,7 @@ void toc() {
     design(1);
     color(11);
     cout << "                                       ------------------";
-    color(7);
+    color(14);
     cout << " Rizal";
     color(11);
     cout <<" ------------------" << endl;
@@ -434,14 +434,14 @@ void toc() {
 
 /*
                                    ------------- Noli Me Tangere -------------
-                                    [ 2 ] Buod ng Nobelang "Noli Me Tangere"
+                                    [ 2 ] Buod
                                     [ 3 ] Pagkakakilanlan sa mga Tauhan
-                                    [ 4 ] Mga Kabanata ng "Noli Me Tangere"
+                                    [ 4 ] Mga Kabanata
 */
 
     color(11);
     cout << "                                       -------------";
-    color(7);
+    color(14);
     cout << " Noli Me Tangere";
     color(11);
     cout << " -------------" << endl;
@@ -452,7 +452,7 @@ void toc() {
     color(11);
     cout << " ]";
     color(7); 
-    cout << " Buod ng Nobelang \"Noli Me Tangere\"" << endl;
+    cout << " Buod" << endl;
     color(11);
     cout << "                                        [ ";
     color(7);
@@ -468,19 +468,19 @@ void toc() {
     color(11);
     cout << " ]";
     color(7); 
-    cout << " Mga Kabanata ng \"Noli Me Tangere\"" << endl << endl;
+    cout << " Mga Kabanata" << endl << endl;
 
 
 /*
                                    ------------ El Filibusterismo ------------
-                                    [ 5 ] Buod ng Nobelang "El Filibusterismo"
+                                    [ 5 ] Buod
                                     [ 6 ] Pagkakakilanlan sa mga Tauhan
-                                    [ 7 ] Mga Kabanata ng "El Filibusterismo"
+                                    [ 7 ] Mga Kabanata
 */
 
     color(11);
     cout << "                                       ------------";
-    color(7);
+    color(14);
     cout << " El Filibusterismo";
     color(11);
     cout << " ------------" << endl;
@@ -490,7 +490,7 @@ void toc() {
     color(11);
     cout << " ]";
     color(7); 
-    cout << " Buod ng Nobelang \"El Filibusterismo\"" << endl;
+    cout << " Buod" << endl;
     color(11);
     cout << "                                        [ ";
     color(7);
@@ -506,7 +506,7 @@ void toc() {
     color(11);
     cout << " ]";
     color(7); 
-    cout << " Mga Kabanata ng \"El Filibusterismo\"" << endl << endl;
+    cout << " Mga Kabanata" << endl << endl;
 
     /*
                                    ----------- Tungkol sa Programa -----------
@@ -517,7 +517,7 @@ void toc() {
 
     color(11);
     cout << "                                       -----------";
-    color(7);
+    color(14);
     cout << " Tungkol sa Programa";
     color(11);
     cout << " -----------" << endl;
@@ -528,7 +528,7 @@ void toc() {
     color(11);
     cout << " ]";
     color(7); 
-    cout << " Bookmark" << endl;
+    cout << " Marka" << endl;
     color(11);
     cout << "                                        [ ";
     color(7);
@@ -547,7 +547,7 @@ void toc() {
     cout << " Gabay sa Paggamit" << endl << endl;
     color(11);
     cout << "                                       ------------";
-    color(7);
+    color(14);
     cout << " Ibang Pagpipilian";
     color(11);
     cout << " ------------" << endl;
@@ -1162,6 +1162,8 @@ void chap_file_noli() {
         design(1);
         color(11);
         cout << "                                                       Kabanata " << k_num << " " << endl;
+        cout << "                                                   [ "; color(7); cout << "Noli Me Tangere"; color(11); cout << " ]" << endl;
+        
         design(1);
         color(11);
 
@@ -1199,7 +1201,7 @@ void chap_file_noli() {
         color(11);
         cout << " ] ";
         color(10);
-        cout << "Bookmark";
+        cout << "Markahan";
 
         color(11);
         cout << "             [ ";
@@ -1361,7 +1363,8 @@ void nav_Nol_K() {
     case 52:
         system("cls");
         nobel = 1;
-        bookmark_option_select(1);
+        c_auto = 1;
+        bookmark_add_auto(1);
         break;
 
     case 53:
@@ -2010,6 +2013,8 @@ void chap_file_fili() {
         design(1);
         color(11);
         cout << "                                                       Kabanata " << k_num << " " << endl;
+        cout << "                                                  [ "; color(7); cout << "El Filibusterismo"; color(11); cout << " ]" << endl;
+
         design(1);
         color(11);
 
@@ -2047,7 +2052,7 @@ void chap_file_fili() {
         color(11);
         cout << " ] "; 
         color(10);
-        cout << "Bookmark";
+        cout << "Markahan";
 
         color(11);
         cout << "             [ ";
@@ -2206,7 +2211,8 @@ void nav_Fil_K() {
         case 52:
             system("cls");
             nobel = 2;
-            bookmark_option_select(2);
+            c_auto = 2;
+            bookmark_add_auto(2);
             break;
 
         case 53:
@@ -2604,7 +2610,7 @@ void bookmark_option() // Bookmark Menu
 
     design(1);
     color(11);
-    cout << "                                                      Bookmark Menu" << endl;
+    cout << "                                                       Markahan" << endl;
 
     design(5);
 
@@ -2613,19 +2619,15 @@ void bookmark_option() // Bookmark Menu
     color(7);
     cout << "1";
     color(11);
-    cout << " ] View Bookmarks" << endl;
-
+    cout << " ]"; color(7); cout << " Tignan ang mga minarkahan" << endl;
+    color(11);
     cout << "                                        [ ";
     color(7);
     cout << "2";
     color(11);
-    cout << " ] Add a Bookmark" << endl;
-    cout << "                                        [ ";
-    color(7);
-    cout << "3";
-    color(11);
-    cout << " ] Remove a Bookmark" << endl << endl;
+    cout << " ]"; color(7); cout << " Palitan ang mga marka" << endl << endl;
 
+    color(11);
     cout << "                                        [ ";
     color(7);
     cout << "ESC";
@@ -2661,12 +2663,6 @@ void bookmark_option_select(int nobel) // FIXED
             bookmark_add();
             break;
 
-        case 51:
-            system("cls");
-            bookmark_remove();
-            break;
-
-
         default:
             system("cls");
             cin.clear(); cin.ignore(512, '\n');
@@ -2696,11 +2692,6 @@ void bookmark_option_select(int nobel) // FIXED
         case 50:
             system("cls");
             bookmark_add();
-            break;
-
-        case 51:
-            system("cls");
-            bookmark_remove();
             break;
 
 
@@ -2733,10 +2724,6 @@ void bookmark_option_select(int nobel) // FIXED
             bookmark_add();
             break;
 
-        case 51:
-            system("cls");
-            bookmark_remove();
-            break;
 
         default:
             system("cls");
@@ -2760,7 +2747,7 @@ void bookmark_selection() {
     gotoxy(0, 5);
 
     design(1);
-    color(7);
+    color(11);
     cout << "                                                         Nobela" << endl;
 
     design(5);
@@ -2770,13 +2757,14 @@ void bookmark_selection() {
     color(7);
     cout << "1";
     color(11);
-    cout << " ] Noli Me Tangere" << endl;
+    cout << " ] "; color(7); cout << "Noli Me Tangere" << endl;
+    color(11);
     cout << "                                        [ ";
     color(7); 
     cout << "2";
     color(11);
-    cout << " ] El Filibusterismo" << endl << endl;
-    
+    cout << " ] "; color(7); cout << "El Filibusterismo" << endl << endl;
+
     color(11);
     cout << "                                        [ "; 
     color(7); 
@@ -2830,37 +2818,47 @@ void bookmark_view_noli() {
 
     design(1);
     color(11);
-    cout << "                                                Bookmark:";
+    cout << "                                                Marka:";
     color(14);
     cout << " Noli Me Tangere" << endl << endl;
+    design(5);
 
-    int bm_num = 0;
     ifstream bm_noli("Resources/Bookmarks/bm_noli.txt");
     ifstream time_noli("Resources/Bookmarks/time_noli.txt");
 
     color(7);
-    cout << "                                        Bm#   |  Kabanata\t|  Oras" << endl;
+    cout << "                                        Kabanata:\t|  Oras:" << endl;
 
     string line;
     string line2;
     while (getline(bm_noli, line) && getline(time_noli, line2)) // chapter
     {
-        bm_num++;
-        cout << "                                       [ " << bm_num << " ]  |  " << line << "\t\t|  " << line2 << endl;
+
+        cout << "                                        " << line << "\t\t|  " << line2 << endl;
     }
 
     bm_noli.close();
     time_noli.close();
 
-    cout << endl;
-
-    design(1);
+    cout << endl << endl;
 
     color(11);
-    cout << "                                           ";
-    system("pause");
-    system("cls");
-    bookmark_option_select(nobel);
+    cout << "                                        [ ";
+    color(7);
+    cout << "1";
+    color(11);
+    cout << " ]"; color(7); cout << " Pumunta sa minarkahan" << endl << endl;
+
+    color(11);
+    cout << "                                        [ ";
+    color(7);
+    cout << "ESC";
+    color(11);
+    cout << " ] ";
+    color(12);
+    cout << "Bumalik " << endl;
+    design(1);
+    nav_bookmark(1);
 }
 
 // Bookmark: Viewing El Filibusterismo BM-Summary
@@ -2871,42 +2869,101 @@ void bookmark_view_fili() {
 
     design(1);
     color(11);
-    cout << "                                               Bookmark:";
+    cout << "                                               Marka:";
     color(14);
     cout << " El Filibusterismo" << endl << endl;
+    design(5);
 
-
-    int bm_num = 0;
     ifstream bm_fili("Resources/Bookmarks/bm_fili.txt");
     ifstream time_fili("Resources/Bookmarks/time_fili.txt");
 
     color(7);
-    cout << "                                        Bm#   |  Kabanata\t|  Oras" << endl;
+    cout << "                                        Kabanata:\t|  Oras:" << endl;
 
     string line;
     string line2;
     while (getline(bm_fili, line) && getline(time_fili, line2)) // chapter
     {
-        bm_num++;
-        cout << "                                       [ " << bm_num << " ]  |  " << line << "\t\t|  " << line2 << endl;
+        cout << "                                        " << line << "\t\t|  " << line2 << endl;
     }
 
     bm_fili.close();
     time_fili.close();
 
-    cout << endl;
-
-    design(1);
+    cout << endl << endl;
 
     color(11);
-    cout << "                                           ";
-    system("pause");
-    system("cls");
-    bookmark_option_select(nobel);
+    cout << "                                        [ ";
+    color(7);
+    cout << "1";
+    color(11);
+    cout << " ]"; color(7); cout << " Pumunta sa minarkahan" << endl << endl;
+
+    color(11);
+    cout << "                                        [ ";
+    color(7);
+    cout << "ESC";
+    color(11);
+    cout << " ] ";
+    color(12);
+    cout << "Bumalik " << endl;
+    design(1);
+    nav_bookmark(2);
 }
 // Bookmark for: TOC; Noli Me Tangere; El Filibusterismo // Done
 
+// GoTo Bookmark Navigation
+void nav_bookmark(int bm_selectNav) {
+    int bm_nav;
+    bm_nav = _getch();
 
+    if (bm_selectNav == 1) {
+        string chap;
+        ifstream getChap("Resources/Bookmarks/bm_noli.txt");
+        switch (bm_nav) {
+        case 49:
+            while (getline(getChap, chap)) {
+                k_num = stoi(chap);
+            }
+            getChap.close();
+            system("cls");
+            chap_file_noli();
+            break;
+        case 27:
+            bookmark_option_select(nobel);
+            break;
+        default:
+            system("cls");
+            error();
+            bookmark_selection();
+        }
+    }
+    else if (bm_selectNav == 2) {
+        string chap;
+        ifstream getChap("Resources/Bookmarks/bm_fili.txt");
+        switch (bm_nav) {
+        case 49:
+            while (getline(getChap, chap)) {
+                k_num = stoi(chap);
+            }
+            getChap.close();
+            system("cls");
+            chap_file_fili();
+            break;
+        case 27:
+            bookmark_option_select(nobel);
+            break;
+        default:
+            system("cls");
+            error();
+            bookmark_selection();
+        }
+
+    }
+
+    system("cls");
+    bookmark_option_select(nobel);
+}
 
 void bookmark_add() {
     // fstream add 
@@ -2916,22 +2973,24 @@ void bookmark_add() {
 
     design(1);
     color(11);
-    cout << "                                                      Add Bookmark" << endl;
-    design(1);
+    cout << "                                                         Nobela" << endl;
+
+    design(5);
 
     color(11);
     cout << "                                        [ ";
     color(7);
     cout << "1";
     color(11);
-    cout << " ] Noli Me Tangere" << endl;
-
+    cout << " ] "; color(7); cout << "Noli Me Tangere" << endl;
+    color(11);
     cout << "                                        [ ";
     color(7);
     cout << "2";
     color(11);
-    cout << " ] El Filibusterismo" << endl << endl;
+    cout << " ] "; color(7); cout << "El Filibusterismo" << endl << endl;
 
+    color(11);
     cout << "                                        [ ";
     color(7);
     cout << "ESC";
@@ -2939,23 +2998,78 @@ void bookmark_add() {
     cout << " ] ";
     color(12);
     cout << "Bumalik " << endl;
+
     design(1);
     
     bookmark_add_chapter();
 }
 
-void bookmark_add_auto();
-void bookmark_add_auto() {
 
+void bookmark_add_auto(int file) {
+    if (file == 1) {
+        ofstream add_chapter("Resources/Bookmarks/bm_noli.txt");
+        ofstream add_time("Resources/Bookmarks/time_noli.txt");
 
+        add_chapter << k_num << endl;
+
+        time_t t = time(0);   // get time now /// Format: [ 24:00 12/12/2022 ]
+        tm* now = localtime(&t);
+        add_time << (now->tm_hour) << ':' << (now->tm_min + 1) << ' ' << (now->tm_mon + 1) << '/' << now->tm_mday << '/' << (now->tm_year + 1900) << endl;
+
+        add_chapter.close();
+        add_time.close();
+
+        confirm_auto(c_auto);
+    }
+    if (file == 2) {
+        ofstream add_chapter("Resources/Bookmarks/bm_fili.txt");
+        ofstream add_time("Resources/Bookmarks/time_fili.txt");
+
+        add_chapter << k_num << endl;
+
+        time_t t = time(0);   // get time now /// Format: [ 24:00 12/12/2022 ]
+        tm* now = localtime(&t);
+        add_time << (now->tm_hour) << ':' << (now->tm_min + 1) << ' ' << (now->tm_mon + 1) << '/' << now->tm_mday << '/' << (now->tm_year + 1900) << endl;
+
+        add_chapter.close();
+        add_time.close();
+
+        confirm_auto(c_auto);
+    }
+}
+
+void confirm_auto(int c_auto) {
+    system("cls");
+    gotoxy(0, 5);
+    design(1);
+    color(10);
+
+    cout << "                                           Nalagyan na ng marka ang kabanata." << endl << endl;
+    color(7);
+    cout << "                                           Babalik sa huling pinanggalingan..." << endl;
+    design(1);
+
+    Sleep(3000);
+    confirm_auto_nobel(c_auto);
+}
+
+void confirm_auto_nobel(int c_auto) {
+    if (c_auto == 1) {
+        system("cls");
+        chap_file_noli();
+    }
+    else if (c_auto == 2) {
+        system("cls");
+        chap_file_fili();
+    }
 }
 
 void bookmark_add_chapter() {
 
     int bm_add;
-
-    
+    string getChapter;
     bm_add = _getch();
+
     switch (bm_add) {
     case 27:
         system("cls");
@@ -2965,44 +3079,74 @@ void bookmark_add_chapter() {
     case 49:
         system("cls");
         gotoxy(0, 5);
-
         design(1);
         color(11);
-        cout << "                                                      Add Bookmark" << endl;
-        design(1);
+        cout << "                                          Magdagdag ng Marka";
 
+        color(14);
+        cout << ": \"Noli Me Tangere\"" << endl;
+
+        design(5);
+        
         // Entering Chapter
-        cout << "                                       Enter a Chapter: ";
+        color(7);
+        cout << "                                        Pumili ng Kabanata: ";
+        color(14);
         cin >> k_num;
-        system("cls");
-        confirm(1);
+        if (k_num >= 1 && k_num <= 64) {
+            confirm(1);
+        }
+        else if (cin.fail())
+        {
+            error();
+            bookmark_add_chapter();
+        }
+        else
+        {
+            error();
+            bookmark_add_chapter();
+        }
         break;
 
     case 50:
+        system("cls");
+        gotoxy(0, 5);
         design(1);
         color(11);
-        cout << "                                                      Add Bookmark" << endl;
-        design(1);
+        cout << "                                           Magdagdag ng Marka";
+        color(14);
+        cout << ": \"El Filibusterismo\"" << endl;
+
+        design(5);
 
         // Entering Chapter
-        cout << "                                       Enter a Chapter: ";
+        color(7);
+        cout << "                                        Pumili ng Kabanata: ";
+        color(14);
         cin >> k_num;
-        system("cls");
-        confirm(2);
+        if (k_num >= 1 && k_num <= 39) {
+            confirm(2);
+        }
+        else if (cin.fail())
+        {
+        error();
+        bookmark_add_chapter();
+        }
+        else
+        {
+        error();
+        bookmark_add_chapter();
+        }
+        
         break;
     }
 
-
-
-
-
 }
-
+// problem: pressing [ esc ] clears the textfile
 void confirm(int confirm_nobel) {
 
     if (confirm_nobel == 1) {
 
-    
     // Confirmation
     int confirm;
 
@@ -3012,13 +3156,22 @@ void confirm(int confirm_nobel) {
     gotoxy(0, 5);
     design(1);
     color(11);
-    cout << "                                                    Magdagdag ng Marka" << endl;
+    cout << "                                                   Magdagdag ng Marka" << endl;
+    design(5);
+    color(14);
+    cout << "                                       Nobela:";
+    color(7);
+    cout << " Noli Me Tangere" << endl;
+    color(14);
+    cout << "                                       Kabanata: ";
+    color(7);
+    cout << k_num << endl << endl;
+    color(11);
+    cout << "                                       [ "; color(7); cout << "1"; color(11); cout << " ]"; color(10);cout << " Magpatuloy" << endl;
+    color(11);
+    cout << "                                       [ "; color(7); cout << "Esc"; color(11); cout << " ] "; color(12); cout << "Bumalik" << endl;
+
     design(1);
-
-    cout << "                                       Pinili: Noli Me Tangere (" << k_num << ")" << endl;
-    cout << "                                       [ 1 ] Magpatuloy" << endl;
-    cout << "                                       [ Esc ] Bumalik" << endl;
-
     confirm = _getch();
     if (confirm == 49) {
         add_chapter << k_num << endl;
@@ -3033,13 +3186,12 @@ void confirm(int confirm_nobel) {
         cout << "                                    ";
         system("pause");
         system("cls");
-        bookmark_view_fili();
-
+        bookmark_view_noli();
     }
-    else {
-        system("cls");
+    else if(confirm == 27) {
         cin.clear(); cin.ignore(512, '\n');
-        bookmark_add;
+        system("cls");
+        bookmark_option_select(nobel);
     }
     }
 
@@ -3054,13 +3206,22 @@ void confirm(int confirm_nobel) {
     gotoxy(0, 5);
     design(1);
     color(11);
-    cout << "                                                    Magdagdag ng Marka" << endl;
+    cout << "                                                   Magdagdag ng Marka" << endl;
+    design(5);
+    color(14);
+    cout << "                                       Nobela:";
+    color(7);
+    cout << " El Filibusterismo" << endl;
+    color(14);
+    cout << "                                       Kabanata: ";
+    color(7);
+    cout << k_num << endl << endl;
+    color(11);
+    cout << "                                       [ "; color(7); cout << "1"; color(11); cout << " ]"; color(10);cout << " Magpatuloy" << endl;
+    color(11);
+    cout << "                                       [ "; color(7); cout << "Esc"; color(11); cout << " ] "; color(12); cout << "Bumalik" << endl;
+
     design(1);
-
-    cout << "                                       Pinili: Noli Me Tangere (" << k_num << ")" << endl;
-    cout << "                                       [ 1 ] Magpatuloy" << endl;
-    cout << "                                       [ Esc ] Bumalik" << endl;
-
     confirm = _getch();
     if (confirm == 49) {
 
@@ -3078,90 +3239,14 @@ void confirm(int confirm_nobel) {
         cout << "                                  ";
         system("pause");
         system("cls");
-        bookmark_view_noli();
+        bookmark_view_fili();
     }
-    else {
-        system("cls");
+    else if (confirm == 27) {
         cin.clear(); cin.ignore(512, '\n');
-        bookmark_add;
-    }
-    }
-}
-
-
-void test();
-
-void test() {
-    int bm_add;
-
-    bm_add = _getch();
-
-    switch (bm_add) {
-    case 27:
         system("cls");
         bookmark_option_select(nobel);
-        break;
-
-    case 49:
-        system("cls");
-        bookmark_add();
-
     }
-    if (k_num > 5) {
-
-
-
     }
-
-}
-
-void bookmark_remove() {
-    // fstream remove
-    system("TITLE Bookmark - Remove");
-
-    gotoxy(0, 5);
-
-    design(1);
-    color(11);
-    cout << "                                                      Remove Bookmark" << endl;
-    design(1);
-
-    color(11);
-    cout << "                                        [ ";
-    color(7);
-    cout << "1";
-    color(11);
-    cout << " ] Noli Me Tangere" << endl;
-
-    cout << "                                        [ ";
-    color(7);
-    cout << "2";
-    color(11);
-    cout << " ] El Filibusterismo" << endl << endl;
-
-    cout << "                                        [ ";
-    color(7);
-    cout << "ESC";
-    color(11);
-    cout << " ] ";
-    color(12);
-    cout << "Bumalik " << endl;
-    design(1);
-
-    system("pause");
-    bookmark_selection();
-}
-
-void bookmark_file_noli() {
-    //ofstream bm_nol;
-    system("pause");
-    bookmark_selection();
-}
-
-void bookmark_file_fili() {
-    //ofstream bm_fil;
-    system("pause");
-    bookmark_selection();
 }
 
 // Time and Date        

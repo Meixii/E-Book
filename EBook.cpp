@@ -8,147 +8,6 @@
 *
 */
 
-/*
-    Lakbay ni Pepe (LnP):
-
-    Offline E-Book Application made with C++ only, naglalaman siya ng details about kay Rizal, tapos sa Noli, at El Fili,
-    yung app natin mostly ginagamitan lang ng numkeys, tas "esc" for 'back feature' lalo na yung sa navigation, sa start
-    ng program natin may Logo ng title ng app natin, tas yung user any key pede nya pindutin at this point para mag proceed,
-    then lalabas yung short introduction ng app natin (kung may dadagdag kayo sige lang kc parang kulang pa ata yon),
-    tas some disclaimer lang din ayon, then tutorial ung next once na nag proceed na ung user, dito may heads up na nirecommend
-    ung numpad(ung nasa right side ng keyboard) or pede rin naman gamitin ung sa taas ng mga may letters basta numbers ung
-    pinaka main user input kaya ayon nilagay narin dyan para mas malessen ung error inputs although may error function naman
-    ung app and safe na nag rerevert sa last session ung app once na maka encounter ng error, anyway, after ng small tutorial/tips,
-    lalabas yung "Mapa ni Pepe" which is ung  Main Menu ng program, nandon nakalagay lahat ng 'pages' kung baga, dito yung first
-    "cin" na ginamit since nag exceed ung options niya sa 9; bali maglalagay ng number si user from 1 to 11, may error check
-    nadin siya and hindi nag lloop ung error so guds na siya, dun tayo sa una:
-
-                ------------------ Rizal ------------------
-                [ 1 ] Ang Bida
-
-                ------------- Noli Me Tangere -------------
-                [ 2 ] Buod
-                [ 3 ] Pagkakakilanlan sa mga Tauhan
-                [ 4 ] Mga Kabanata
-
-                ------------ El Filibusterismo ------------
-                [ 5 ] Buod
-                [ 6 ] Pagkakakilanlan sa mga Tauhan
-                [ 7 ] Mga Kabanata
-
-                ----------- Tungkol sa Programa -----------
-                [ 8 ] Bookmark
-                [ 9 ] Kilalanin ang mga Gumawa
-                [ 10 ] Gabay sa Paggamit
-
-                ------------ Ibang Pagpipilian ------------
-                [ 11 ] Itigil ang paglalakbay
-
-    ayan ung nasa main menu natin, naka separate na sya para mas madali makita, sa [ 1 ] Ang Bida, dito yung tungkol kay rizal,
-    ayon nilagyan ko rin ng image using ascii para medyo may design, mostly dun sa navigation natin ay _getch() nalang or mag
-    ppress kanalang ng key sa keyboard tapos madedetect yung key nayon and magpproceed sa kung ano man function na nilagay mo;
-    ung navigation natin is naka dipende kung saan sya so magkakaiba yung navigation except sa mga nauulit like ung sa kabanata
-    ng nobela, yung iba 1 to 5 lang, sa kabanata 1 to 6 yung pede i press na key, basta iba-iba sa bawat type, tsaka ung navigation
-    ginawa kong flexible or wala masyadong restriction, pede ka mag quit by pressing [5] or kung ano mang last option na ndon,
-    or pede kang bumalik sa main menu anytime without damaging the app, yung mga nakasulat dun sa Rizal may mga ibang may color,
-    ang ginawa ko doon hard coded na sa app mismo, bali dun ko mismo tinype ung info about kay rizal,
-
-    moving on, puro fstream lang ginamit pagdating na sa Tauhan, Kabanata, then Talasalitaan, although need rin i revise ung
-    mismong textfile kasi hindi papatay un sa app pag hindi inayos sa textfile
-
-    sa [ 4 ] or [ 7 ] parehas lang nmn ng function pero iba lang context, mag iinput yung user ng number dyan either 1 to 64
-    or 1 to 39 dipende kung pinili nya ba ung noli or el fili, then lalabas yung chapter pati ung talasalitaan sa ibaba non,
-    pede ka mag next and back using [ 1 ] and [ 2 ], tas pede rin bumalik ka sa chapter selector like if usto mo pumunta agad
-    for example chap 23 ganon tas ayon may option para bumalik sa main menu or close the app.
-
-    what will happen if u select chap [ 1 ] and pressed Previous Chapter? Babalik lang sya sa Chapter Selector, kapag sa dulo
-    naman tapos ni next mo, may parang End screen na lalabas tas may option ka na pumunta sa kung san mo gusto or iterminate
-    ung app, for errors oks na siguro ung app, ang ginawa ko lang for error is nagcout lang din ako ng "Maling Input eme" tas
-    ayon mag bback sya kung san sya huling nanggaling. so aun ung iba wala nmn special dun,
-
-    yung option pala ng bookmark sa kabanata (noli palang ata nakalagay) is hindi pa nakalay visually, pero ung function para
-    mag move from chapter to bookmark is nandon by pressing [ 4 ] kahit iba nakasulat, di pa kc nadadagdag ung cout.
-
-    pano naman kapag nag try ka mag exit ng program, may prompt na lalaabas confirmation lang, para kapag malay mo ma pindot
-    lang ung exit may confirmation siya either mag quit ung app or bumalik, for now mag bback sya sa Start hindi sa previous
-    function kasi hindi pa nalalagay yun since kaka discover ko lng din pano gawin dahil dun sa bookmark.
-*/
-
-/*
-    Optimization:
-    - Navigation // done
-    - Exit Prompt: Back function // tb
-
-    Time:
-    - format: 24:00 or 12:00 (AM/PM) MM / DD / YYYY
-
-    Bookmark:
-    - Navigation [TOC, Noli, Fili] // done
-    - Add
-    - Remove
-
-*/
-
-/*
-                Coding 101:
-
-                system("mode x, y");                            // Window Size
-                system("TITLE Title Here");                     // Window Title
-                system("pause");                                // Pauses the whole function, Pressing any key will unpause the program
-                system("cls");                                  // Clears the screen
-                SetConsoleTextAttribute(hConsole, n);           // Console Text n = {0 - 9}
-                _getch();                                       // Gets Keyboard Output, returns the ASCII value of the key pressed;
-                                                                   e.g: Pressing "Esc" button will returns the value of '27';
-                                                                   see ASCII Table for ref.
-                ifstream                                        // Opens a file, reads the file
-                ofstream                                        // Opens a file, rewrites the file
-                void identifier();                              // Function
-
-                Identifiers:
-
-                color(color#);
-                    // change color# 
-                        values (color pallete):
-                        
-                        4 = red
-                        7 = white
-                        8 = gray
-                        11 = blue
-                        14 = yellow
-
-                new      // old (di pa naiiba)
-                line(1); // void design(1);
-                    // Short Horizontal Border Line 
-
-                line(2); // void design(2);
-                    // Long Horizontal Border Line
-
-                line(3); // void design(3); // 11
-                    // full line; chapter
-
-                line(4); // void design(4); // 8
-                    // full line; nav
-
-                ASCII value = Key:
-                27 = Esc
-                49 = 1
-                50 = 2
-                ...
-                57 = 9
-
-                // time
-                int tm_sec;                                     // seconds of minutes from 0 to 61
-                int tm_min;                                     // minutes of hour from 0 to 59
-                int tm_hour;                                    // hours of day from 0 to 24
-
-                // date
-                int tm_mday;                                    // day of month from 1 to 31
-                int tm_mon;                                     // month of year from 0 to 11
-                int tm_year;                                    // year since 1900
-
-                if may tanong i-question n'yo
-    */
-
 #define _CRT_SECURE_NO_WARNINGS
 
     // Header
@@ -240,16 +99,20 @@ void error();
     // bookmark
 void bookmark_selection();
 
+    // novel bookmark menu
 void bookmark_view_noli();
 void bookmark_view_fili();
 
-void bookmark_option(); // Bookmark Main Menu
+    // bookmark Main Menu
+void bookmark_option(); 
 void bookmark_option_select(int nobel); // use this
 
+    // add bookmark
 void bookmark_add();
 void bookmark_add_chapter();
-
 void bookmark_add_auto(int file);
+
+    // chapter auto bookmark
 void confirm_auto(int c_auto); // Auto Bookmark (Chapter)
 void confirm_auto_nobel(int c_auto);
 
@@ -258,9 +121,9 @@ void confirm(int confirm_nobel);
 // Text Color
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
+// Start Menu
 int main()
 { 
-    // Start Menu
     system("mode 120, 100");
     system("TITLE Lakbay ni Pepe - Group 3");
     Logo();
@@ -646,42 +509,6 @@ void toc() {
     }
 }
 
-
-
-// Rizal
-void Face() {
-    color(112);
-    cout << "                                               ,,,*,/,                                                                  " << endl;
-    cout << "                                              ,((*,,**/(#%%&%#(###%%%#(#%*                                              " << endl;
-    cout << "                                            //(((##**/(//***(#(%%%%%%%%%%&#%&*                                          " << endl;
-    cout << "                                          //*(%&&@&%,/**////((#((/(#/(%@@&&&&&&#                                        " << endl;
-    cout << "                                        *(%%%&&&&&#(#/#*/#(#%(/(////(#&/*,,,*/#%#(*,                                    " << endl;
-    cout << "                                       ,#&&&&&@@&&&%&&&%&%&&%%#(#&@&%*,,,,,,,,,,,,,(%#                                  " << endl;
-    cout << "                                     ,(*%&@&@&@@@@&&%&@@@@@@@@@&&&#*,,,,,,.,,,,,,,,,/##                                 " << endl;
-    cout << "                                    ,*%&&&&&&&@&&&&#/****,,,,,,,,,,,,,,,.,.,,,,,****/#%%                                " << endl;
-    cout << "                                    /(&&&&&&&@@@@&%#***,,,,,,,,.,.............,,,,**(&&#(                               " << endl;
-    cout << "                                    /&&@&@@@@@@@@&&/**,,,,,...................,,,,,,/&&#*                               " << endl;
-    cout << "                                     (&@@@@&@@@&%**,,,,,,,,,,*/#%%%#*,..,,,,*/(#(//((&&                                 " << endl;
-    cout << "                                      #@@@@&&@@&*,,,,,,,**,,*(#%#/*#%#/,,*/%&&#**,,//#,                                 " << endl;
-    cout << "                                     *#,.*(&&&&(,,,,,,,,/&((,#@&,(&**,..../%#%&@@&%&&/                                  " << endl;
-    cout << "                                    *&,/&/*,*##/,,,,,.......,,*,,,,.......,/**///((#((&                                 " << endl;
-    cout << "                                    **,*(@#,,*/***,,,......................***,******/#                                 " << endl;
-    cout << "                                    *,.,(./,,,////***,,,,,,,..,...,,........(,,,,,,*/(,                                 " << endl;
-    cout << "                                     ***,...,**/(/**/****,,,,,,.,,*.......,,/,,,,,,/#/                                  " << endl;
-    cout << "                                        ,*,.,.*///********,,,,....../##&&&&&&/,,**(%,                                   " << endl;
-    cout << "                                           %&%*********,,,,,,,.....,,..,,,((*,,*(#/                                     " << endl;
-    cout << "                                            &#(/*****,,,,,,,,,,(#%&%%%%%&%%%((#(##                                      " << endl;
-    cout << "                                            ***#(*/****,*,,,,,,,,,,,.,....,**(#(#,                                      " << endl;
-    cout << "                                            ,./*#&%#(/*****,****,***/#%&&%##((#%/                                       " << endl;
-    cout << "                                       ,%@&%......,&&%%(//*,,,,,,,...,,,**//(#%,                                        " << endl;
-    cout << "                                     &&&&@&&%.........,/#&&%%(/*,,,,,,***/(##*                                          " << endl;
-    cout << "                                  *&&&&&@&&&&&#..........,***/%&&&&&&&&&&&&&&&&#                                        " << endl;
-    cout << "                     *&&&&#**(&&&&&&&&&@&&&&&&&&#..........,,****#(/*///#&&&&&&&&&#                                     " << endl;
-    cout << "                    &&%@&&&&@@@@&&&&&&&&&&&&&&&&&&%.........,,,*/(/**//(&&&&&&&&&&&&&%                                  " << endl;
-    cout << "                  %&&&&&&&&&&@&&&&&&&&&&&&%%%&&&&&&&%&&#.....,,**/////%&&&&&&&&&&&&&&&&&&%,                             " << endl;
-    cout << "               /&&&&&&&&&&&&&&&&&&&&&&&&&#%%%%%&&&&&&%%%&&&&@&&&&&&&&&&&&&&&&&&&&&%%%%%%&%&&&&&*                        " << endl << endl;
-}
-
 void Rizal() {
     system("TITLE Lakbay ni Pepe - Ang Bayani");
 
@@ -916,8 +743,6 @@ void nav_Rizal2() {
 
 }
 
-
-
 // Noli Me Tangere - Buod
 void noli() {
     system("TITLE Lakbay ni Pepe - Noli Me Tangere");
@@ -1126,8 +951,6 @@ void nav_noli2() {
     }
 
 }
-
-
 
 // Noli Me Tangere - Kabanata
 void chap_noli() {
@@ -1384,8 +1207,6 @@ void nav_Nol_K() {
     }
 
 }
-
-
 
 // Noli Me Tangere - Tauhan 1
 void char_noli() {
@@ -1761,8 +1582,6 @@ void char_file_noli_2() {
     }
 }
 
-
-
 // El Filibusterismo - Buod
 void fili() {
     system("TITLE El Filibusterismo - Buod");
@@ -1977,7 +1796,6 @@ void nav_fili2() {
     }
 
 }
-
 
 // El Filibusterismo - Kabanata
 void chap_fili() {
@@ -2231,7 +2049,6 @@ void nav_Fil_K() {
             break;
         }
 }
-
 
 // El Filibusterismo - Tauhan
 void char_fili() {
@@ -2600,7 +2417,6 @@ void char_file_fili_2() {
     }
 }
 
-
 // Bookmark 
 
 void bookmark_option() // Bookmark Menu
@@ -2638,7 +2454,6 @@ void bookmark_option() // Bookmark Menu
     design(1);
 
 }
-
 
 void bookmark_option_select(int nobel) // FIXED
 {
@@ -2738,7 +2553,6 @@ void bookmark_option_select(int nobel) // FIXED
 
 }
 
-
 // Bookmark: Selecting Novels
 void bookmark_selection() { 
     
@@ -2806,9 +2620,6 @@ void bookmark_selection() {
             bookmark_selection();
         }
 }
-
-
-
 
 // Bookmark: Viewing Noli Me Tangere BM-Summary
 void bookmark_view_noli() {
@@ -2910,7 +2721,6 @@ void bookmark_view_fili() {
     design(1);
     nav_bookmark(2);
 }
-// Bookmark for: TOC; Noli Me Tangere; El Filibusterismo // Done
 
 // GoTo Bookmark Navigation
 void nav_bookmark(int bm_selectNav) {
@@ -3004,7 +2814,6 @@ void bookmark_add() {
     bookmark_add_chapter();
 }
 
-
 void bookmark_add_auto(int file) {
     if (file == 1) {
         ofstream add_chapter("Resources/Bookmarks/bm_noli.txt");
@@ -3038,6 +2847,8 @@ void bookmark_add_auto(int file) {
     }
 }
 
+
+// Bookmark: Auto-Add Confirm
 void confirm_auto(int c_auto) {
     system("cls");
     gotoxy(0, 5);
@@ -3307,7 +3118,39 @@ void design(int lineType) // Lines Design
 
 }
 
-
+// Rizal
+void Face() {
+    color(112);
+    cout << "                                               ,,,*,/,                                                                  " << endl;
+    cout << "                                              ,((*,,**/(#%%&%#(###%%%#(#%*                                              " << endl;
+    cout << "                                            //(((##**/(//***(#(%%%%%%%%%%&#%&*                                          " << endl;
+    cout << "                                          //*(%&&@&%,/**////((#((/(#/(%@@&&&&&&#                                        " << endl;
+    cout << "                                        *(%%%&&&&&#(#/#*/#(#%(/(////(#&/*,,,*/#%#(*,                                    " << endl;
+    cout << "                                       ,#&&&&&@@&&&%&&&%&%&&%%#(#&@&%*,,,,,,,,,,,,,(%#                                  " << endl;
+    cout << "                                     ,(*%&@&@&@@@@&&%&@@@@@@@@@&&&#*,,,,,,.,,,,,,,,,/##                                 " << endl;
+    cout << "                                    ,*%&&&&&&&@&&&&#/****,,,,,,,,,,,,,,,.,.,,,,,****/#%%                                " << endl;
+    cout << "                                    /(&&&&&&&@@@@&%#***,,,,,,,,.,.............,,,,**(&&#(                               " << endl;
+    cout << "                                    /&&@&@@@@@@@@&&/**,,,,,...................,,,,,,/&&#*                               " << endl;
+    cout << "                                     (&@@@@&@@@&%**,,,,,,,,,,*/#%%%#*,..,,,,*/(#(//((&&                                 " << endl;
+    cout << "                                      #@@@@&&@@&*,,,,,,,**,,*(#%#/*#%#/,,*/%&&#**,,//#,                                 " << endl;
+    cout << "                                     *#,.*(&&&&(,,,,,,,,/&((,#@&,(&**,..../%#%&@@&%&&/                                  " << endl;
+    cout << "                                    *&,/&/*,*##/,,,,,.......,,*,,,,.......,/**///((#((&                                 " << endl;
+    cout << "                                    **,*(@#,,*/***,,,......................***,******/#                                 " << endl;
+    cout << "                                    *,.,(./,,,////***,,,,,,,..,...,,........(,,,,,,*/(,                                 " << endl;
+    cout << "                                     ***,...,**/(/**/****,,,,,,.,,*.......,,/,,,,,,/#/                                  " << endl;
+    cout << "                                        ,*,.,.*///********,,,,....../##&&&&&&/,,**(%,                                   " << endl;
+    cout << "                                           %&%*********,,,,,,,.....,,..,,,((*,,*(#/                                     " << endl;
+    cout << "                                            &#(/*****,,,,,,,,,,(#%&%%%%%&%%%((#(##                                      " << endl;
+    cout << "                                            ***#(*/****,*,,,,,,,,,,,.,....,**(#(#,                                      " << endl;
+    cout << "                                            ,./*#&%#(/*****,****,***/#%&&%##((#%/                                       " << endl;
+    cout << "                                       ,%@&%......,&&%%(//*,,,,,,,...,,,**//(#%,                                        " << endl;
+    cout << "                                     &&&&@&&%.........,/#&&%%(/*,,,,,,***/(##*                                          " << endl;
+    cout << "                                  *&&&&&@&&&&&#..........,***/%&&&&&&&&&&&&&&&&#                                        " << endl;
+    cout << "                     *&&&&#**(&&&&&&&&&@&&&&&&&&#..........,,****#(/*///#&&&&&&&&&#                                     " << endl;
+    cout << "                    &&%@&&&&@@@@&&&&&&&&&&&&&&&&&&%.........,,,*/(/**//(&&&&&&&&&&&&&%                                  " << endl;
+    cout << "                  %&&&&&&&&&&@&&&&&&&&&&&&%%%&&&&&&&%&&#.....,,**/////%&&&&&&&&&&&&&&&&&&%,                             " << endl;
+    cout << "               /&&&&&&&&&&&&&&&&&&&&&&&&&#%%%%%&&&&&&%%%&&&&@&&&&&&&&&&&&&&&&&&&&&%%%%%%&%&&&&&*                        " << endl << endl;
+}
 
 // End
 void nav_end() {
@@ -3562,88 +3405,79 @@ void quit() {
 
 }
 
+/*
+    Bugs:
+    - Marka:
+        - Visual bugs when pressing [ Esc ] Bumalik
+        - Cancelling the confirmation on Add Bookmark will remove the existing bookmark
+
+    - Time; the minutes int from 0 to 9 (for e.g the time is: 7:02), it will not show two integers (will show as 7:2)
+
+    Program Limitation:
+    - Marked page will only limited to one per novel
+    - Window Resolution and Scroll Function
+        - Some novel chapters exceeds the current window resolution so to semi-fix the problem, we made the resolution larger instead of using a pre-made scroll function
+*/
 
 /*
+                Coding 101: These are some of the functions we had used in the program
 
-    NYI Features:
-    - Bookmark System
-    : Let's you bookmark a specific chapter and save it to your computer for future use
-    : Stores the current integer you had selected in any Novel Chapters' and you can revert back to your bookmarked
+                system("mode x, y");                            // Window Size
+                system("TITLE Title Here");                     // Window Title
+                system("pause");                                // Pauses the whole function, Pressing any key will unpause the program
+                system("cls");                                  // Clears the screen
+                SetConsoleTextAttribute(hConsole, n);           // Console Text n = {0 - 255}
+                _getch();                                       // Gets Keyboard Output, returns the ASCII value of the key pressed;
+                                                                   e.g: Pressing "Esc" button will returns the value of '27';
+                                                                   see ASCII Table for ref.
+                ifstream                                        // Opens a file, reads the file
+                ofstream                                        // Opens a file, rewrites the file
+                void identifier();                              // Function
 
-    > Example Interface // bookmark_option();
+                Identifiers:
 
-            Would you like to:
-        [ 1 ] Select a Bookmark
-        [ 2 ] Add a Bookmark
-        [ 3 ] Remove a Bookmark
+                color(color#);
+                    // change color#
+                        values (color pallete):
 
-    [ 1 ] Bookmark:
+                        7 = white
+                        8 = gray
+                        10 = lime
+                        11 = blue
+                        12 = red
+                        14 = yellow
 
-            Time                            Novel                           Chapter
+                design(design#);
+                    // line/border designs
+                (1);
+                    // Short Horizontal Border Line
 
-    ; [1]   3:23pm, 10/23/22        |       El Filibusterismo       |       23
-    ; [2]   11:05pm, 11/03/22       |       Noli Me Tangere         |       54
-    ; [3]   8:47am, 11/11/22        |       El Filibusterismo       |       32
+                (2);
+                    // Long Horizontal Border Line
 
-    // cls
+                (3);
+                    // full line; chapter
 
+                (4);
+                    // full line; nav
 
+                (5);
+                    // short dotted lines
 
+                ASCII value = Key:
+                27 = Esc
+                49 = 1
+                50 = 2
+                ...
+                57 = 9
 
-    [ 2 ] Add a Bookmark:
+                // time
+                int tm_sec;                                     // seconds of minutes from 0 to 61
+                int tm_min;                                     // minutes of hour from 0 to 59
+                int tm_hour;                                    // hours of day from 0 to 24
 
-    Please select a location: 
-    
-    [ 1 ] Noli Me Tangere     ||      [ 2 ] El Filibusterismo
-
-    Enter here: 2
-
-    // cls
-
-
-
-    ========================================================================================
-        Currently Selected: El Filibusterismo                  
-    ========================================================================================
-    Please select a chapter: [ 1 - 39 ]
-
-    Enter here: 32
-
-    // cls
-
-
-
-    ========================================================================================
-        Currently Selected: El Filibusterismo [ 32 ]           
-    ========================================================================================
-        Please confirm the selection:
-        [ Esc ] Try Again
-        [ Enter ] To Continue
-
-
-
-
-    [ 3 ] Remove a Bookmark:
-
-    ; [1]   Time: 3:23pm, 10/23/22        |       Bookmark Location:  El Filibusterismo       |       Chapter: 23
-    ; [2]   Time: 11:05pm, 11/03/22       |       Bookmark Location:  Noli Me Tangere         |       Chapter: 54
-    ; [3]   Time: 8:47am, 11/11/22        |       Bookmark Location:  El Filibusterismo       |       Chapter: 32
-
-    Please select bookmark number:
-
-    Enter here: 1
-
-    // cls
-
-    Updating Bookmark..
-
-    // cls
-
-    Bookmark:
-
-    ; [1]   Time: 11:05pm, 11/03/22       |       Bookmark Location:  Noli Me Tangere         |       Chapter: 54
-    ; [2]   Time: 8:47am, 11/11/22        |       Bookmark Location:  El Filibusterismo       |       Chapter: 32
-
-    // cls
-
-*/
+                // date
+                int tm_mday;                                    // day of month from 1 to 31
+                int tm_mon;                                     // month of year from 0 to 11
+                int tm_year;                                    // year since 1900
+    */

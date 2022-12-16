@@ -1,8 +1,5 @@
-# Lakbay-ni-Pepe
-Offline E-Book Application made with C++ only, naglalaman siya ng details about kay Rizal, tapos sa Noli, at El Fili,
-yung app natin mostly ginagamitan lang ng numkeys, tas "esc" for 'back feature' lalo na yung sa navigation, sa start
-ng program natin may Logo ng title ng app natin, tas yung user any key pede nya pindutin at this point para mag proceed,
-then lalabas yung short introduction ng app natin.
+# The "Lakbay-ni-Pepe"
+is a pure C++ Offline E-Book Application that contains content about the Philippine National Hero, Dr. José Protasio Rizal Mercado y Alonso Realonda, and his great novels "Noli Me Tángere" and "El Filibusterismo" in summarized Filipino form, as well as the characters and a glossary to make reading easier for readers.
 
 ### Programmer: Mga Bata ni Sir RR
 
@@ -27,10 +24,11 @@ Planned (✘) and currently working (✓) - but not necessarily fully completed 
       + ✓ Buod ng Nobelang "El Filibusterismo"
       + ✓ Pagkakakilanlan sa mga Tauhan
       + ✓ Mga Kabanata ng "El Filibusterismo"
-    * ✘ Bookmark
+    * ✓ Marka
     * ✓ All logic corrected
 - ✓ Kilalanin ang mga Gumawa
 - ✓ Gabay sa Paggamit
+- ✓ Back Logic
 
 ```
 ------------------ Rizal ------------------

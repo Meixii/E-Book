@@ -15,6 +15,7 @@ is a pure C++ Offline E-Book Application that contains content about the Philipp
 
 Planned (✘) and currently working (✓) - but not necessarily fully completed - features:
 
+- ✓ Contents about Jose Rizal
 - ✓ Read Novels
     * ✓ Noli Me Tangere
       + ✓ Buod ng Nobelang "Noli Me Tangere"
@@ -28,24 +29,24 @@ Planned (✘) and currently working (✓) - but not necessarily fully completed 
     * ✓ All logic corrected
 - ✓ Kilalanin ang mga Gumawa
 - ✓ Gabay sa Paggamit
-- ✓ Back Logic
+- ✓ Back Function
 
 ```
 ------------------ Rizal ------------------
 [ 1 ] Ang Bida
 
 ------------- Noli Me Tangere -------------
-[ 2 ] Buod ng Nobelang "Noli Me Tangere"
+[ 2 ] Buod
 [ 3 ] Pagkakakilanlan sa mga Tauhan
-[ 4 ] Mga Kabanata ng "Noli Me Tangere"
+[ 4 ] Mga Kabanata
 
 ------------ El Filibusterismo ------------
-[ 5 ] Buod ng Nobelang "El Filibusterismo"
+[ 5 ] Buod
 [ 6 ] Pagkakakilanlan sa mga Tauhan
-[ 7 ] Mga Kabanata ng "El Filibusterismo"
+[ 7 ] Mga Kabanata
 
 ----------- Tungkol sa Programa -----------
-[ 8 ] Bookmark
+[ 8 ] Marka
 [ 9 ] Kilalanin ang mga Gumawa
 [ 10 ] Gabay sa Paggamit
 
@@ -59,7 +60,10 @@ Planned (✘) and currently working (✓) - but not necessarily fully completed 
 </p>
 
 ## Limitation 
-- No GUI interface
+- Resolution & Scroll Function
+- Only one Marked pages per Novel
+- Back function on Exit Program Prompt; the user will be redirected to Start page
+- Time (minutes) doesn't include 0's on 0-9 minutes (e.g: time will cout as "7:1" instead of "7:01")
 
 > Note: Some issues were not yet fixed thus I will be updating this in several upcoming weeks/months. And I hope that this project will be used for educational purposes and that the system itself maintains its copyrights as proposed.
 

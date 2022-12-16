@@ -27,7 +27,7 @@
 using namespace std;
 
     // Global Variables
-int k_num, c_num, bm, nobel, selectNobel, bm_menu, c_auto, bm_selectNav;
+int k_num, c_num, bm, nobel, selectNobel, bm_menu, c_auto, c_custom, bm_selectNav;
 
 //// Function Declaration:
     // Program
@@ -113,10 +113,14 @@ void bookmark_add_chapter();
 void bookmark_add_auto(int file);
 
     // chapter auto bookmark
-void confirm_auto(int c_auto); // Auto Bookmark (Chapter)
+void confirm_auto(); // Auto Bookmark (Chapter)
 void confirm_auto_nobel(int c_auto);
 
-void confirm(int confirm_nobel);
+    // chapter custom bookmark
+void confirm_custom();
+void confirm_custom_nobel(int c_custom);
+
+void bm_confirm(int confirm_nobel);
 
 // Text Color
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -2624,7 +2628,7 @@ void bookmark_selection() {
 // Bookmark: Viewing Noli Me Tangere BM-Summary
 void bookmark_view_noli() {
     system("TITLE Bookmark - Noli Me Tangere");
-
+    system("cls");
     gotoxy(0, 5);
 
     design(1);
@@ -2740,12 +2744,15 @@ void nav_bookmark(int bm_selectNav) {
             chap_file_noli();
             break;
         case 27:
-            bookmark_option_select(nobel);
+            system("cls");
+            getChap.close();
+            bookmark_selection();
             break;
         default:
             system("cls");
+            getChap.close();
             error();
-            bookmark_selection();
+            bookmark_view_noli();
         }
     }
     else if (bm_selectNav == 2) {
@@ -2761,12 +2768,17 @@ void nav_bookmark(int bm_selectNav) {
             chap_file_fili();
             break;
         case 27:
-            bookmark_option_select(nobel);
+            system("cls");
+            getChap.close();
+            bookmark_selection();
+            
             break;
         default:
             system("cls");
+            getChap.close();
             error();
-            bookmark_selection();
+            bookmark_view_fili();
+            
         }
 
     }
@@ -2828,7 +2840,7 @@ void bookmark_add_auto(int file) {
         add_chapter.close();
         add_time.close();
 
-        confirm_auto(c_auto);
+        confirm_auto();
     }
     if (file == 2) {
         ofstream add_chapter("Resources/Bookmarks/bm_fili.txt");
@@ -2843,13 +2855,13 @@ void bookmark_add_auto(int file) {
         add_chapter.close();
         add_time.close();
 
-        confirm_auto(c_auto);
+        confirm_auto();
     }
 }
 
 
 // Bookmark: Auto-Add Confirm
-void confirm_auto(int c_auto) {
+void confirm_auto() {
     system("cls");
     gotoxy(0, 5);
     design(1);
@@ -2872,6 +2884,33 @@ void confirm_auto_nobel(int c_auto) {
     else if (c_auto == 2) {
         system("cls");
         chap_file_fili();
+    }
+}
+
+// Bookmark: Custom Confirm
+void confirm_custom() {
+    system("cls");
+    gotoxy(0, 5);
+    design(1);
+    color(10);
+
+    cout << "                                           Nalagyan na ng marka ang kabanata." << endl << endl;
+    color(7);
+    cout << "                                              Pupunta sa mga markahan..." << endl;
+    design(1);
+
+    Sleep(3000);
+    confirm_custom_nobel(c_custom);
+}
+
+void confirm_custom_nobel(int c_custom) {
+    if (c_custom == 1) {
+        system("cls");
+        bookmark_view_noli();
+    }
+    else if (c_custom == 2) {
+        system("cls");
+        bookmark_view_fili();
     }
 }
 
@@ -2905,17 +2944,19 @@ void bookmark_add_chapter() {
         color(14);
         cin >> k_num;
         if (k_num >= 1 && k_num <= 64) {
-            confirm(1);
+            bm_confirm(1);
         }
         else if (cin.fail())
         {
+            cin.clear(); cin.ignore(512, '\n');
             error();
-            bookmark_add_chapter();
+            bookmark_add();
         }
         else
         {
+            cin.clear(); cin.ignore(512, '\n');
             error();
-            bookmark_add_chapter();
+            bookmark_add();
         }
         break;
 
@@ -2924,7 +2965,7 @@ void bookmark_add_chapter() {
         gotoxy(0, 5);
         design(1);
         color(11);
-        cout << "                                           Magdagdag ng Marka";
+        cout << "                                         Magdagdag ng Marka";
         color(14);
         cout << ": \"El Filibusterismo\"" << endl;
 
@@ -2936,34 +2977,43 @@ void bookmark_add_chapter() {
         color(14);
         cin >> k_num;
         if (k_num >= 1 && k_num <= 39) {
-            confirm(2);
+            bm_confirm(2);
         }
         else if (cin.fail())
         {
-        error();
-        bookmark_add_chapter();
+            cin.clear(); cin.ignore(512, '\n');
+            error();
+            bookmark_add();
         }
         else
         {
-        error();
-        bookmark_add_chapter();
+            cin.clear(); cin.ignore(512, '\n');
+            error();
+            bookmark_add();
         }
-        
+
+        break;
+
+    default:
+        system("cls");
+        error();
+        bookmark_add();
         break;
     }
 
 }
-// problem: pressing [ esc ] clears the textfile
-void confirm(int confirm_nobel) {
+
+
+void bm_confirm(int confirm_nobel) {
+    
 
     if (confirm_nobel == 1) {
 
     // Confirmation
     int confirm;
 
-    ofstream add_chapter("Resources/Bookmarks/bm_noli.txt");
-    ofstream add_time("Resources/Bookmarks/time_noli.txt");
-
+    
+    system("cls");
     gotoxy(0, 5);
     design(1);
     color(11);
@@ -2982,37 +3032,43 @@ void confirm(int confirm_nobel) {
     color(11);
     cout << "                                       [ "; color(7); cout << "Esc"; color(11); cout << " ] "; color(12); cout << "Bumalik" << endl;
 
+
+
     design(1);
     confirm = _getch();
-    if (confirm == 49) {
-        add_chapter << k_num << endl;
+        if (confirm == 27) {
+            cin.clear(); cin.ignore(512, '\n');
+            system("cls");
+            bookmark_option_select(nobel);
+        }
+        else if (confirm == 49) {
+            ofstream add_chapter("Resources/Bookmarks/bm_noli.txt");
+            ofstream add_time("Resources/Bookmarks/time_noli.txt");
+            add_chapter << k_num << endl;
 
-        time_t t = time(0);   // get time now /// Format: [ 24:00 12/12/2022 ]
-        tm* now = localtime(&t);
-        add_time << (now->tm_hour) << ':' << (now->tm_min + 1) << ' ' << (now->tm_mon + 1) << '/' << now->tm_mday << '/' << (now->tm_year + 1900) << endl;
+            time_t t = time(0);   // get time now /// Format: [ 24:00 12/12/2022 ]
+            tm* now = localtime(&t);
+            add_time << (now->tm_hour) << ':' << (now->tm_min + 1) << ' ' << (now->tm_mon + 1) << '/' << now->tm_mday << '/' << (now->tm_year + 1900) << endl;
 
-        add_chapter.close();
-        add_time.close();
+            add_chapter.close();
+            add_time.close();
+            system("cls");
+            c_custom = 1;
+            confirm_custom();
+        }
+        else {
+            system("cls");
+            error();
+            bm_confirm(confirm_nobel);
+        }
 
-        cout << "                                    ";
-        system("pause");
-        system("cls");
-        bookmark_view_noli();
-    }
-    else if(confirm == 27) {
-        cin.clear(); cin.ignore(512, '\n');
-        system("cls");
-        bookmark_option_select(nobel);
-    }
     }
 
     else if (confirm_nobel == 2)
     {
+        system("cls");
     // Confirmation
     int confirm;
-
-    ofstream add_chapter("Resources/Bookmarks/bm_fili.txt");
-    ofstream add_time("Resources/Bookmarks/time_fili.txt");
 
     gotoxy(0, 5);
     design(1);
@@ -3032,31 +3088,38 @@ void confirm(int confirm_nobel) {
     color(11);
     cout << "                                       [ "; color(7); cout << "Esc"; color(11); cout << " ] "; color(12); cout << "Bumalik" << endl;
 
-    design(1);
-    confirm = _getch();
-    if (confirm == 49) {
+        design(1);
+        confirm = _getch();
+        if (confirm == 27) 
+        {
+            cin.clear(); cin.ignore(512, '\n');
+            system("cls");
+            bookmark_option_select(nobel);
+        }
+        else if (confirm == 49) 
+        {
+            ofstream add_chapter("Resources/Bookmarks/bm_fili.txt");
+            ofstream add_time("Resources/Bookmarks/time_fili.txt");
+            // chapter
+            add_chapter << k_num << endl;
 
-        // chapter
-        add_chapter << k_num << endl;
+            // time
+            time_t t = time(0);   // get time now /// Format: [ 24:00 12/12/2022 ]
+            tm* now = localtime(&t);
+            add_time << (now->tm_hour) << ':' << (now->tm_min + 1) << ' ' << (now->tm_mon + 1) << '/' << now->tm_mday << '/' << (now->tm_year + 1900) << endl;
 
-        // time
-        time_t t = time(0);   // get time now /// Format: [ 24:00 12/12/2022 ]
-        tm* now = localtime(&t);
-        add_time << (now->tm_hour) << ':' << (now->tm_min + 1) << ' ' << (now->tm_mon + 1) << '/' << now->tm_mday << '/' << (now->tm_year + 1900) << endl;
+            add_chapter.close();
+            add_time.close();
 
-        add_chapter.close();
-        add_time.close();
-
-        cout << "                                  ";
-        system("pause");
-        system("cls");
-        bookmark_view_fili();
-    }
-    else if (confirm == 27) {
-        cin.clear(); cin.ignore(512, '\n');
-        system("cls");
-        bookmark_option_select(nobel);
-    }
+            system("cls");
+            c_custom = 2;
+            confirm_custom();
+        }
+        else {
+            system("cls");
+            error();
+            bm_confirm(confirm_nobel);
+        }
     }
 }
 
@@ -3408,7 +3471,6 @@ void quit() {
 /*
     Bugs:
     - Marka:
-        - Visual bugs when pressing [ Esc ] Bumalik
         - Cancelling the confirmation on Add Bookmark will remove the existing bookmark
 
     - Time; the minutes int from 0 to 9 (for e.g the time is: 7:02), it will not show two integers (will show as 7:2)
